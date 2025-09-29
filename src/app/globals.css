@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #0a120d; /* Near-Black Green */
+  --foreground: #dcf2e4; /* Light green for text */
+  --card: #0f1b14; /* Fog Green */
+  --card-foreground: #dcf2e4;
+  --popover: #0f1b14;
+  --popover-foreground: #dcf2e4;
+  --primary: #1f5f46; /* Emerald */
+  --primary-foreground: #f0f9f4;
+  --secondary: #2f6f55; /* Moss */
+  --secondary-foreground: #f0f9f4;
+  --muted: #0e1a12; /* Forest Green */
+  --muted-foreground: #bce5cc;
+  --accent: #c6a858; /* Antique Gold */
+  --accent-foreground: #0a120d;
+  --destructive: #6f1f2a; /* Blood Rose */
+  --destructive-foreground: #f0f9f4;
+  --border: #2f6f55;
+  --input: #0f1b14;
+  --ring: #3a8c6a; /* Jade */
+  --radius: 0.5rem;
+  --chart-1: #1f5f46;
+  --chart-2: #2f6f55;
+  --chart-3: #3a8c6a;
+  --chart-4: #c6a858;
+  --chart-5: #cfd6d6;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Manrope', sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
