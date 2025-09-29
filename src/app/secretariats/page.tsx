@@ -9,6 +9,9 @@ import { appConfig } from '@/lib/config'
 
 export default function SecretariatsPage() {
   const { reveals } = appConfig
+  const now = new Date()
+  const revealTime = new Date(reveals.secretariats.revealAt)
+  const isRevealed = now >= revealTime
 
   // Placeholder secretariat data that would be revealed
   const secretariats = [
@@ -62,6 +65,63 @@ export default function SecretariatsPage() {
     }
   ]
 
+  // Show countdown if not yet revealed
+  if (!isRevealed) {
+    return (
+      <div className="min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <Users className="h-16 w-16 text-accent-gold" />
+                <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse" />
+              </div>
+            </div>
+            
+            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Secretariats
+            </h1>
+            <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
+              Distinguished Leadership Team
+            </p>
+          </motion.div>
+
+          {/* Countdown Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <div className="bg-forest-950/60 border border-accent-gold/20 rounded-xl p-8 backdrop-blur-sm">
+              <p className="text-accent-gold font-semibold text-2xl mb-6 tracking-wide">
+                THE SECRETARIATS WILL BE REVEALED SOON
+              </p>
+              
+              <Countdown
+                revealAt={reveals.secretariats.revealAt}
+                title=""
+                description=""
+                className="[&>div]:bg-gradient-to-br [&>div]:from-forest-700 [&>div]:to-forest-800 [&>div]:border-accent-gold/30 [&>div]:text-accent-gold"
+              />
+              
+              <p className="text-muted-foreground mt-6 text-lg">
+                Meet the distinguished team that will guide your diplomatic journey. Excellence awaits.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    )
+  }
+
+  // Show full content if revealed
   return (
     <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,59 +336,6 @@ export default function SecretariatsPage() {
                 Contact Secretariats
               </a>
             </Button>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  )
-
-  return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <Users className="h-16 w-16 text-accent-gold" />
-              <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse" />
-            </div>
-          </div>
-          
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Secretariats
-          </h1>
-          <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
-            Distinguished Leadership Team
-          </p>
-        </motion.div>
-
-        {/* Countdown Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <div className="bg-forest-950/60 border border-accent-gold/20 rounded-xl p-8 backdrop-blur-sm">
-            <p className="text-accent-gold font-semibold text-2xl mb-6 tracking-wide">
-              THE SECRETARIATS WILL BE REVEALED SOON
-            </p>
-            
-            <Countdown
-              revealAt={reveals.secretariats.revealAt}
-              title=""
-              description=""
-              className="[&>div]:bg-gradient-to-br [&>div]:from-forest-700 [&>div]:to-forest-800 [&>div]:border-accent-gold/30 [&>div]:text-accent-gold"
-            />
-            
-            <p className="text-muted-foreground mt-6 text-lg">
-              Meet the distinguished team that will guide your diplomatic journey. Excellence awaits.
-            </p>
           </div>
         </motion.div>
       </div>

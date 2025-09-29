@@ -40,7 +40,7 @@ export const appConfig = {
     },
     secretariats: { 
       mode: "countdown" as const, 
-      revealAt: "2024-12-20T10:00:00Z", 
+      revealAt: "2025-12-17T10:00:00Z", 
       showCountdownOverlay: false 
     }
   },

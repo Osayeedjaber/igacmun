@@ -827,32 +827,6 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.7 }}
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"
-                  >
-                    {[
-                      { icon: "🏛️", label: "10+ Committees", desc: "Diverse diplomatic arenas" },
-                      { icon: "🌍", label: "Global Issues", desc: "Real-world challenges" },
-                      { icon: "🎯", label: "All Levels", desc: "Beginner to Advanced" }
-                    ].map((item, index) => (
-                      <motion.div
-                        key={item.label}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="bg-forest-800/40 border border-accent-gold/10 rounded-lg p-4 hover:border-accent-gold/30 transition-colors duration-300"
-                      >
-                        <div className="text-2xl mb-2">{item.icon}</div>
-                        <div className="font-semibold text-accent-gold mb-1">{item.label}</div>
-                        <div className="text-muted-foreground text-xs">{item.desc}</div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
                 </div>
               </div>
             </motion.div>
