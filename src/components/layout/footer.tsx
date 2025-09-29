@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Instagram, Facebook, Twitter, Linkedin, Mail, Phone, MapPin, Globe, Heart } from 'lucide-react'
+import { Instagram, Facebook, Mail, Phone, MapPin, Globe, Heart } from 'lucide-react'
 import { ElegantBackground } from '@/components/ui/elegant-background'
 import { Logo } from '@/components/ui/logo'
 
@@ -12,26 +12,14 @@ export function Footer() {
     {
       name: 'Instagram',
       icon: Instagram,
-      href: 'https://instagram.com/igacmun',
+      href: 'https://www.instagram.com/igac.official_',
       color: 'hover:text-pink-400'
     },
     {
       name: 'Facebook',
       icon: Facebook,
-      href: 'https://facebook.com/igacmun',
+      href: 'https://www.facebook.com/profile.php?id=100095775481124',
       color: 'hover:text-blue-400'
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      href: 'https://twitter.com/igacmun',
-      color: 'hover:text-blue-300'
-    },
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      href: 'https://linkedin.com/company/igacmun',
-      color: 'hover:text-blue-500'
     }
   ]
 
@@ -52,8 +40,8 @@ export function Footer() {
     },
     {
       icon: Phone,
-      text: '+880 1XXX-XXXXXX',
-      href: 'tel:+8801XXXXXXXX'
+      text: '+880 18153-53082',
+      href: 'tel:+8801815353082'
     },
     {
       icon: MapPin,

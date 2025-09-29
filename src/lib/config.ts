@@ -44,63 +44,91 @@ export const appConfig = {
       showCountdownOverlay: false 
     }
   },
+  registrationTypes: [
+    {
+      key: 'earlyBird',
+      icon: 'Star',
+      color: 'from-emerald-500/20 to-emerald-600/5',
+      borderColor: 'border-emerald-400/40',
+      flashMode: 'false'
+    },
+    {
+      key: 'regular',
+      icon: 'CheckCircle',
+      color: 'from-forest-500/20 to-forest-600/5',
+      borderColor: 'border-forest-400/40',
+      flashMode: 'false'
+    },
+    {
+      key: 'campusAmbassadors',
+      icon: 'Users',
+      color: 'from-accent-gold/20 to-accent-gold/5',
+      borderColor: 'border-accent-gold/40',
+      flashMode: 'false'
+    },
+    {
+      key: 'late',
+      icon: 'Clock',
+      color: 'from-destructive/20 to-destructive/5',
+      borderColor: 'border-destructive/40',
+      flashMode: 'false'
+    },
+    {
+      key: 'executiveBoard',
+      icon: 'Crown',
+      color: 'from-purple-900/30 via-indigo-800/20 to-purple-900/30',
+      borderColor: 'border-purple-400/50',
+      flashMode: 'false'
+    },
+  ],
   forms: {
-    // Registration Forms - Update these URLs with your actual Google Forms
     campusAmbassadors: { 
       enabled: true, 
-      link: "https://forms.gle/your-campus-ambassadors-form-id",
+      link: "https://forms.gle/PW95WFfWVVu2vPMD6",
       title: "Campus Ambassadors",
       description: "Represent your institution",
-      deadline: "2025-11-30T23:59:59Z",
-      price: "Free"
+      deadline: "2025-11-30T23:59:59Z"
     },
     earlyBird: { 
-      enabled: true, 
-      link: "https://forms.gle/your-early-bird-form-id",
+      enabled: false, 
+      link: "https://forms.gle/Rumm2ApxBcAi41649",
       title: "Early Bird Registration",
       description: "Secure your spot with discounted rates",
-      deadline: "2025-10-31T23:59:59Z",
-      price: "$25"
+      deadline: "2025-10-31T23:59:59Z"
     },
     regular: { 
-      enabled: true, 
+      enabled: false,
       link: "https://forms.gle/your-regular-registration-form-id",
       title: "Regular Registration",
       description: "Standard registration rates",
-      deadline: "2025-12-10T23:59:59Z",
-      price: "$35"
+      deadline: "2025-12-10T23:59:59Z"
     },
     late: { 
-      enabled: false, 
+      enabled: false,
       link: "https://forms.gle/your-late-registration-form-id",
       title: "Late Registration",
-      description: "Final opportunity to register",
-      deadline: "2025-12-15T23:59:59Z",
-      price: "$45"
+      description: "Last chance registration with additional fees",
+      deadline: "2025-12-15T23:59:59Z"
     },
-    // Contact Forms
-    contact: {
-      enabled: true,
-      link: "https://forms.gle/your-contact-form-id",
-      title: "Contact Us",
-      description: "Get in touch with our team"
+    executiveBoard: { 
+      enabled: true, 
+      link: "https://forms.gle/Jieo1f4TMaTnkzgeA",
+      title: "Executive Board Registration",
+      description: "Exclusive registration for executive positions and leadership roles",
+      deadline: "2025-11-15T23:59:59Z"
     },
-    // Sponsorship Forms
-    sponsorship: {
+    paymentConfirmation: {
       enabled: true,
-      link: "https://forms.gle/your-sponsorship-form-id",
-      title: "Become a Sponsor",
-      description: "Partner with us for IGACMUN Session III"
+      link: "https://forms.gle/kruBU3Vr5336ZXXRA",
+      title: "Payment Confirmation",
+      description: "Submit your payment proof after registration",
+      deadline: "2025-12-20T23:59:59Z"
     }
   },
   
-  // Social Media Links - Update with your actual social media handles
   social: {
-    instagram: "https://instagram.com/igacmun",
-    facebook: "https://facebook.com/igacmun", 
-    twitter: "https://twitter.com/igacmun",
-    linkedin: "https://linkedin.com/company/igacmun",
-    youtube: "https://youtube.com/@igacmun",
+    instagram: "https://www.instagram.com/igac.official_",
+    facebook: "https://www.facebook.com/profile.php?id=100095775481124",
     email: "intlglobalaffairscouncil@gmail.com",
     phone: "+880-18153-53082"
   },
