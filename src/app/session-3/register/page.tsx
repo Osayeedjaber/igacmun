@@ -31,7 +31,7 @@ export default function RegisterPage() {
       ...type, 
       form: forms[type.key as keyof typeof forms],
       icon: iconMap[type.icon] || Star,
-      flashMode: (type as any).flashMode === 'true'
+      flashMode: false
     }))
     .filter(type => type.form)
     .sort((a, b) => {
