@@ -378,19 +378,19 @@ __turbopack_context__.s([
 const appConfig = {
     leadership: [
         {
-            name: "al rashedul farabi subaru",
+            name: "Al Rashidus Sabru Farabi",
             role: "President",
             photo: "/leadership/president.jpg",
             description: "Leading IGACMUN Session III with diplomatic excellence"
         },
         {
-            name: "marzia jannat tayba",
+            name: "Marzia E Jannat",
             role: "Chairman",
             photo: "/leadership/chairman.jpg",
             description: "Guiding the strategic vision of our conference"
         },
         {
-            name: "rezwan rashed zindae",
+            name: "Rezwan Rashid Zidan",
             role: "Co-founder",
             photo: "/leadership/cofounder.jpg",
             description: "Building the foundation of youth diplomacy"

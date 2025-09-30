@@ -3,8 +3,8 @@
 import React, { useRef, useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { Users, Calendar, MapPin, Award, Target, Globe, Handshake, Lightbulb, ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence, PanInfo } from 'framer-motion'
+import { Users, Calendar, MapPin, Award, Target, Globe, Handshake, Lightbulb, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { LeadershipCard } from '@/components/ui/leadership-card'
 import { Countdown } from '@/components/ui/countdown'
@@ -80,7 +80,7 @@ ExecutiveTeamCard.displayName = 'ExecutiveTeamCard'
 
 export default function Home() {
   const { leadership, event, reveals, venue, committees } = appConfig
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const carouselRef = useRef<HTMLDivElement>(null)
   const [showScrollArrow, setShowScrollArrow] = useState(true)
 
   const handleScroll = useCallback(() => {
@@ -94,7 +94,6 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
-
 
   // Memoized Executive Team Data for Performance
   const executiveTeam = useMemo(() => [
@@ -139,6 +138,7 @@ export default function Home() {
       image: "/Joint secretaries/afsan talukder  ORGANIZING SECRETARY.jpg"
     }
   ], [])
+
 
   return (
     <div className="min-h-screen">
@@ -426,7 +426,7 @@ export default function Home() {
       </section>
 
       {/* President's Message */}
-      <section className="py-24 relative">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative">
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0"
           className="opacity-60"
@@ -437,79 +437,79 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-12 md:mb-16"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
               A Message from the President
             </h2>
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-8"></div>
+            <div className="w-16 sm:w-20 md:w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-4 sm:mb-6 md:mb-8"></div>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto px-2 sm:px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-card border border-accent-gold/20 rounded-2xl p-8 md:p-12 relative overflow-hidden"
+              className="bg-card border border-accent-gold/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden"
             >
               {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-forest-800/20 to-forest-900/20 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-forest-800/20 to-forest-900/20 rounded-xl sm:rounded-2xl" />
               
-              {/* Quote marks */}
-              <div className="absolute top-6 left-6 text-6xl text-accent-gold/20 font-serif leading-none">&ldquo;</div>
-              <div className="absolute bottom-6 right-6 text-6xl text-accent-gold/20 font-serif leading-none rotate-180">&rdquo;</div>
+              {/* Quote marks - responsive sizing */}
+              <div className="absolute top-3 sm:top-4 md:top-6 left-3 sm:left-4 md:left-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-accent-gold/20 font-serif leading-none">&ldquo;</div>
+              <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 right-3 sm:right-4 md:right-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-accent-gold/20 font-serif leading-none rotate-180">&rdquo;</div>
               
               <div className="relative z-10 text-center">
-                {/* President's photo */}
+                {/* President's photo - responsive sizing */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-accent-gold/40 shadow-xl"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full overflow-hidden border-2 sm:border-3 md:border-4 border-accent-gold/40 shadow-xl"
                 >
                   <Image 
                     src="/leadership/president.jpg" 
-                    alt="Al Rashedul Farabi Subaru - President" 
+                    alt="Al Rashidus Sabru Farabi - President" 
                     width={128}
                     height={128}
                     className="object-cover w-full h-full"
                   />
                 </motion.div>
 
-                {/* Message */}
+                {/* Message - responsive text */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                   viewport={{ once: true }}
-                  className="space-y-6"
+                  className="space-y-4 sm:space-y-5 md:space-y-6 px-2 sm:px-4"
                 >
-                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed italic">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic">
                     &ldquo;Welcome to IGACMUN Session III: Game of Thorns. As we gather once again to engage in 
                     diplomatic discourse, we embark on a journey that will challenge our perspectives, 
                     sharpen our minds, and forge the leaders of tomorrow.&rdquo;
                   </p>
-                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed italic">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic">
                     &ldquo;This session represents not just a conference, but a crucible where young minds 
                     will grapple with the world&apos;s most pressing challenges. Together, we will navigate 
                     the thorns of global politics to reach the roses of understanding and cooperation.&rdquo;
                   </p>
                 </motion.div>
 
-                {/* Signature */}
+                {/* Signature - responsive sizing */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                   viewport={{ once: true }}
-                  className="mt-8 pt-6 border-t border-accent-gold/20"
+                  className="mt-6 sm:mt-7 md:mt-8 pt-4 sm:pt-5 md:pt-6 border-t border-accent-gold/20"
                 >
-                  <p className="font-display text-xl font-semibold text-accent-gold mb-1">
-                    Al Rashedul Farabi Subaru
+                  <p className="font-display text-lg sm:text-xl md:text-xl font-semibold text-accent-gold mb-1">
+                    Al Rashidus Sabru Farabi
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     President, IGACMUN Session III
                   </p>
                 </motion.div>
@@ -523,7 +523,7 @@ export default function Home() {
       <ElegantDivider variant="minimal" />
 
       {/* Leadership Section */}
-      <section className="py-24 relative">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative">
         <ElegantBackground variant="section" />
         <BackgroundGradientAnimation
           containerClassName="absolute inset-0"
@@ -535,20 +535,20 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
               Meet Our Leadership
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               The visionary leaders driving diplomatic excellence and shaping the future of Model United Nations
             </p>
           </motion.div>
 
-          {/* Leadership Grid with Better Spacing */}
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 xl:gap-20">
+          {/* Leadership Grid - Mobile Optimized */}
+          <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
             {leadership.map((leader, index) => (
-              <div key={leader.name} className="flex-shrink-0">
+              <div key={leader.name} className="flex-shrink-0 w-full sm:w-auto max-w-sm">
                 <LeadershipCard
                   name={leader.name}
                   role={leader.role}
@@ -560,20 +560,20 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Leadership Quote/Mission */}
+          {/* Leadership Quote/Mission - Mobile Optimized */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mt-20"
+            className="text-center mt-12 sm:mt-16 md:mt-20"
           >
-            <div className="max-w-4xl mx-auto">
-              <blockquote className="text-lg md:text-xl text-muted-foreground italic leading-relaxed">
+            <div className="max-w-4xl mx-auto px-4">
+              <blockquote className="text-base sm:text-lg md:text-xl text-muted-foreground italic leading-relaxed">
                 &ldquo;Together, we forge the path toward diplomatic excellence, empowering the next generation 
                 of global leaders to tackle the world&apos;s most pressing challenges.&rdquo;
               </blockquote>
-              <div className="mt-6 h-px w-24 bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto"></div>
+              <div className="mt-4 sm:mt-6 h-px w-16 sm:w-20 md:w-24 bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto"></div>
             </div>
           </motion.div>
 
@@ -583,18 +583,18 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
-            className="mt-24"
+            className="mt-16 sm:mt-20 md:mt-24"
           >
-            <div className="text-center mb-16">
-              <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                 The Core of International Global Affairs Council
               </h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 The dedicated leadership team that manages everything and drives our mission forward
               </p>
             </div>
 
-            {/* Horizontal Scrolling Leadership Cards with Navigation */}
+            {/* Ultra Smooth Infinite Scrolling Carousel */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -602,24 +602,25 @@ export default function Home() {
               viewport={{ once: true }}
               className="relative"
             >
-
               {/* Infinite Scrollable Container */}
               <div className="relative overflow-hidden">
                 <motion.div 
-                  ref={scrollRef}
+                  ref={carouselRef}
                   className="flex gap-6 pb-6"
                   animate={{ 
                     x: [-320 * executiveTeam.length, 0]
                   }}
                   transition={{
-                    duration: executiveTeam.length * 8,
+                    duration: executiveTeam.length * 5, // Faster: reduced from 8 to 5 seconds
                     repeat: Infinity,
                     ease: "linear",
                     repeatType: "loop"
                   }}
                   style={{ 
                     width: `${(executiveTeam.length * 3) * 320}px`,
-                    willChange: "transform"
+                    willChange: "transform",
+                    backfaceVisibility: "hidden", // Better performance
+                    perspective: 1000 // Smoother rendering
                   }}
                 >
                   {/* Triple set for seamless infinite scroll */}
@@ -634,7 +635,6 @@ export default function Home() {
                   ))}
                 </motion.div>
               </div>
-
             </motion.div>
           </motion.div>
         </div>
@@ -652,7 +652,7 @@ export default function Home() {
             {[
               { icon: Users, label: "Expected Delegates", value: event.expectedDelegates },
               { icon: Award, label: "Committees", value: "TBA" },
-              { icon: Calendar, label: "Days", value: "TBA" },
+              { icon: Calendar, label: "Days", value: "3" },
               { icon: MapPin, label: "Venue", value: venue.name },
             ].map((stat, index) => (
               <motion.div

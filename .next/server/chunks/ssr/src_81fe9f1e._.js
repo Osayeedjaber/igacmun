@@ -37,19 +37,19 @@ const LeadershipCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$
         },
         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("w-full max-w-sm mx-auto", className),
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-card relative group hover:shadow-xl hover:shadow-accent-gold/20 border border-accent-gold/20 rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:border-accent-gold/40 hover:-translate-y-2",
+            className: "bg-card relative group hover:shadow-xl hover:shadow-accent-gold/20 border border-accent-gold/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500 hover:border-accent-gold/40 hover:-translate-y-2",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0 bg-gradient-to-br from-forest-800/30 to-forest-900/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    className: "absolute inset-0 bg-gradient-to-br from-forest-800/30 to-forest-900/30 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/leadership-card.tsx",
                     lineNumber: 35,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative z-10 flex justify-center mb-4 sm:mb-6",
+                    className: "relative z-10 flex justify-center mb-3 sm:mb-4 md:mb-6",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium bg-accent-gold/15 text-accent-gold border border-accent-gold/30 backdrop-blur-sm",
+                        className: "inline-flex items-center px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full text-xs sm:text-sm font-medium bg-accent-gold/15 text-accent-gold border border-accent-gold/30 backdrop-blur-sm",
                         children: role
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/leadership-card.tsx",
@@ -62,7 +62,7 @@ const LeadershipCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 sm:mb-6",
+                    className: "relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 mx-auto mb-3 sm:mb-4 md:mb-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute inset-0 bg-gradient-to-br from-accent-gold/20 to-forest-600/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500 scale-110"
@@ -77,7 +77,7 @@ const LeadershipCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$
                                 src: photo,
                                 alt: name,
                                 fill: true,
-                                sizes: "(max-width: 640px) 128px, 160px",
+                                sizes: "(max-width: 640px) 96px, (max-width: 768px) 128px, 160px",
                                 className: "object-cover transition-transform duration-700 group-hover:scale-110",
                                 ...index < 2 ? {
                                     priority: true
@@ -101,9 +101,9 @@ const LeadershipCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative z-10 text-center mb-3 sm:mb-4",
+                    className: "relative z-10 text-center mb-2 sm:mb-3 md:mb-4",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-lg sm:text-2xl font-bold text-foreground font-display capitalize leading-tight group-hover:text-accent-gold/90 transition-colors duration-300",
+                        className: "text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-foreground font-display capitalize leading-tight group-hover:text-accent-gold/90 transition-colors duration-300",
                         children: name
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/leadership-card.tsx",
@@ -116,9 +116,9 @@ const LeadershipCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative z-10 text-center",
+                    className: "relative z-10 text-center px-2",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-muted-foreground text-sm sm:text-base leading-relaxed max-w-xs mx-auto",
+                        className: "text-muted-foreground text-xs sm:text-sm md:text-base leading-relaxed max-w-xs mx-auto",
                         children: description
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/leadership-card.tsx",
@@ -131,21 +131,21 @@ const LeadershipCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute top-4 sm:top-6 right-4 sm:right-6 w-2 h-2 bg-accent-gold/30 rounded-full animate-pulse opacity-60"
+                    className: "absolute top-3 sm:top-4 md:top-6 right-3 sm:right-4 md:right-6 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-accent-gold/30 rounded-full animate-pulse opacity-60"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/leadership-card.tsx",
                     lineNumber: 79,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute bottom-4 sm:bottom-6 left-4 sm:left-6 w-1.5 h-1.5 bg-accent-gold/20 rounded-full animate-pulse delay-1000 opacity-60"
+                    className: "absolute bottom-3 sm:bottom-4 md:bottom-6 left-3 sm:left-4 md:left-6 w-1 sm:w-1.5 h-1 sm:h-1.5 bg-accent-gold/20 rounded-full animate-pulse delay-1000 opacity-60"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/leadership-card.tsx",
                     lineNumber: 80,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0 rounded-2xl bg-gradient-to-br from-accent-gold/5 via-transparent to-forest-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    className: "absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-accent-gold/5 via-transparent to-forest-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/leadership-card.tsx",
                     lineNumber: 83,
@@ -720,19 +720,19 @@ __turbopack_context__.s([
 const appConfig = {
     leadership: [
         {
-            name: "al rashedul farabi subaru",
+            name: "Al Rashidus Sabru Farabi",
             role: "President",
             photo: "/leadership/president.jpg",
             description: "Leading IGACMUN Session III with diplomatic excellence"
         },
         {
-            name: "marzia jannat tayba",
+            name: "Marzia E Jannat",
             role: "Chairman",
             photo: "/leadership/chairman.jpg",
             description: "Guiding the strategic vision of our conference"
         },
         {
-            name: "rezwan rashed zindae",
+            name: "Rezwan Rashid Zidan",
             role: "Co-founder",
             photo: "/leadership/cofounder.jpg",
             description: "Building the foundation of youth diplomacy"
@@ -841,7 +841,7 @@ const appConfig = {
             link: "https://forms.gle/kruBU3Vr5336ZXXRA",
             title: "Payment Confirmation",
             description: "Submit your payment proof after registration",
-            deadline: "2025-12-20T23:59:59Z"
+            deadline: "2025-12-15T23:59:59Z"
         }
     },
     social: {
@@ -1233,7 +1233,7 @@ const ExecutiveTeamCard = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$proje
 ExecutiveTeamCard.displayName = 'ExecutiveTeamCard';
 function Home() {
     const { leadership, event, reveals, venue, committees } = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["appConfig"];
-    const scrollRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const carouselRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [showScrollArrow, setShowScrollArrow] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     const handleScroll = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
         const scrollPosition = window.scrollY;
@@ -2052,7 +2052,7 @@ function Home() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "py-24 relative",
+                className: "py-12 sm:py-16 md:py-20 lg:py-24 relative",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$background$2d$gradient$2d$animation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BackgroundGradientAnimation"], {
                         containerClassName: "absolute inset-0",
@@ -2080,10 +2080,10 @@ function Home() {
                                 viewport: {
                                     once: true
                                 },
-                                className: "text-center mb-16",
+                                className: "text-center mb-8 sm:mb-12 md:mb-16",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "font-display text-4xl md:text-5xl font-bold text-foreground mb-6",
+                                        className: "font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4",
                                         children: "A Message from the President"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
@@ -2091,7 +2091,7 @@ function Home() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-8"
+                                        className: "w-16 sm:w-20 md:w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-4 sm:mb-6 md:mb-8"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
                                         lineNumber: 445,
@@ -2104,7 +2104,7 @@ function Home() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "max-w-5xl mx-auto",
+                                className: "max-w-5xl mx-auto px-2 sm:px-4",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                     initial: {
                                         opacity: 0,
@@ -2121,17 +2121,17 @@ function Home() {
                                     viewport: {
                                         once: true
                                     },
-                                    className: "bg-card border border-accent-gold/20 rounded-2xl p-8 md:p-12 relative overflow-hidden",
+                                    className: "bg-card border border-accent-gold/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-br from-forest-800/20 to-forest-900/20 rounded-2xl"
+                                            className: "absolute inset-0 bg-gradient-to-br from-forest-800/20 to-forest-900/20 rounded-xl sm:rounded-2xl"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
                                             lineNumber: 457,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute top-6 left-6 text-6xl text-accent-gold/20 font-serif leading-none",
+                                            className: "absolute top-3 sm:top-4 md:top-6 left-3 sm:left-4 md:left-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-accent-gold/20 font-serif leading-none",
                                             children: "“"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
@@ -2139,7 +2139,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute bottom-6 right-6 text-6xl text-accent-gold/20 font-serif leading-none rotate-180",
+                                            className: "absolute bottom-3 sm:bottom-4 md:bottom-6 right-3 sm:right-4 md:right-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-accent-gold/20 font-serif leading-none rotate-180",
                                             children: "”"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
@@ -2165,10 +2165,10 @@ function Home() {
                                                     viewport: {
                                                         once: true
                                                     },
-                                                    className: "w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-accent-gold/40 shadow-xl",
+                                                    className: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full overflow-hidden border-2 sm:border-3 md:border-4 border-accent-gold/40 shadow-xl",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                         src: "/leadership/president.jpg",
-                                                        alt: "Al Rashedul Farabi Subaru - President",
+                                                        alt: "Al Rashidus Sabru Farabi - President",
                                                         width: 128,
                                                         height: 128,
                                                         className: "object-cover w-full h-full"
@@ -2198,10 +2198,10 @@ function Home() {
                                                     viewport: {
                                                         once: true
                                                     },
-                                                    className: "space-y-6",
+                                                    className: "space-y-4 sm:space-y-5 md:space-y-6 px-2 sm:px-4",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-lg md:text-xl text-muted-foreground leading-relaxed italic",
+                                                            className: "text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic",
                                                             children: "“Welcome to IGACMUN Session III: Game of Thorns. As we gather once again to engage in diplomatic discourse, we embark on a journey that will challenge our perspectives, sharpen our minds, and forge the leaders of tomorrow.”"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/page.tsx",
@@ -2209,7 +2209,7 @@ function Home() {
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-lg md:text-xl text-muted-foreground leading-relaxed italic",
+                                                            className: "text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic",
                                                             children: "“This session represents not just a conference, but a crucible where young minds will grapple with the world's most pressing challenges. Together, we will navigate the thorns of global politics to reach the roses of understanding and cooperation.”"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/page.tsx",
@@ -2238,18 +2238,18 @@ function Home() {
                                                     viewport: {
                                                         once: true
                                                     },
-                                                    className: "mt-8 pt-6 border-t border-accent-gold/20",
+                                                    className: "mt-6 sm:mt-7 md:mt-8 pt-4 sm:pt-5 md:pt-6 border-t border-accent-gold/20",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "font-display text-xl font-semibold text-accent-gold mb-1",
-                                                            children: "Al Rashedul Farabi Subaru"
+                                                            className: "font-display text-lg sm:text-xl md:text-xl font-semibold text-accent-gold mb-1",
+                                                            children: "Al Rashidus Sabru Farabi"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/page.tsx",
                                                             lineNumber: 509,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-muted-foreground",
+                                                            className: "text-sm sm:text-base text-muted-foreground",
                                                             children: "President, IGACMUN Session III"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/page.tsx",
@@ -2299,7 +2299,7 @@ function Home() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "py-24 relative",
+                className: "py-12 sm:py-16 md:py-20 lg:py-24 relative",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$elegant$2d$background$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ElegantBackground"], {
                         variant: "section"
@@ -2334,10 +2334,10 @@ function Home() {
                                 viewport: {
                                     once: true
                                 },
-                                className: "text-center mb-20",
+                                className: "text-center mb-12 sm:mb-16 md:mb-20",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "font-display text-4xl md:text-5xl font-bold text-foreground mb-6",
+                                        className: "font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4",
                                         children: "Meet Our Leadership"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
@@ -2345,7 +2345,7 @@ function Home() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed",
+                                        className: "text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4",
                                         children: "The visionary leaders driving diplomatic excellence and shaping the future of Model United Nations"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
@@ -2359,9 +2359,9 @@ function Home() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 xl:gap-20",
+                                className: "flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20",
                                 children: leadership.map((leader, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex-shrink-0",
+                                        className: "flex-shrink-0 w-full sm:w-auto max-w-sm",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$leadership$2d$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LeadershipCard"], {
                                             name: leader.name,
                                             role: leader.role,
@@ -2399,12 +2399,12 @@ function Home() {
                                 viewport: {
                                     once: true
                                 },
-                                className: "text-center mt-20",
+                                className: "text-center mt-12 sm:mt-16 md:mt-20",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "max-w-4xl mx-auto",
+                                    className: "max-w-4xl mx-auto px-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("blockquote", {
-                                            className: "text-lg md:text-xl text-muted-foreground italic leading-relaxed",
+                                            className: "text-base sm:text-lg md:text-xl text-muted-foreground italic leading-relaxed",
                                             children: "“Together, we forge the path toward diplomatic excellence, empowering the next generation of global leaders to tackle the world's most pressing challenges.”"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
@@ -2412,7 +2412,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mt-6 h-px w-24 bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto"
+                                            className: "mt-4 sm:mt-6 h-px w-16 sm:w-20 md:w-24 bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
                                             lineNumber: 576,
@@ -2445,13 +2445,13 @@ function Home() {
                                 viewport: {
                                     once: true
                                 },
-                                className: "mt-24",
+                                className: "mt-16 sm:mt-20 md:mt-24",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-center mb-16",
+                                        className: "text-center mb-8 sm:mb-12 md:mb-16 px-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "font-display text-3xl md:text-4xl font-bold text-foreground mb-6",
+                                                className: "font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6",
                                                 children: "The Core of International Global Affairs Council"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/page.tsx",
@@ -2459,7 +2459,7 @@ function Home() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-lg text-muted-foreground max-w-2xl mx-auto",
+                                                className: "text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed",
                                                 children: "The dedicated leadership team that manages everything and drives our mission forward"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/page.tsx",
@@ -2492,7 +2492,7 @@ function Home() {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "relative overflow-hidden",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                                ref: scrollRef,
+                                                ref: carouselRef,
                                                 className: "flex gap-6 pb-6",
                                                 animate: {
                                                     x: [
@@ -2501,14 +2501,16 @@ function Home() {
                                                     ]
                                                 },
                                                 transition: {
-                                                    duration: executiveTeam.length * 8,
+                                                    duration: executiveTeam.length * 5,
                                                     repeat: Infinity,
                                                     ease: "linear",
                                                     repeatType: "loop"
                                                 },
                                                 style: {
                                                     width: `${executiveTeam.length * 3 * 320}px`,
-                                                    willChange: "transform"
+                                                    willChange: "transform",
+                                                    backfaceVisibility: "hidden",
+                                                    perspective: 1000 // Smoother rendering
                                                 },
                                                 children: [
                                                     executiveTeam.map((leader, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ExecutiveTeamCard, {
@@ -2516,7 +2518,7 @@ function Home() {
                                                             index: index
                                                         }, `first-${leader.name}`, false, {
                                                             fileName: "[project]/src/app/page.tsx",
-                                                            lineNumber: 627,
+                                                            lineNumber: 628,
                                                             columnNumber: 21
                                                         }, this)),
                                                     executiveTeam.map((leader, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ExecutiveTeamCard, {
@@ -2524,7 +2526,7 @@ function Home() {
                                                             index: index
                                                         }, `second-${leader.name}`, false, {
                                                             fileName: "[project]/src/app/page.tsx",
-                                                            lineNumber: 630,
+                                                            lineNumber: 631,
                                                             columnNumber: 21
                                                         }, this)),
                                                     executiveTeam.map((leader, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ExecutiveTeamCard, {
@@ -2532,18 +2534,18 @@ function Home() {
                                                             index: index
                                                         }, `third-${leader.name}`, false, {
                                                             fileName: "[project]/src/app/page.tsx",
-                                                            lineNumber: 633,
+                                                            lineNumber: 634,
                                                             columnNumber: 21
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/page.tsx",
-                                                lineNumber: 608,
+                                                lineNumber: 607,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
-                                            lineNumber: 607,
+                                            lineNumber: 606,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
@@ -2604,7 +2606,7 @@ function Home() {
                                 {
                                     icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"],
                                     label: "Days",
-                                    value: "TBA"
+                                    value: "3"
                                 },
                                 {
                                     icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"],
