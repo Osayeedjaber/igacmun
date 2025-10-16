@@ -487,7 +487,7 @@ export default function Home() {
                   className="space-y-4 sm:space-y-5 md:space-y-6 px-2 sm:px-4"
                 >
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic">
-                    &ldquo;Welcome to IGACMUN Session III: Game of Thorns. As we gather once again to engage in 
+                    &ldquo;Welcome to IGACMUN Session III: . As we gather once again to engage in 
                     diplomatic discourse, we embark on a journey that will challenge our perspectives, 
                     sharpen our minds, and forge the leaders of tomorrow.&rdquo;
                   </p>

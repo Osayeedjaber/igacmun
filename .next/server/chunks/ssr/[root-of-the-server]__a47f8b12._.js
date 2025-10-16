@@ -179,7 +179,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layout$
 ;
 const metadata = {
     metadataBase: new URL(("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : 'http://localhost:3000'),
-    title: "IGACMUN Session III - Game of Thorns: Green Dominion",
+    title: "IGACMUN Session III - : Green Dominion",
     description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence. Join us for IGACMUN Session III.",
     keywords: [
         "MUN",
@@ -201,7 +201,7 @@ const metadata = {
         apple: "/apple-touch-icon.png"
     },
     openGraph: {
-        title: "IGACMUN Session III - Game of Thorns: Green Dominion",
+        title: "IGACMUN Session III - : Green Dominion",
         description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence.",
         type: "website",
         locale: "en_US",
@@ -216,7 +216,7 @@ const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "IGACMUN Session III - Game of Thorns: Green Dominion",
+        title: "IGACMUN Session III - : Green Dominion",
         description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence.",
         images: [
             "/logo.png"

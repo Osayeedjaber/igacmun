@@ -226,7 +226,7 @@ export default function AboutPage() {
                   },
                   {
                     year: "2025",
-                    title: "Session III - Game of Thorns",
+                    title: "Session III - ",
                     description: "Launching our most ambitious conference yet with enhanced diplomatic challenges and experiences."
                   }
                 ].map((milestone, index) => (

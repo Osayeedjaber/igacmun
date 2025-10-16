@@ -21,7 +21,7 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://igacmun-session-3.netlify.app' : 'http://localhost:3000'),
-  title: "IGACMUN Session III - Game of Thorns: Green Dominion",
+  title: "IGACMUN Session III - : Green Dominion",
   description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence. Join us for IGACMUN Session III.",
   keywords: ["MUN", "Model United Nations", "IGAC", "Conference", "Diplomacy", "Youth", "Bangladesh"],
   authors: [{ name: "IGAC" }],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "IGACMUN Session III - Game of Thorns: Green Dominion",
+    title: "IGACMUN Session III - : Green Dominion",
     description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence.",
     type: "website",
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "IGACMUN Session III - Game of Thorns: Green Dominion",
+    title: "IGACMUN Session III - : Green Dominion",
     description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence.",
     images: ["/logo.png"],
   },

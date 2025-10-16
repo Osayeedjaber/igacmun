@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Game of Thorns color palette
+        //  color palette
         forest: {
           50: '#f0f9f4',
           100: '#dcf2e4',
