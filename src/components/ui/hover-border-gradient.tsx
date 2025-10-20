@@ -34,14 +34,14 @@ export function HoverBorderGradient({
     RIGHT: "radial-gradient(16.2% 41.2% at 100% 50%, rgba(198, 168, 88, 1) 0%, rgba(198, 168, 88, 0) 100%)",
   }
 
-  const rotateDirection = (currentDirection: Direction): Direction => {
+  const rotateDirection = React.useCallback((currentDirection: Direction): Direction => {
     const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"]
     const currentIndex = directions.indexOf(currentDirection)
     const nextIndex = clockwise
       ? (currentIndex - 1 + directions.length) % directions.length
       : (currentIndex + 1) % directions.length
     return directions[nextIndex]
-  }
+  }, [clockwise])
 
   useEffect(() => {
     if (!hovered) {
@@ -50,7 +50,7 @@ export function HoverBorderGradient({
       }, duration)
       return () => clearInterval(interval)
     }
-  }, [hovered, duration, clockwise])
+  }, [hovered, duration, rotateDirection])
 
   return (
     <Tag

@@ -12,7 +12,7 @@ import { appConfig } from '@/lib/config'
 import { isRevealed } from '@/lib/utils'
 
 export default function Session3Page() {
-  const { leadership, reveals, venue, committees } = appConfig
+  const { reveals, venue } = appConfig
 
   return (
     <div className="min-h-screen">

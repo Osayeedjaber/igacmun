@@ -9,7 +9,6 @@ import { ElegantBackground } from '@/components/ui/elegant-background'
 import { appConfig } from '@/lib/config'
 
 export default function AboutPage() {
-  const { leadership } = appConfig
 
   return (
     <div className="min-h-screen py-20 relative">

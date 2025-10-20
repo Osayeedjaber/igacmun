@@ -98,7 +98,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "F:\\github\\igacmun",
+    "outputFileTracingRoot": "C:\\Users\\laiya\\OneDrive\\Desktop\\igacweb\\igacmun",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -287,10 +287,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "F:\\github\\igacmun"
+      "root": "C:\\Users\\laiya\\OneDrive\\Desktop\\igacweb\\igacmun"
     }
   },
-  "appDir": "F:\\github\\igacmun",
+  "appDir": "C:\\Users\\laiya\\OneDrive\\Desktop\\igacweb\\igacmun",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

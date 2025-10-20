@@ -7,7 +7,6 @@ interface BackgroundGradientAnimationProps {
   children?: React.ReactNode
   className?: string
   containerClassName?: string
-  colors?: string[]
   gradientBackgroundStart?: string
   gradientBackgroundEnd?: string
   firstColor?: string
@@ -16,8 +15,6 @@ interface BackgroundGradientAnimationProps {
   fourthColor?: string
   fifthColor?: string
   pointerColor?: string
-  size?: string
-  blendingValue?: string
   interactive?: boolean
 }
 
@@ -25,9 +22,6 @@ export function BackgroundGradientAnimation({
   children,
   className,
   containerClassName,
-  colors,
-  size,
-  blendingValue,
   gradientBackgroundStart = "rgb(10, 18, 13)",
   gradientBackgroundEnd = "rgb(15, 27, 20)",
   firstColor = "31, 95, 70", // Emerald RGB
@@ -43,23 +37,23 @@ export function BackgroundGradientAnimation({
   React.useEffect(() => {
     if (!interactive || !interactiveRef.current) return
 
+    const element = interactiveRef.current
+    
     const handleMouseMove = (e: MouseEvent) => {
-      if (!interactiveRef.current) return
+      if (!element) return
       
-      const rect = interactiveRef.current.getBoundingClientRect()
+      const rect = element.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
       
-      interactiveRef.current.style.setProperty('--mouse-x', `${x}px`)
-      interactiveRef.current.style.setProperty('--mouse-y', `${y}px`)
+      element.style.setProperty('--mouse-x', `${x}px`)
+      element.style.setProperty('--mouse-y', `${y}px`)
     }
 
-    interactiveRef.current.addEventListener('mousemove', handleMouseMove)
+    element.addEventListener('mousemove', handleMouseMove)
     
     return () => {
-      if (interactiveRef.current) {
-        interactiveRef.current.removeEventListener('mousemove', handleMouseMove)
-      }
+      element.removeEventListener('mousemove', handleMouseMove)
     }
   }, [interactive])
 

@@ -1,4 +1,4 @@
-// File: F:\github\igacmun\src\app\session-3\register\page.tsx
+// File: C:\Users\laiya\OneDrive\Desktop\igacweb\igacmun\src\app\session-3\register\page.tsx
 import * as entry from '../../../../../src/app/session-3/register/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
