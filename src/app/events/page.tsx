@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 import { Calendar, Users, MapPin, Award, ExternalLink, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ShinyText } from '@/components/ui/shiny-text'
-import { GlareCard } from '@/components/ui/glare-card'
 import { appConfig } from '@/lib/config'
 
 export default function EventsPage() {

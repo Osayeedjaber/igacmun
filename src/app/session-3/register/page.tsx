@@ -111,10 +111,9 @@ export default function RegisterPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedRegistrationTypes.map((type, index) => {
+          {sortedRegistrationTypes.map((type) => {
             const { form } = type
             const Icon = type.icon
-            const isRegular = type.key === 'regular'
             
             return (
               <div
@@ -354,7 +353,7 @@ export default function RegisterPage() {
                 About IGACMUN Session III
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Session III is the next chapter of IGAC's flagship conference</li>
+                <li>• Session III is the next chapter of IGAC&apos;s flagship conference</li>
                 <li>• Session II successfully hosted 1700+ delegates in 2024</li>
                 <li>• Building on proven excellence with enhanced experiences</li>
                 <li>• Taking place in December 2025 at AIUB Campus</li>

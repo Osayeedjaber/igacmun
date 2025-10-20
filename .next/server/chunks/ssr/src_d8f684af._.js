@@ -92,20 +92,20 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                             className: "h-12 w-48 bg-accent-gold/20 rounded-lg animate-pulse"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 111,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-4 w-32 bg-muted/20 rounded animate-pulse mx-auto"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 112,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ui/countdown.tsx",
-                    lineNumber: 110,
+                    lineNumber: 109,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -116,18 +116,18 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                             className: "h-20 w-20 bg-card/50 border border-accent-gold/20 rounded-lg animate-pulse"
                         }, i, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 116,
+                            lineNumber: 115,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/countdown.tsx",
-                    lineNumber: 114,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ui/countdown.tsx",
-            lineNumber: 105,
+            lineNumber: 104,
             columnNumber: 7
         }, this);
     }
@@ -160,7 +160,7 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                     className: "absolute inset-0 bg-gradient-to-br from-accent-gold/5 via-transparent to-forest-900/10 rounded-lg"
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/countdown.tsx",
-                    lineNumber: 142,
+                    lineNumber: 141,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -171,7 +171,7 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                             children: title
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 145,
+                            lineNumber: 144,
                             columnNumber: 9
                         }, this),
                         description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -179,13 +179,13 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                             children: description
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 149,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ui/countdown.tsx",
-                    lineNumber: 144,
+                    lineNumber: 143,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -203,25 +203,25 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                                                 children: unit.value.toString().padStart(2, '0')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/countdown.tsx",
-                                                lineNumber: 163,
+                                                lineNumber: 162,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/countdown.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 161,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-gradient-to-br from-accent-gold/10 to-transparent rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ui/countdown.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/ui/countdown.tsx",
-                                    lineNumber: 161,
+                                    lineNumber: 160,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -229,18 +229,18 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                                     children: unit.label
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/countdown.tsx",
-                                    lineNumber: 169,
+                                    lineNumber: 168,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, unit.label, true, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 157,
+                            lineNumber: 156,
                             columnNumber: 11
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/countdown.tsx",
-                    lineNumber: 155,
+                    lineNumber: 154,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -250,33 +250,33 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
                             className: "absolute top-1/4 left-1/4 w-1 h-1 bg-accent-gold/40 rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 178,
+                            lineNumber: 177,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-3/4 right-1/4 w-1 h-1 bg-accent-gold/30 rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 179,
+                            lineNumber: 178,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute bottom-1/4 left-1/3 w-1 h-1 bg-accent-gold/35 rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/countdown.tsx",
-                            lineNumber: 180,
+                            lineNumber: 179,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/ui/countdown.tsx",
-                    lineNumber: 177,
+                    lineNumber: 176,
                     columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/ui/countdown.tsx",
-            lineNumber: 136,
+            lineNumber: 135,
             columnNumber: 5
         }, this);
     if (showOverlay) {
@@ -284,18 +284,18 @@ function Countdown({ revealAt, title = "Coming Soon", description, className, on
             className: "fixed inset-0 bg-background/95 backdrop-blur-md z-50 flex items-center justify-center",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CountdownContent, {}, void 0, false, {
                 fileName: "[project]/src/components/ui/countdown.tsx",
-                lineNumber: 188,
+                lineNumber: 187,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/countdown.tsx",
-            lineNumber: 187,
+            lineNumber: 186,
             columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CountdownContent, {}, void 0, false, {
         fileName: "[project]/src/components/ui/countdown.tsx",
-        lineNumber: 193,
+        lineNumber: 192,
         columnNumber: 10
     }, this);
 }
@@ -334,12 +334,12 @@ function CountdownOverlay({ revealAt, title, description, children, className })
                 children: "Loading..."
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/countdown.tsx",
-                lineNumber: 228,
+                lineNumber: 227,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/countdown.tsx",
-            lineNumber: 227,
+            lineNumber: 226,
             columnNumber: 7
         }, this);
     }
@@ -358,12 +358,12 @@ function CountdownOverlay({ revealAt, title, description, children, className })
             onReveal: ()=>setIsRevealed(true)
         }, void 0, false, {
             fileName: "[project]/src/components/ui/countdown.tsx",
-            lineNumber: 239,
+            lineNumber: 238,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/ui/countdown.tsx",
-        lineNumber: 238,
+        lineNumber: 237,
         columnNumber: 5
     }, this);
 }
@@ -809,7 +809,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 function Session3Page() {
-    const { event, reveals, venue, forms } = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["appConfig"];
+    const { leadership, reveals, venue, committees } = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["appConfig"];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen",
         children: [
@@ -820,21 +820,21 @@ function Session3Page() {
                         className: "absolute inset-0 bg-gradient-to-br from-background via-forest-950/40 to-background"
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 27,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(198,168,88,0.08),transparent_60%)]"
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 28,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-[linear-gradient(to_right,transparent_0%,rgba(198,168,88,0.02)_50%,transparent_100%)]"
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 29,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -845,7 +845,7 @@ function Session3Page() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 32,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -855,20 +855,20 @@ function Session3Page() {
                                 className: "absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-accent-gold/5 to-transparent rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                lineNumber: 36,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-forest-600/10 to-transparent rounded-full blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                lineNumber: 37,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 35,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -908,17 +908,17 @@ function Session3Page() {
                                             children: "IGACMUN SESSION III"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 55,
+                                            lineNumber: 50,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 49,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 48,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -941,7 +941,7 @@ function Session3Page() {
                                             children: "SESSION III"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 56,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -966,7 +966,7 @@ function Session3Page() {
                                                             children: "United"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 76,
+                                                            lineNumber: 71,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -974,14 +974,14 @@ function Session3Page() {
                                                             children: "|"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 77,
+                                                            lineNumber: 72,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "Transformation"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 78,
+                                                            lineNumber: 73,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -989,20 +989,20 @@ function Session3Page() {
                                                             children: "|"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 79,
+                                                            lineNumber: 74,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: "Innovation"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 80,
+                                                            lineNumber: 75,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 70,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1010,13 +1010,13 @@ function Session3Page() {
                                                     children: "December 2025"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 77,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 69,
+                                            lineNumber: 64,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -1036,13 +1036,13 @@ function Session3Page() {
                                             children: "The next chapter of South East Asia's premier Model United Nations conference"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 79,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 55,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1075,23 +1075,23 @@ function Session3Page() {
                                                             className: "ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 105,
+                                                            lineNumber: 100,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 103,
+                                                    lineNumber: 98,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 97,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 101,
+                                            lineNumber: 96,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$magnetic$2d$element$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MagneticElement"], {
@@ -1105,40 +1105,40 @@ function Session3Page() {
                                                     children: "View Committees"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 106,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 105,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 109,
+                                            lineNumber: 104,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 95,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/page.tsx",
-                            lineNumber: 41,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 40,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/session-3/page.tsx",
-                lineNumber: 25,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1148,7 +1148,7 @@ function Session3Page() {
                         className: "absolute inset-0 bg-gradient-to-b from-background to-forest-950/50"
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 123,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1182,12 +1182,12 @@ function Session3Page() {
                                                         children: "CONFERENCE OVERVIEW"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 137,
+                                                        lineNumber: 132,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 136,
+                                                    lineNumber: 131,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1195,7 +1195,7 @@ function Session3Page() {
                                                     children: "The Next Chapter in Diplomatic Excellence"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 134,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1203,13 +1203,13 @@ function Session3Page() {
                                                     children: "Building on the success of IGACMUN Session II which hosted 1700+ delegates, Session III aims to set a new standard for Model United Nations conferences in South East Asia. Join us for an unprecedented diplomatic experience in December 2025."
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 142,
+                                                    lineNumber: 137,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 130,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1254,7 +1254,7 @@ function Session3Page() {
                                                             children: stat.number
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 162,
+                                                            lineNumber: 157,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1262,24 +1262,24 @@ function Session3Page() {
                                                             children: stat.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 163,
+                                                            lineNumber: 158,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, stat.label, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 149,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 147,
+                                            lineNumber: 142,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1310,14 +1310,14 @@ function Session3Page() {
                                                     sizes: "(max-width: 1024px) 100vw, 50vw"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 178,
+                                                    lineNumber: 173,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute inset-0 bg-gradient-to-t from-forest-900/80 to-transparent"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 185,
+                                                    lineNumber: 180,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1330,7 +1330,7 @@ function Session3Page() {
                                                                 children: "December 2025"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 188,
+                                                                lineNumber: 183,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1338,24 +1338,24 @@ function Session3Page() {
                                                                 children: "American International University-Bangladesh"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 189,
+                                                                lineNumber: 184,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 182,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 186,
+                                                    lineNumber: 181,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 172,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1397,12 +1397,12 @@ function Session3Page() {
                                                                 className: "h-5 w-5 text-accent-gold"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 209,
+                                                                lineNumber: 204,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 208,
+                                                            lineNumber: 203,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1410,41 +1410,41 @@ function Session3Page() {
                                                             children: item.text
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 211,
+                                                            lineNumber: 206,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, item.text, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 200,
+                                                    lineNumber: 195,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 194,
+                                            lineNumber: 189,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/page.tsx",
-                            lineNumber: 126,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/session-3/page.tsx",
-                        lineNumber: 125,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/session-3/page.tsx",
-                lineNumber: 122,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1474,7 +1474,7 @@ function Session3Page() {
                                     children: "Conference Information"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 230,
+                                    lineNumber: 225,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1482,13 +1482,13 @@ function Session3Page() {
                                     children: "Quick access to all essential conference details"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 233,
+                                    lineNumber: 228,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/page.tsx",
-                            lineNumber: 223,
+                            lineNumber: 218,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1525,14 +1525,14 @@ function Session3Page() {
                                                             sizes: "(max-width: 768px) 100vw, 50vw"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 252,
+                                                            lineNumber: 247,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 259,
+                                                            lineNumber: 254,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1545,7 +1545,7 @@ function Session3Page() {
                                                                         children: venue.fullName
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 262,
+                                                                        lineNumber: 257,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1553,24 +1553,24 @@ function Session3Page() {
                                                                         children: "AIUB Campus, Dhaka"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 265,
+                                                                        lineNumber: 260,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 261,
+                                                                lineNumber: 256,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 260,
+                                                            lineNumber: 255,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 251,
+                                                    lineNumber: 246,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1588,12 +1588,12 @@ function Session3Page() {
                                                                                 className: "h-7 w-7 text-accent-gold"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 276,
+                                                                                lineNumber: 271,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                                            lineNumber: 275,
+                                                                            lineNumber: 270,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1601,13 +1601,13 @@ function Session3Page() {
                                                                             children: "Conference Venue"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                                            lineNumber: 278,
+                                                                            lineNumber: 273,
                                                                             columnNumber: 23
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                                    lineNumber: 274,
+                                                                    lineNumber: 269,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["isRevealed"])(reveals.venue.revealAt) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1615,13 +1615,13 @@ function Session3Page() {
                                                                     children: "Confirmed"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                                    lineNumber: 281,
+                                                                    lineNumber: 276,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 273,
+                                                            lineNumber: 268,
                                                             columnNumber: 19
                                                         }, this),
                                                         !(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["isRevealed"])(reveals.venue.revealAt) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$countdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Countdown"], {
@@ -1630,7 +1630,7 @@ function Session3Page() {
                                                             description: ""
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 288,
+                                                            lineNumber: 283,
                                                             columnNumber: 21
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "space-y-4",
@@ -1640,7 +1640,7 @@ function Session3Page() {
                                                                     children: "World-class venue for diplomatic excellence"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                                    lineNumber: 295,
+                                                                    lineNumber: 290,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1652,30 +1652,30 @@ function Session3Page() {
                                                                         children: "View Full Venue Details"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 299,
+                                                                        lineNumber: 294,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                                    lineNumber: 298,
+                                                                    lineNumber: 293,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 294,
+                                                            lineNumber: 289,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 272,
+                                                    lineNumber: 267,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 242,
+                                            lineNumber: 237,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1710,12 +1710,12 @@ function Session3Page() {
                                                                                 className: "h-7 w-7 text-accent-gold"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 320,
+                                                                                lineNumber: 315,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                                            lineNumber: 319,
+                                                                            lineNumber: 314,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1723,13 +1723,13 @@ function Session3Page() {
                                                                             children: "Registration"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                                            lineNumber: 322,
+                                                                            lineNumber: 317,
                                                                             columnNumber: 23
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                                    lineNumber: 318,
+                                                                    lineNumber: 313,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1737,13 +1737,13 @@ function Session3Page() {
                                                                     children: "NOW OPEN"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                                    lineNumber: 324,
+                                                                    lineNumber: 319,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 317,
+                                                            lineNumber: 312,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1751,13 +1751,13 @@ function Session3Page() {
                                                             children: "Multiple tiers available"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 328,
+                                                            lineNumber: 323,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 316,
+                                                    lineNumber: 311,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1775,7 +1775,7 @@ function Session3Page() {
                                                                                 children: "Regular Delegates"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 335,
+                                                                                lineNumber: 330,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1783,13 +1783,13 @@ function Session3Page() {
                                                                                 children: "Standard registration"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 336,
+                                                                                lineNumber: 331,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 334,
+                                                                        lineNumber: 329,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1797,18 +1797,18 @@ function Session3Page() {
                                                                         children: "Open"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 338,
+                                                                        lineNumber: 333,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 333,
+                                                                lineNumber: 328,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 332,
+                                                            lineNumber: 327,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1823,7 +1823,7 @@ function Session3Page() {
                                                                                 children: "Campus Ambassadors"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 345,
+                                                                                lineNumber: 340,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1831,13 +1831,13 @@ function Session3Page() {
                                                                                 children: "Represent your institution"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 346,
+                                                                                lineNumber: 341,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 344,
+                                                                        lineNumber: 339,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1845,18 +1845,18 @@ function Session3Page() {
                                                                         children: "Open"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 348,
+                                                                        lineNumber: 343,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 343,
+                                                                lineNumber: 338,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 342,
+                                                            lineNumber: 337,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1871,7 +1871,7 @@ function Session3Page() {
                                                                                 children: "Executive Board"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 355,
+                                                                                lineNumber: 350,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1879,13 +1879,13 @@ function Session3Page() {
                                                                                 children: "Leadership positions"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 356,
+                                                                                lineNumber: 351,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 354,
+                                                                        lineNumber: 349,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1893,18 +1893,18 @@ function Session3Page() {
                                                                         children: "Open"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 358,
+                                                                        lineNumber: 353,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 353,
+                                                                lineNumber: 348,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 352,
+                                                            lineNumber: 347,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1917,30 +1917,30 @@ function Session3Page() {
                                                                 children: "Register Now"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 363,
+                                                                lineNumber: 358,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                            lineNumber: 362,
+                                                            lineNumber: 357,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                                    lineNumber: 331,
+                                                    lineNumber: 326,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 309,
+                                            lineNumber: 304,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 240,
+                                    lineNumber: 235,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1978,12 +1978,12 @@ function Session3Page() {
                                                                             className: "h-7 w-7 text-accent-gold"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                                            lineNumber: 385,
+                                                                            lineNumber: 380,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 384,
+                                                                        lineNumber: 379,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1993,7 +1993,7 @@ function Session3Page() {
                                                                                 children: "Schedule"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 388,
+                                                                                lineNumber: 383,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2001,19 +2001,19 @@ function Session3Page() {
                                                                                 children: "3-Day Conference"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 389,
+                                                                                lineNumber: 384,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 387,
+                                                                        lineNumber: 382,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 383,
+                                                                lineNumber: 378,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2021,13 +2021,13 @@ function Session3Page() {
                                                                 children: "Coming Soon"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 392,
+                                                                lineNumber: 387,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 382,
+                                                        lineNumber: 377,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$countdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Countdown"], {
@@ -2036,18 +2036,18 @@ function Session3Page() {
                                                         description: ""
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 396,
+                                                        lineNumber: 391,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                lineNumber: 381,
+                                                lineNumber: 376,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 374,
+                                            lineNumber: 369,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2082,12 +2082,12 @@ function Session3Page() {
                                                                             className: "h-7 w-7 text-accent-gold"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                                                            lineNumber: 416,
+                                                                            lineNumber: 411,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 415,
+                                                                        lineNumber: 410,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2097,7 +2097,7 @@ function Session3Page() {
                                                                                 children: "Committees"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 419,
+                                                                                lineNumber: 414,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2105,19 +2105,19 @@ function Session3Page() {
                                                                                 children: "10 Diplomatic Arenas"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                                lineNumber: 420,
+                                                                                lineNumber: 415,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                                        lineNumber: 418,
+                                                                        lineNumber: 413,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 414,
+                                                                lineNumber: 409,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2125,13 +2125,13 @@ function Session3Page() {
                                                                 children: "Coming Soon"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                                lineNumber: 423,
+                                                                lineNumber: 418,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 413,
+                                                        lineNumber: 408,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$countdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Countdown"], {
@@ -2140,30 +2140,30 @@ function Session3Page() {
                                                         description: ""
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 427,
+                                                        lineNumber: 422,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                lineNumber: 412,
+                                                lineNumber: 407,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 405,
+                                            lineNumber: 400,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 372,
+                                    lineNumber: 367,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/page.tsx",
-                            lineNumber: 238,
+                            lineNumber: 233,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2189,7 +2189,7 @@ function Session3Page() {
                                     children: "Ready to Join?"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 445,
+                                    lineNumber: 440,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2197,7 +2197,7 @@ function Session3Page() {
                                     children: "Be part of the next chapter. Registration is now open for delegates, campus ambassadors, and executive board positions for Session III in December 2025."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 448,
+                                    lineNumber: 443,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2216,18 +2216,18 @@ function Session3Page() {
                                                         className: "ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/page.tsx",
-                                                        lineNumber: 455,
+                                                        lineNumber: 450,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                lineNumber: 453,
+                                                lineNumber: 448,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 452,
+                                            lineNumber: 447,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2239,41 +2239,41 @@ function Session3Page() {
                                                 children: "Contact Us"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/session-3/page.tsx",
-                                                lineNumber: 459,
+                                                lineNumber: 454,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/page.tsx",
-                                            lineNumber: 458,
+                                            lineNumber: 453,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/page.tsx",
-                                    lineNumber: 451,
+                                    lineNumber: 446,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/page.tsx",
-                            lineNumber: 438,
+                            lineNumber: 433,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/session-3/page.tsx",
-                    lineNumber: 222,
+                    lineNumber: 217,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/session-3/page.tsx",
-                lineNumber: 221,
+                lineNumber: 216,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/session-3/page.tsx",
-        lineNumber: 23,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }

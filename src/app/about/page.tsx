@@ -9,7 +9,7 @@ import { ElegantBackground } from '@/components/ui/elegant-background'
 import { appConfig } from '@/lib/config'
 
 export default function AboutPage() {
-  const { social } = appConfig
+  const { leadership } = appConfig
 
   return (
     <div className="min-h-screen py-20 relative">
@@ -241,7 +241,7 @@ export default function AboutPage() {
                     title: "IGACMUN Session III",
                     description: "Launching our most ambitious conference yet with enhanced diplomatic challenges, experiences, and building upon our legacy of excellence."
                   }
-                ].map((milestone, index) => (
+                ].map((milestone) => (
                   <div key={milestone.year} className="relative flex items-start space-x-6">
                     {/* Timeline dot */}
                     <div className="relative z-10 flex-shrink-0 hidden md:block">

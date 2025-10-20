@@ -4,20 +4,15 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Shield, Sword, Users, Calendar, MapPin, Award, ArrowRight } from 'lucide-react'
+import { Shield, Users, Calendar, MapPin, Award, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Countdown } from '@/components/ui/countdown'
-import { CardSpotlight } from '@/components/ui/card-spotlight'
-import { ShinyText } from '@/components/ui/shiny-text'
-import { GlareCard } from '@/components/ui/glare-card'
 import { MagneticElement } from '@/components/ui/magnetic-element'
-import { SplitText } from '@/components/ui/split-text'
-import { BentoGrid, BentoCard } from '@/components/ui/magic-bento'
 import { appConfig } from '@/lib/config'
 import { isRevealed } from '@/lib/utils'
 
 export default function Session3Page() {
-  const { event, reveals, venue, forms } = appConfig
+  const { leadership, reveals, venue, committees } = appConfig
 
   return (
     <div className="min-h-screen">
@@ -87,7 +82,7 @@ export default function Session3Page() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
               >
-                The next chapter of South East Asia's premier Model United Nations conference
+                The next chapter of South East Asia&apos;s premier Model United Nations conference
               </motion.p>
             </div>
 

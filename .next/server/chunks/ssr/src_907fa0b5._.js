@@ -691,10 +691,9 @@ function RegisterPage() {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
-                    children: sortedRegistrationTypes.map((type, index)=>{
+                    children: sortedRegistrationTypes.map((type)=>{
                         const { form } = type;
                         const Icon = type.icon;
-                        const isRegular = type.key === 'regular';
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: `
                   relative bg-gradient-to-br from-card to-forest-900/20 border-2 border-accent-gold/30 
@@ -711,17 +710,17 @@ function RegisterPage() {
                                             className: "h-8 w-8 text-accent-gold"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 132,
+                                            lineNumber: 131,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 130,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 130,
+                                    lineNumber: 129,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -732,7 +731,7 @@ function RegisterPage() {
                                             children: form.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 137,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -740,7 +739,7 @@ function RegisterPage() {
                                             children: form.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 140,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -751,7 +750,7 @@ function RegisterPage() {
                                                         className: "h-4 w-4 text-green-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 147,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -759,7 +758,7 @@ function RegisterPage() {
                                                         children: "Available"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 149,
+                                                        lineNumber: 148,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
@@ -769,7 +768,7 @@ function RegisterPage() {
                                                         className: "h-4 w-4 text-muted-foreground"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 153,
+                                                        lineNumber: 152,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -777,14 +776,14 @@ function RegisterPage() {
                                                         children: "Not Available"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 153,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 144,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -799,40 +798,40 @@ function RegisterPage() {
                                                         className: "ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 172,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true) : "Coming Soon"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 158,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 136,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `absolute top-4 right-4 w-2 h-2 ${type.flashMode ? 'bg-red-400/50' : 'bg-accent-gold/30'} rounded-full animate-pulse`
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 181,
+                                    lineNumber: 180,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `absolute bottom-4 left-4 w-1 h-1 ${type.flashMode ? 'bg-red-400/30' : 'bg-accent-gold/20'} rounded-full`
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 184,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, type.key, true, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 120,
+                            lineNumber: 119,
                             columnNumber: 15
                         }, this);
                     })
@@ -868,25 +867,25 @@ function RegisterPage() {
                                                 className: "h-16 w-16 text-accent-gold"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                lineNumber: 203,
+                                                lineNumber: 202,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 203,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 201,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 201,
+                                    lineNumber: 200,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -894,7 +893,7 @@ function RegisterPage() {
                                     children: "Payment Confirmation"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 207,
+                                    lineNumber: 206,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -902,13 +901,13 @@ function RegisterPage() {
                                     children: "Complete your registration by submitting payment proof. Follow the instructions below for a smooth process."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 210,
+                                    lineNumber: 209,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 200,
+                            lineNumber: 199,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -926,12 +925,12 @@ function RegisterPage() {
                                                         className: "h-6 w-6 text-forest-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 219,
+                                                        lineNumber: 218,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 217,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -939,13 +938,13 @@ function RegisterPage() {
                                                     children: "Payment Instructions"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 221,
+                                                    lineNumber: 220,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 217,
+                                            lineNumber: 216,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -961,12 +960,12 @@ function RegisterPage() {
                                                                 children: "1"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                lineNumber: 228,
+                                                                lineNumber: 227,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 227,
+                                                            lineNumber: 226,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -976,7 +975,7 @@ function RegisterPage() {
                                                                     children: "Complete Registration"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 231,
+                                                                    lineNumber: 230,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -984,19 +983,19 @@ function RegisterPage() {
                                                                     children: "Fill out your registration form first"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 232,
+                                                                    lineNumber: 231,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 230,
+                                                            lineNumber: 229,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 225,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1009,12 +1008,12 @@ function RegisterPage() {
                                                                 children: "2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                lineNumber: 237,
+                                                                lineNumber: 236,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 236,
+                                                            lineNumber: 235,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1024,7 +1023,7 @@ function RegisterPage() {
                                                                     children: "Make Payment"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 240,
+                                                                    lineNumber: 239,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1032,19 +1031,19 @@ function RegisterPage() {
                                                                     children: "Use the payment details provided in confirmation email"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 241,
+                                                                    lineNumber: 240,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 239,
+                                                            lineNumber: 238,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 235,
+                                                    lineNumber: 234,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1057,12 +1056,12 @@ function RegisterPage() {
                                                                 children: "3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                lineNumber: 246,
+                                                                lineNumber: 245,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 245,
+                                                            lineNumber: 244,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1072,7 +1071,7 @@ function RegisterPage() {
                                                                     children: "Submit Proof"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 249,
+                                                                    lineNumber: 248,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1080,19 +1079,19 @@ function RegisterPage() {
                                                                     children: "Upload screenshot or receipt using the form"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 250,
+                                                                    lineNumber: 249,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 248,
+                                                            lineNumber: 247,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 244,
+                                                    lineNumber: 243,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1105,12 +1104,12 @@ function RegisterPage() {
                                                                 children: "4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                lineNumber: 255,
+                                                                lineNumber: 254,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 254,
+                                                            lineNumber: 253,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1120,7 +1119,7 @@ function RegisterPage() {
                                                                     children: "Confirmation"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 258,
+                                                                    lineNumber: 257,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1128,25 +1127,25 @@ function RegisterPage() {
                                                                     children: "Receive final confirmation within 24-48 hours"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                    lineNumber: 259,
+                                                                    lineNumber: 258,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 257,
+                                                            lineNumber: 256,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 253,
+                                                    lineNumber: 252,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 225,
+                                            lineNumber: 224,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1158,7 +1157,7 @@ function RegisterPage() {
                                                         className: "h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 266,
+                                                        lineNumber: 265,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1168,7 +1167,7 @@ function RegisterPage() {
                                                                 children: "Important Note"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                lineNumber: 268,
+                                                                lineNumber: 267,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1176,30 +1175,30 @@ function RegisterPage() {
                                                                 children: "Payment confirmation must be submitted before the deadline. Late submissions may not be processed."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                lineNumber: 269,
+                                                                lineNumber: 268,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 267,
+                                                        lineNumber: 266,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                lineNumber: 265,
+                                                lineNumber: 264,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 264,
+                                            lineNumber: 263,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 215,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1214,12 +1213,12 @@ function RegisterPage() {
                                                         className: "h-6 w-6 text-accent-gold"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 280,
+                                                        lineNumber: 279,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 279,
+                                                    lineNumber: 278,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1229,7 +1228,7 @@ function RegisterPage() {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["appConfig"].forms.paymentConfirmation.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 283,
+                                                            lineNumber: 282,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1237,19 +1236,19 @@ function RegisterPage() {
                                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["appConfig"].forms.paymentConfirmation.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 286,
+                                                            lineNumber: 285,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 281,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 278,
+                                            lineNumber: 277,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1263,7 +1262,7 @@ function RegisterPage() {
                                                             children: "Deadline:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 294,
+                                                            lineNumber: 293,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1275,13 +1274,13 @@ function RegisterPage() {
                                                             })
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 295,
+                                                            lineNumber: 294,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 293,
+                                                    lineNumber: 292,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1292,7 +1291,7 @@ function RegisterPage() {
                                                             children: "Status:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 304,
+                                                            lineNumber: 303,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1303,7 +1302,7 @@ function RegisterPage() {
                                                                         className: "h-4 w-4 text-green-500"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                        lineNumber: 308,
+                                                                        lineNumber: 307,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1311,7 +1310,7 @@ function RegisterPage() {
                                                                         children: "Available"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                        lineNumber: 309,
+                                                                        lineNumber: 308,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
@@ -1321,7 +1320,7 @@ function RegisterPage() {
                                                                         className: "h-4 w-4 text-muted-foreground"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                        lineNumber: 313,
+                                                                        lineNumber: 312,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1329,26 +1328,26 @@ function RegisterPage() {
                                                                         children: "Not Available"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                                        lineNumber: 314,
+                                                                        lineNumber: 313,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                            lineNumber: 305,
+                                                            lineNumber: 304,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 303,
+                                                    lineNumber: 302,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 292,
+                                            lineNumber: 291,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1362,7 +1361,7 @@ function RegisterPage() {
                                                         className: "mr-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 329,
+                                                        lineNumber: 328,
                                                         columnNumber: 21
                                                     }, this),
                                                     "Submit Payment Proof",
@@ -1370,32 +1369,32 @@ function RegisterPage() {
                                                         className: "ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                        lineNumber: 331,
+                                                        lineNumber: 330,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true) : "Coming Soon"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 321,
+                                            lineNumber: 320,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 277,
+                                    lineNumber: 276,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 215,
+                            lineNumber: 214,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                    lineNumber: 194,
+                    lineNumber: 193,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1418,7 +1417,7 @@ function RegisterPage() {
                             children: "Important Information"
                         }, void 0, false, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 347,
+                            lineNumber: 346,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1434,14 +1433,14 @@ function RegisterPage() {
                                                     className: "h-5 w-5 text-accent-gold mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 353,
+                                                    lineNumber: 352,
                                                     columnNumber: 17
                                                 }, this),
                                                 "About IGACMUN Session III"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 352,
+                                            lineNumber: 351,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1451,47 +1450,47 @@ function RegisterPage() {
                                                     children: "• Session III is the next chapter of IGAC's flagship conference"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 357,
+                                                    lineNumber: 356,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Session II successfully hosted 1700+ delegates in 2024"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 358,
+                                                    lineNumber: 357,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Building on proven excellence with enhanced experiences"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 359,
+                                                    lineNumber: 358,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Taking place in December 2025 at AIUB Campus"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 360,
+                                                    lineNumber: 359,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• All registrations processed through Google Forms"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 361,
+                                                    lineNumber: 360,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 356,
+                                            lineNumber: 355,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 350,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1504,14 +1503,14 @@ function RegisterPage() {
                                                     className: "h-5 w-5 text-accent-gold mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 366,
+                                                    lineNumber: 365,
                                                     columnNumber: 17
                                                 }, this),
                                                 "What's Included"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 365,
+                                            lineNumber: 364,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1521,66 +1520,66 @@ function RegisterPage() {
                                                     children: "• Full access to all committee sessions"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 370,
+                                                    lineNumber: 369,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Conference materials and delegate handbook"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 371,
+                                                    lineNumber: 370,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Networking with delegates across the region"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 372,
+                                                    lineNumber: 371,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Certificate of participation"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 373,
+                                                    lineNumber: 372,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Opportunity for awards and recognition"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 374,
+                                                    lineNumber: 373,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                     children: "• Meals and refreshments during conference days"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                                    lineNumber: 375,
+                                                    lineNumber: 374,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                                            lineNumber: 369,
+                                            lineNumber: 368,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                                    lineNumber: 364,
+                                    lineNumber: 363,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 350,
+                            lineNumber: 349,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                    lineNumber: 341,
+                    lineNumber: 340,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1603,7 +1602,7 @@ function RegisterPage() {
                             children: "Need help with registration? Have questions about the conference?"
                         }, void 0, false, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 387,
+                            lineNumber: 386,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1614,18 +1613,18 @@ function RegisterPage() {
                                 children: "Contact Us"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/session-3/register/page.tsx",
-                                lineNumber: 391,
+                                lineNumber: 390,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/session-3/register/page.tsx",
-                            lineNumber: 390,
+                            lineNumber: 389,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/session-3/register/page.tsx",
-                    lineNumber: 381,
+                    lineNumber: 380,
                     columnNumber: 9
                 }, this)
             ]

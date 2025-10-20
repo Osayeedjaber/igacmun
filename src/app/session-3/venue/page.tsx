@@ -4,12 +4,11 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { MapPin, Building, Car, Utensils, Wifi, Users, Phone } from 'lucide-react'
-import { CountdownOverlay } from '@/components/ui/countdown'
 import { Button } from '@/components/ui/button'
 import { appConfig } from '@/lib/config'
 
 export default function VenuePage() {
-  const { reveals, venue } = appConfig
+  const { venue } = appConfig
 
   return (
     <div className="min-h-screen py-20">
