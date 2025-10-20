@@ -3,14 +3,17 @@
 import React, { useRef, useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion, AnimatePresence, PanInfo } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Users, Calendar, MapPin, Award, Target, Globe, Handshake, Lightbulb, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { LeadershipCard } from '@/components/ui/leadership-card'
 import { Countdown } from '@/components/ui/countdown'
-import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation'
 import { ElegantBackground, ElegantDivider } from '@/components/ui/elegant-background'
-import { Logo } from '@/components/ui/logo'
+import { ShinyText } from '@/components/ui/shiny-text'
+import { MagneticElement } from '@/components/ui/magnetic-element'
+import { GlareCard } from '@/components/ui/glare-card'
+import { SplitText } from '@/components/ui/split-text'
+import { BentoGrid, BentoCard } from '@/components/ui/magic-bento'
 import { appConfig } from '@/lib/config'
 import { isRevealed } from '@/lib/utils'
 
@@ -103,14 +106,19 @@ export default function Home() {
       image: "/Joint secretaries/GENERAL SECRETARY _ ABID FAHAD KHAN.jpg"
     },
     {
+      name: "HUZAIFA ABRAR SAHAL",
+      title: "ADDITIONAL GENERAL SECRETARY",
+      image: "/Joint secretaries/joint secretary HUZAIFA ABRAR SAHAL.jpg"
+    },
+    {
+      name: "AREEB FAROOQUI",
+      title: "ADDITIONAL GENERAL SECRETARY",
+      image: "/Joint secretaries/areeb farooqui.jpg ADDITIONAL GENERAL SECRETARY.JPG"
+    },
+    {
       name: "FARHAT LAMISHA",
       title: "JOINT SECRETARY",
       image: "/Joint secretaries/joint secretar Farhat lamisha.jpg"
-    },
-    {
-      name: "HUZAIFA ABRAR SAHAL",
-      title: "JOINT SECRETARY",
-      image: "/Joint secretaries/joint secretary HUZAIFA ABRAR SAHAL.jpg"
     },
     {
       name: "NUSRAT JAHAN",
@@ -155,8 +163,17 @@ export default function Home() {
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <Logo size="5xl" animated={false} showText={false} />
-              <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse" />
+              <div className="w-64 h-64 md:w-80 md:h-80 relative">
+                <Image
+                  src="/logo.png"
+                  alt="IGACMUN Logo"
+                  width={320}
+                  height={320}
+                  className="object-contain w-full h-full"
+                  priority
+                />
+              </div>
+              <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-2xl animate-pulse" />
             </div>
           </motion.div>
 
@@ -165,7 +182,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6"
           >
             {event.title}
           </motion.h1>
@@ -174,7 +191,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="font-display text-2xl md:text-4xl text-accent-gold mb-6"
+            className="font-display text-xl md:text-3xl text-accent-gold mb-6"
           >
             {event.subtitle}
           </motion.p>
@@ -183,9 +200,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8"
+            className="text-base md:text-lg text-accent-gold font-semibold max-w-3xl mx-auto mb-8"
           >
-            {event.tagline}
+            United | Transformation | Innovation
           </motion.p>
 
           {/* Conference Dates */}
@@ -200,7 +217,7 @@ export default function Home() {
               <Calendar className="h-5 w-5 text-accent-gold/70" />
               <div className="w-8 h-px bg-gradient-to-l from-transparent to-accent-gold/50"></div>
             </div>
-            <p className="text-lg md:text-xl text-foreground font-display font-semibold">
+            <p className="text-base md:text-lg text-foreground font-display font-semibold">
               19 - 21 December 2025
             </p>
           </motion.div>
@@ -212,28 +229,32 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 1.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <Button size="xl" variant="default" asChild>
-                  <Link href="/session-3/register">
-                    Register Now
-                  </Link>
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <Button variant="outline" size="xl" asChild>
-                  <Link href="/session-3">
-                    Learn More
-                  </Link>
-                </Button>
-              </motion.div>
+              <MagneticElement strength={0.15}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Button size="xl" variant="default" asChild>
+                    <Link href="/session-3/register">
+                      Register Now
+                    </Link>
+                  </Button>
+                </motion.div>
+              </MagneticElement>
+              <MagneticElement strength={0.15}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Button variant="outline" size="xl" asChild>
+                    <Link href="/session-3">
+                      Learn More
+                    </Link>
+                  </Button>
+                </motion.div>
+              </MagneticElement>
             </motion.div>
         </div>
 
@@ -290,8 +311,6 @@ export default function Home() {
       </section>
 
 
-      {/* Elegant Divider */}
-      <ElegantDivider variant="ornate" />
 
       {/* About IGAC Section */}
       <section className="py-24 relative">
@@ -304,11 +323,11 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-5xl md:text-7xl font-bold text-accent-gold mb-6">
-              IGAC
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
+              <ShinyText className="text-accent-gold">IGAC</ShinyText>
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground font-display mb-4">
-              International Global Affairs Council
+            <p className="text-lg md:text-xl text-muted-foreground font-display mb-4">
+              <SplitText>International Global Affairs Council</SplitText>
             </p>
           </motion.div>
 
@@ -322,19 +341,19 @@ export default function Home() {
               className="space-y-6 order-1"
             >
               <div>
-                <h3 className="font-display text-3xl font-bold text-foreground mb-6">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
                   About Us
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   The International Global Affairs Council (IGAC), founded on August 14, 2023, is a youth-led 
                   organization dedicated to empowering the next generation of leaders through diplomacy, 
                   entrepreneurship, and essential skills development.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   By fostering critical thinking, leadership, negotiation, and cross-cultural communication, 
                   IGAC equips young people to tackle global challenges and drive meaningful change.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   With a strong focus on collaboration, teamwork, and resilience, IGAC provides a platform 
                   for youth to engage in global discussions, overcome obstacles, and shape the future as 
                   confident change-makers.
@@ -344,10 +363,10 @@ export default function Home() {
               {/* IGAC Features */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { icon: Target, label: "Youth Leadership", desc: "Empowering next generation" },
-                  { icon: Globe, label: "Global Impact", desc: "Tackling world challenges" },
-                  { icon: Handshake, label: "Collaboration", desc: "Building partnerships" },
-                  { icon: Lightbulb, label: "Innovation", desc: "Creative solutions" }
+                  { icon: Target, label: "Youth Leadership", desc: "Empowering next generation", color: "from-blue-500/20 to-blue-600/5", borderColor: "border-blue-400/40", iconBg: "bg-blue-500/20", iconColor: "text-blue-400", textColor: "text-blue-400" },
+                  { icon: Globe, label: "Global Impact", desc: "Tackling world challenges", color: "from-green-500/20 to-green-600/5", borderColor: "border-green-400/40", iconBg: "bg-green-500/20", iconColor: "text-green-400", textColor: "text-green-400" },
+                  { icon: Handshake, label: "Collaboration", desc: "Building partnerships", color: "from-purple-500/20 to-purple-600/5", borderColor: "border-purple-400/40", iconBg: "bg-purple-500/20", iconColor: "text-purple-400", textColor: "text-purple-400" },
+                  { icon: Lightbulb, label: "Innovation", desc: "Creative solutions", color: "from-amber-500/20 to-amber-600/5", borderColor: "border-amber-400/40", iconBg: "bg-amber-500/20", iconColor: "text-amber-400", textColor: "text-amber-400" }
                 ].map((feature, index) => (
                   <motion.div
                     key={feature.label}
@@ -355,7 +374,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-3 p-3 bg-card border border-accent-gold/20 rounded-lg hover:border-accent-gold/40 transition-colors duration-300 group"
+                    className={`flex items-center space-x-3 p-3 bg-gradient-to-br ${feature.color} border ${feature.borderColor} rounded-lg hover:shadow-lg transition-all duration-300 group`}
                   >
                     <motion.div
                       whileHover={{ 
@@ -363,12 +382,12 @@ export default function Home() {
                         scale: [1, 1.1, 1]
                       }}
                       transition={{ duration: 0.6 }}
-                      className="p-2 bg-accent-gold/10 rounded-full group-hover:bg-accent-gold/20 transition-colors duration-300"
+                      className={`p-2 ${feature.iconBg} rounded-full group-hover:scale-110 transition-transform duration-300`}
                     >
-                      <feature.icon className="h-5 w-5 text-accent-gold/70 group-hover:text-accent-gold transition-colors duration-300" />
+                      <feature.icon className={`h-5 w-5 ${feature.iconColor} transition-colors duration-300`} />
                     </motion.div>
                     <div>
-                      <div className="font-semibold text-accent-gold text-sm">{feature.label}</div>
+                      <div className={`font-semibold ${feature.textColor} text-sm`}>{feature.label}</div>
                       <div className="text-muted-foreground text-xs">{feature.desc}</div>
                     </div>
                   </motion.div>
@@ -413,7 +432,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <p className="text-lg font-semibold bg-forest-900/60 px-3 py-2 rounded backdrop-blur-sm">
-                    IGAC Team
+                    The IGAC Family
                   </p>
                 </div>
                 
@@ -425,50 +444,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* President's Message */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative">
-        <BackgroundGradientAnimation
-          containerClassName="absolute inset-0"
-          className="opacity-60"
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* President's Message - Clean & Mobile Optimized */}
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <ElegantBackground variant="section" />
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4">
+              A Message from the President
+            </h2>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto"></div>
+          </motion.div>
+
+          {/* Message Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center mb-8 sm:mb-12 md:mb-16"
+            className="relative"
           >
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
-              A Message from the President
-            </h2>
-            <div className="w-16 sm:w-20 md:w-24 h-px bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-4 sm:mb-6 md:mb-8"></div>
-          </motion.div>
-
-          <div className="max-w-5xl mx-auto px-2 sm:px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-card border border-accent-gold/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 relative overflow-hidden"
-            >
-              {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-forest-800/20 to-forest-900/20 rounded-xl sm:rounded-2xl" />
+            {/* Card Container */}
+            <div className="bg-gradient-to-br from-forest-900/40 to-forest-800/40 backdrop-blur-sm border border-accent-gold/30 rounded-2xl p-6 md:p-10 shadow-2xl">
               
-              {/* Quote marks - responsive sizing */}
-              <div className="absolute top-3 sm:top-4 md:top-6 left-3 sm:left-4 md:left-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-accent-gold/20 font-serif leading-none">&ldquo;</div>
-              <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 right-3 sm:right-4 md:right-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-accent-gold/20 font-serif leading-none rotate-180">&rdquo;</div>
-              
-              <div className="relative z-10 text-center">
-                {/* President's photo - responsive sizing */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 md:mb-8 rounded-full overflow-hidden border-2 sm:border-3 md:border-4 border-accent-gold/40 shadow-xl"
-                >
+              {/* President Photo */}
+              <div className="flex justify-center mb-6">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-accent-gold/50 shadow-lg">
                   <Image 
                     src="/leadership/president.jpg" 
                     alt="Al Rashidus Sabru Farabi - President" 
@@ -476,88 +484,126 @@ export default function Home() {
                     height={128}
                     className="object-cover w-full h-full"
                   />
-                </motion.div>
-
-                {/* Message - responsive text */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  viewport={{ once: true }}
-                  className="space-y-4 sm:space-y-5 md:space-y-6 px-2 sm:px-4"
-                >
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic">
-                    &ldquo;Welcome to IGACMUN Session III: . As we gather once again to engage in 
-                    diplomatic discourse, we embark on a journey that will challenge our perspectives, 
-                    sharpen our minds, and forge the leaders of tomorrow.&rdquo;
-                  </p>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed italic">
-                    &ldquo;This session represents not just a conference, but a crucible where young minds 
-                    will grapple with the world&apos;s most pressing challenges. Together, we will navigate 
-                    the thorns of global politics to reach the roses of understanding and cooperation.&rdquo;
-                  </p>
-                </motion.div>
-
-                {/* Signature - responsive sizing */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  viewport={{ once: true }}
-                  className="mt-6 sm:mt-7 md:mt-8 pt-4 sm:pt-5 md:pt-6 border-t border-accent-gold/20"
-                >
-                  <p className="font-display text-lg sm:text-xl md:text-xl font-semibold text-accent-gold mb-1">
-                    Al Rashidus Sabru Farabi
-                  </p>
-                  <p className="text-sm sm:text-base text-muted-foreground">
-                    President, IGACMUN Session III
-                  </p>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
-          </div>
+
+              {/* Message Content */}
+              <div className="space-y-6 text-center max-w-4xl mx-auto">
+                <div className="relative">
+                  <span className="absolute -top-4 -left-2 md:-left-4 text-6xl md:text-7xl text-accent-gold/20 font-serif">&ldquo;</span>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed px-6 md:px-8">
+                    Welcome to IGACMUN Session III. As we gather once again to engage in 
+                    diplomatic discourse, we embark on a journey that will challenge our perspectives, 
+                    sharpen our minds, and forge the leaders of tomorrow.
+                  </p>
+                </div>
+                
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed px-6 md:px-8">
+                  This session represents not just a conference, but a crucible where young minds 
+                  will grapple with the world&apos;s most pressing challenges. Together, we will navigate 
+                  the thorns of global politics to reach the roses of understanding and cooperation.
+                </p>
+              </div>
+
+              {/* Signature */}
+              <div className="mt-8 pt-6 border-t border-accent-gold/20 text-center">
+                <p className="font-display text-xl md:text-2xl font-bold text-accent-gold mb-2">
+                  Al Rashidus Sabru Farabi
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  General Secretary, IGACMUN SESSION III
+                </p>
+              </div>
+
+              {/* Decorative Corner Elements */}
+              <div className="absolute top-4 right-4 w-3 h-3 border-t-2 border-r-2 border-accent-gold/30 rounded-tr"></div>
+              <div className="absolute bottom-4 left-4 w-3 h-3 border-b-2 border-l-2 border-accent-gold/30 rounded-bl"></div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Elegant Divider */}
-      <ElegantDivider variant="minimal" />
 
-      {/* Leadership Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative">
+      {/* Leadership Section - Redesigned with President Center */}
+      <section className="py-16 md:py-24 relative">
         <ElegantBackground variant="section" />
-        <BackgroundGradientAnimation
-          containerClassName="absolute inset-0"
-          className="opacity-30"
-        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-4">
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4">
               Meet Our Leadership
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
               The visionary leaders driving diplomatic excellence and shaping the future of Model United Nations
             </p>
           </motion.div>
 
-          {/* Leadership Grid - Mobile Optimized */}
-          <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
-            {leadership.map((leader, index) => (
-              <div key={leader.name} className="flex-shrink-0 w-full sm:w-auto max-w-sm">
+          {/* Leadership Layout - President in Center, Bigger */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+            {/* Chairman - Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="w-full sm:w-80 lg:w-72"
+            >
+              <GlareCard>
                 <LeadershipCard
-                  name={leader.name}
-                  role={leader.role}
-                  photo={leader.photo}
-                  description={leader.description}
-                  index={index}
+                  name={leadership[1].name}
+                  role={leadership[1].role}
+                  photo={leadership[1].photo}
+                  description={leadership[1].description}
+                  index={1}
                 />
+              </GlareCard>
+            </motion.div>
+
+            {/* President - Center, Bigger */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="w-full sm:w-96 lg:w-80 lg:scale-110 z-10"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-accent-gold/20 rounded-2xl blur-2xl" />
+                <GlareCard intensity={0.7}>
+                  <LeadershipCard
+                    name={leadership[0].name}
+                    role={leadership[0].role}
+                    photo={leadership[0].photo}
+                    description={leadership[0].description}
+                    index={0}
+                  />
+                </GlareCard>
               </div>
-            ))}
+            </motion.div>
+
+            {/* Co-chairman - Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="w-full sm:w-80 lg:w-72"
+            >
+              <GlareCard>
+                <LeadershipCard
+                  name={leadership[2].name}
+                  role={leadership[2].role}
+                  photo={leadership[2].photo}
+                  description={leadership[2].description}
+                  index={2}
+                />
+              </GlareCard>
+            </motion.div>
           </div>
 
           {/* Leadership Quote/Mission - Mobile Optimized */}
@@ -569,7 +615,7 @@ export default function Home() {
             className="text-center mt-12 sm:mt-16 md:mt-20"
           >
             <div className="max-w-4xl mx-auto px-4">
-              <blockquote className="text-base sm:text-lg md:text-xl text-muted-foreground italic leading-relaxed">
+              <blockquote className="text-sm sm:text-base md:text-lg text-muted-foreground italic leading-relaxed">
                 &ldquo;Together, we forge the path toward diplomatic excellence, empowering the next generation 
                 of global leaders to tackle the world&apos;s most pressing challenges.&rdquo;
               </blockquote>
@@ -577,72 +623,60 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Organizing & Joint Secretaries Section */}
+          {/* The Core Section - Infinite Carousel */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mt-16 sm:mt-20 md:mt-24"
+            className="mt-20 md:mt-32"
           >
-            <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
-              <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                The Core of International Global Affairs Council
+            {/* Core Header with Hover Effect */}
+            <div className="text-center mb-12">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 group cursor-default">
+                The <span className="transition-colors duration-300 group-hover:text-accent-gold">Core</span> of IGAC
               </h3>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                The dedicated leadership team that manages everything and drives our mission forward
+              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-4" />
+              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+                The dedicated leadership team at the heart of our mission
               </p>
             </div>
 
-            {/* Ultra Smooth Infinite Scrolling Carousel */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              {/* Infinite Scrollable Container */}
-              <div className="relative overflow-hidden">
-                <motion.div 
-                  ref={carouselRef}
-                  className="flex gap-6 pb-6"
-                  animate={{ 
-                    x: [-320 * executiveTeam.length, 0]
-                  }}
-                  transition={{
-                    duration: executiveTeam.length * 5, // Faster: reduced from 8 to 5 seconds
-                    repeat: Infinity,
-                    ease: "linear",
-                    repeatType: "loop"
-                  }}
-                  style={{ 
-                    width: `${(executiveTeam.length * 3) * 320}px`,
-                    willChange: "transform",
-                    backfaceVisibility: "hidden", // Better performance
-                    perspective: 1000 // Smoother rendering
-                  }}
-                >
-                  {/* Triple set for seamless infinite scroll */}
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`first-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`second-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`third-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                </motion.div>
-              </div>
-            </motion.div>
+            {/* Infinite Scrolling Carousel */}
+            <div className="relative overflow-hidden">
+              <motion.div 
+                ref={carouselRef}
+                className="flex gap-6 pb-6"
+                animate={{ 
+                  x: [-320 * executiveTeam.length, 0]
+                }}
+                transition={{
+                  duration: executiveTeam.length * 6,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop"
+                }}
+                style={{ 
+                  width: `${(executiveTeam.length * 3) * 320}px`
+                }}
+              >
+                {/* Triple set for seamless infinite scroll */}
+                {executiveTeam.map((leader, index) => (
+                  <ExecutiveTeamCard key={`first-${leader.name}`} leader={leader} index={index} />
+                ))}
+                {executiveTeam.map((leader, index) => (
+                  <ExecutiveTeamCard key={`second-${leader.name}`} leader={leader} index={index} />
+                ))}
+                {executiveTeam.map((leader, index) => (
+                  <ExecutiveTeamCard key={`third-${leader.name}`} leader={leader} index={index} />
+                ))}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
 
-      {/* Elegant Divider */}
-      <ElegantDivider variant="default" />
 
       {/* Quick Stats */}
       <section className="py-20 relative">
@@ -650,8 +684,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Users, label: "Expected Delegates", value: event.expectedDelegates },
-              { icon: Award, label: "Committees", value: "TBA" },
+              { icon: Users, label: "Total Delegates", value: "4,000+" },
+              { icon: Award, label: "Committees", value: "10" },
               { icon: Calendar, label: "Days", value: "3" },
               { icon: MapPin, label: "Venue", value: venue.name },
             ].map((stat, index) => (
@@ -737,96 +771,64 @@ export default function Home() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              {/* Themed Committees Countdown */}
-              <div className="bg-gradient-to-br from-forest-900/80 to-forest-800/80 border-2 border-accent-gold/30 rounded-2xl p-8 md:p-12 relative overflow-hidden backdrop-blur-sm">
-                {/* Background decorative elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-forest-800/40 to-forest-900/40" />
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent-gold to-transparent" />
+              <div className="bg-gradient-to-br from-forest-900/80 to-forest-800/80 border border-accent-gold/20 rounded-xl p-8 relative overflow-hidden backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-br from-forest-800/30 to-forest-900/30" />
                 
                 <div className="relative z-10 text-center">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    className="mb-8"
-                  >
-                    <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
-                      Committees
-                    </h3>
-                    <div className="w-16 h-px bg-accent-gold mx-auto mb-4" />
-                    <p className="text-lg text-muted-foreground">
-                      Select your arena for collaboration and impact
-                    </p>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                    viewport={{ once: true }}
-                    className="mb-8"
-                  >
-                    <div className="bg-forest-950/60 border border-accent-gold/20 rounded-xl p-6 backdrop-blur-sm text-center">
-                      {reveals.committees.enableCountdown ? (
-                        <>
-                          <p className="text-accent-gold font-semibold text-xl mb-4 tracking-wide">
-                            COMMITTEES WILL BE REVEALED IN
-                          </p>
-                          
-                          <Countdown
-                            revealAt={reveals.committees.revealAt}
-                            title=""
-                            description=""
-                            className="[&>div]:bg-gradient-to-br [&>div]:from-forest-700 [&>div]:to-forest-800 [&>div]:border-accent-gold/30 [&>div]:text-accent-gold"
-                          />
-                          
-                          <p className="text-muted-foreground mt-6">
-                            The diplomatic battlegrounds will be unveiled soon. Prepare for unprecedented challenges.
-                          </p>
-                        </>
-                      ) : (
-                        <>
-                          <p className="text-accent-gold font-semibold text-xl mb-4 tracking-wide">
-                            COMMITTEES NOW AVAILABLE
-                          </p>
-                          <p className="text-muted-foreground mb-6">
-                            Explore our diverse range of diplomatic committees and choose your battlefield.
-                          </p>
-                          
-                          {/* Committees Preview */}
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                            {committees.slice(0, 3).map((committee, index) => (
-                              <div key={committee.name} className="bg-forest-800/30 border border-accent-gold/20 rounded-lg p-4 hover:border-accent-gold/40 transition-colors duration-300">
-                                <div className="text-center mb-3">
-                                  <div className="w-8 h-8 mx-auto mb-2 rounded bg-accent-gold/20 flex items-center justify-center">
-                                    <span className="text-accent-gold text-xs font-bold">
-                                      {committee.name.split(' ').map((word) => word[0]).join('').slice(0, 2)}
-                                    </span>
-                                  </div>
-                                  <h4 className="font-semibold text-foreground text-sm leading-tight">
-                                    {committee.name}
-                                  </h4>
-                                </div>
-                                <div className="text-center">
-                                  <span className="text-xs text-accent-gold bg-accent-gold/10 px-2 py-1 rounded-full">
-                                    {committee.difficulty}
-                                  </span>
-                                </div>
+                  {reveals.committees.enableCountdown ? (
+                    <>
+                      <p className="text-accent-gold font-semibold text-xl mb-4">
+                        Committee Details Coming Soon
+                      </p>
+                      
+                      <Countdown
+                        revealAt={reveals.committees.revealAt}
+                        title=""
+                        description=""
+                      />
+                      
+                      <p className="text-muted-foreground mt-6">
+                        Information about all 10 committees will be announced soon.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-accent-gold font-semibold text-xl mb-4">
+                        Committees Now Available
+                      </p>
+                      <p className="text-muted-foreground mb-6">
+                        Explore our diverse range of diplomatic committees covering global issues.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        {committees.slice(0, 3).map((committee) => (
+                          <div key={committee.name} className="bg-forest-800/30 border border-accent-gold/20 rounded-lg p-4 hover:border-accent-gold/40 transition-colors">
+                            <div className="text-center mb-3">
+                              <div className="w-8 h-8 mx-auto mb-2 rounded bg-accent-gold/20 flex items-center justify-center">
+                                <span className="text-accent-gold text-xs font-bold">
+                                  {committee.name.split(' ').map((word) => word[0]).join('').slice(0, 2)}
+                                </span>
                               </div>
-                            ))}
+                              <h4 className="font-semibold text-foreground text-sm leading-tight">
+                                {committee.name}
+                              </h4>
+                            </div>
+                            <div className="text-center">
+                              <span className="text-xs text-accent-gold bg-accent-gold/10 px-2 py-1 rounded-full">
+                                {committee.difficulty}
+                              </span>
+                            </div>
                           </div>
-                          
-                          <Button asChild variant="outline" className="border-accent-gold/30 text-accent-gold hover:bg-accent-gold/10">
-                            <Link href="/session-3/committees">
-                              View All Committees
-                            </Link>
-                          </Button>
-                        </>
-                      )}
-                    </div>
-                  </motion.div>
-
+                        ))}
+                      </div>
+                      
+                      <Button asChild variant="outline" className="border-accent-gold/30 text-accent-gold hover:bg-accent-gold/10">
+                        <Link href="/session-3/committees">
+                          View All Committees
+                        </Link>
+                      </Button>
+                    </>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -909,26 +911,24 @@ export default function Home() {
               </div>
 
               {/* Venue Features */}
-              <div className="grid grid-cols-2 gap-4">
+              <BentoGrid className="grid-cols-2 gap-3">
                 {[
-                  { icon: Users, label: "Conference Halls" },
-                  { icon: Award, label: "Modern AV Systems" },
-                  { icon: Calendar, label: "Professional Setup" },
-                  { icon: MapPin, label: "Central Location" }
+                  { icon: Users, label: "Conference Halls", desc: "Spacious venues" },
+                  { icon: Award, label: "Modern AV Systems", desc: "Latest technology" },
+                  { icon: Calendar, label: "Professional Setup", desc: "Expert arrangement" },
+                  { icon: MapPin, label: "Central Location", desc: "Easy access" }
                 ].map((feature, index) => (
-                  <motion.div
-                    key={feature.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center space-x-3 p-3 bg-card border border-accent-gold/20 rounded-lg"
-                  >
-                    <feature.icon className="h-5 w-5 text-accent-gold" />
-                    <span className="text-sm font-medium text-foreground">{feature.label}</span>
-                  </motion.div>
+                  <BentoCard key={feature.label} index={index} className="p-4">
+                    <div className="flex flex-col space-y-2">
+                      <feature.icon className="h-6 w-6 text-accent-gold" />
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground">{feature.label}</h4>
+                        <p className="text-xs text-muted-foreground">{feature.desc}</p>
+                      </div>
+                    </div>
+                  </BentoCard>
                 ))}
-              </div>
+              </BentoGrid>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

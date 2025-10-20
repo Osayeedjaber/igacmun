@@ -30,9 +30,9 @@ export const LeadershipCard = React.memo<LeadershipCardProps>(({
       viewport={{ once: true, margin: "-50px" }}
       className={cn("w-full max-w-sm mx-auto", className)}
     >
-      <div className="bg-card relative group hover:shadow-xl hover:shadow-accent-gold/20 border border-accent-gold/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500 hover:border-accent-gold/40 hover:-translate-y-2">
+      <div className="bg-card relative group hover:shadow-xl hover:shadow-accent-gold/20 border border-accent-gold/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-accent-gold/40">
         {/* Background gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-800/30 to-forest-900/30 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-br from-forest-800/30 to-forest-900/30 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
         {/* Role badge - Mobile Optimized */}
         <div className="relative z-10 flex justify-center mb-3 sm:mb-4 md:mb-6">
@@ -44,16 +44,16 @@ export const LeadershipCard = React.memo<LeadershipCardProps>(({
         {/* Profile image - Responsive Sizing */}
         <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 mx-auto mb-3 sm:mb-4 md:mb-6">
           {/* Glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/20 to-forest-600/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500 scale-110" />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent-gold/20 to-forest-600/20 rounded-full blur-xl transition-all duration-300" />
           
           {/* Image container */}
-          <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent-gold/30 group-hover:border-accent-gold/50 transition-colors duration-500">
+          <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent-gold/30 group-hover:border-accent-gold/50 transition-colors duration-300">
             <Image
               src={photo}
               alt={name}
               fill
               sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, 160px"
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover"
               {...(index < 2 ? { priority: true } : { loading: "lazy" })}
             />
           </div>
@@ -61,7 +61,7 @@ export const LeadershipCard = React.memo<LeadershipCardProps>(({
 
         {/* Name - Responsive Text */}
         <div className="relative z-10 text-center mb-2 sm:mb-3 md:mb-4">
-          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-foreground font-display capitalize leading-tight group-hover:text-accent-gold/90 transition-colors duration-300">
+          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-foreground font-display capitalize leading-tight transition-colors duration-300">
             {name}
           </h3>
         </div>

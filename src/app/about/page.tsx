@@ -43,8 +43,7 @@ export default function AboutPage() {
             International Global Affairs Council
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Empowering youth through diplomatic education and fostering global understanding 
-            through Model United Nations excellence.
+            Founded on August 14, 2023, the International Global Affairs Council (IGAC) is a youth-led organization dedicated to empowering the next generation of leaders through diplomacy, entrepreneurship, and essential skills development. As the number one youth-focused platform in Bangladesh, we equip young people with the skills and opportunities needed to thrive in an ever-evolving world.
           </p>
         </motion.div>
 
@@ -60,9 +59,7 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              To cultivate the next generation of global leaders by providing immersive diplomatic experiences 
-              that enhance critical thinking, cross-cultural understanding, and collaborative problem-solving skills 
-              through the Model United Nations platform.
+              At IGAC, we embrace collaboration, teamwork, and resilience as the driving forces behind innovation and empowerment. By fostering critical thinking, leadership, negotiation, and cross-cultural communication, we equip young people to tackle global challenges and drive meaningful change. Our mission is to support the younger generation in finding sustainable sources of income, especially for students, while providing a platform for youth to engage in global discussions, overcome obstacles, and shape the future as confident change-makers.
             </p>
           </div>
         </motion.div>
@@ -131,29 +128,29 @@ export default function AboutPage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16"
         >
-          {/* Programs & Activities */}
+          {/* What We Do */}
           <div className="bg-card border border-accent-gold/20 rounded-xl p-8">
             <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center">
               <Shield className="h-6 w-6 text-accent-gold mr-3" />
-              Programs & Activities
+              What We Do
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-foreground mb-2">Model United Nations Conferences</h4>
+                <h4 className="font-semibold text-foreground mb-2">Diplomacy & Leadership</h4>
                 <p className="text-muted-foreground text-sm mb-3">
-                  Organizing high-quality MUN conferences that simulate real UN proceedings and global diplomatic challenges.
+                  Empowering youth through Model United Nations (MUN) conferences and fostering leadership skills to engage in meaningful global discussions.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-2">Training Workshops</h4>
+                <h4 className="font-semibold text-foreground mb-2">Entrepreneurship & Innovation</h4>
                 <p className="text-muted-foreground text-sm mb-3">
-                  Conducting comprehensive training sessions on parliamentary procedure, research methods, and public speaking.
+                  Organizing business summits to inspire creativity, strategic thinking, and help students find sustainable sources of income.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-2">Educational Outreach</h4>
+                <h4 className="font-semibold text-foreground mb-2">Global Collaboration</h4>
                 <p className="text-muted-foreground text-sm">
-                  Partnering with schools and universities to promote MUN education and diplomatic awareness.
+                  Encouraging cross-cultural communication, diversity of thought, and building resilience to overcome global challenges.
                 </p>
               </div>
             </div>
@@ -171,16 +168,16 @@ export default function AboutPage() {
                 <span className="text-accent-gold font-bold text-xl">5000+</span>
               </div>
               <div className="flex items-center justify-between p-3 bg-accent-gold/10 rounded-lg">
-                <span className="text-foreground font-medium">Conferences Organized</span>
-                <span className="text-accent-gold font-bold text-xl">15+</span>
+                <span className="text-foreground font-medium">Platform in Bangladesh</span>
+                <span className="text-accent-gold font-bold text-xl">#1</span>
               </div>
               <div className="flex items-center justify-between p-3 bg-accent-gold/10 rounded-lg">
                 <span className="text-foreground font-medium">Partner Institutions</span>
                 <span className="text-accent-gold font-bold text-xl">50+</span>
               </div>
               <div className="flex items-center justify-between p-3 bg-accent-gold/10 rounded-lg">
-                <span className="text-foreground font-medium">Years of Excellence</span>
-                <span className="text-accent-gold font-bold text-xl">8+</span>
+                <span className="text-foreground font-medium">Founded</span>
+                <span className="text-accent-gold font-bold text-xl">2023</span>
               </div>
             </div>
           </div>
@@ -205,29 +202,44 @@ export default function AboutPage() {
               <div className="space-y-8">
                 {[
                   {
-                    year: "2016",
-                    title: "Foundation",
-                    description: "IGAC was established with a vision to promote diplomatic education among youth in Bangladesh."
+                    year: "2023",
+                    title: "Foundation - August 14",
+                    description: "IGAC was founded with a vision to empower the next generation of leaders through diplomacy, entrepreneurship, and essential skills development."
                   },
                   {
-                    year: "2018",
-                    title: "First Major Conference",
-                    description: "Successfully organized our first large-scale MUN conference with 500+ delegates."
+                    year: "Nov 2023",
+                    title: "IGACMUN Session I",
+                    description: "Our inaugural major conference established IGAC as a leading MUN organization with 1000+ delegates across 8 committees, setting the foundation for future diplomatic excellence."
                   },
                   {
-                    year: "2020",
-                    title: "Digital Innovation",
-                    description: "Adapted to virtual formats during the pandemic, pioneering online MUN experiences."
+                    year: "Aug 2024",
+                    title: "Imperial MUN (IMUN'24)",
+                    description: "A prestigious conference with 500+ delegates focusing on contemporary global issues with high-level diplomatic simulations and expert guest speakers across 8 committees."
                   },
                   {
-                    year: "2022",
-                    title: "Regional Recognition",
-                    description: "IGACMUN Session 2 became the largest MUN conference in South East Asia with 1700+ delegates."
+                    year: "Dec 2024",
+                    title: "IGACMUN Session II",
+                    description: "The largest MUN conference in South East Asia! Successfully hosted 1700+ delegates across 12 committees, setting new standards for diplomatic excellence and international participation with crisis committees and distinguished guest speakers."
                   },
                   {
-                    year: "2025",
-                    title: "Session III - ",
-                    description: "Launching our most ambitious conference yet with enhanced diplomatic challenges and experiences."
+                    year: "Dec 2024",
+                    title: "Big Bang Session 2",
+                    description: "Expanding horizons with 300+ delegates across 7 committees, featuring innovative formats, expert moderators, and cultural exchange programs."
+                  },
+                  {
+                    year: "May 2025",
+                    title: "Republic MUN (RMUN'25)",
+                    description: "Shaping tomorrow's leaders with 250+ delegates across 10 committees through intensive diplomatic training and real-world scenario simulations."
+                  },
+                  {
+                    year: "Aug 2025",
+                    title: "Big Bang Session 3",
+                    description: "Innovation & Growth with 250+ delegates across 6 committees, featuring dynamic sessions, youth-focused initiatives, and interactive workshops."
+                  },
+                  {
+                    year: "Dec 2025",
+                    title: "IGACMUN Session III",
+                    description: "Launching our most ambitious conference yet with enhanced diplomatic challenges, experiences, and building upon our legacy of excellence."
                   }
                 ].map((milestone, index) => (
                   <div key={milestone.year} className="relative flex items-start space-x-6">

@@ -204,7 +204,7 @@ function Countdown(param) {
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 relative z-10",
+                    className: "grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 relative z-10",
                     children: timeUnits.map((unit)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col items-center space-y-2",
                             children: [
@@ -212,9 +212,9 @@ function Countdown(param) {
                                     className: "relative group",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-card/80 backdrop-blur-sm border border-accent-gold/30 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[90px] shadow-lg hover:border-accent-gold/50 transition-all duration-300 hover:shadow-xl",
+                                            className: "bg-card/80 backdrop-blur-sm border border-accent-gold/30 rounded-xl p-5 md:p-7 min-w-[80px] md:min-w-[100px] shadow-lg hover:border-accent-gold/50 transition-all duration-300 hover:shadow-xl",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-xl md:text-3xl font-bold text-accent-gold text-center font-display tabular-nums",
+                                                className: "text-2xl md:text-4xl font-bold text-accent-gold text-center font-display tabular-nums",
                                                 children: unit.value.toString().padStart(2, '0')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ui/countdown.tsx",
@@ -428,7 +428,7 @@ const appConfig = {
         },
         {
             name: "Rezwan Rashid Zidan",
-            role: "Co-founder",
+            role: "Co-chairman",
             photo: "/leadership/cofounder.jpg",
             description: "Building the foundation of youth diplomacy"
         }
@@ -460,17 +460,10 @@ const appConfig = {
     },
     registrationTypes: [
         {
-            key: 'earlyBird',
+            key: 'regular',
             icon: 'Star',
             color: 'from-emerald-500/20 to-emerald-600/5',
             borderColor: 'border-emerald-400/40',
-            flashMode: 'false'
-        },
-        {
-            key: 'regular',
-            icon: 'CheckCircle',
-            color: 'from-forest-500/20 to-forest-600/5',
-            borderColor: 'border-forest-400/40',
             flashMode: 'false'
         },
         {
@@ -501,27 +494,24 @@ const appConfig = {
             link: "https://forms.gle/PW95WFfWVVu2vPMD6",
             title: "Campus Ambassadors",
             description: "Represent your institution",
-            deadline: "2025-11-30T23:59:59Z"
-        },
-        earlyBird: {
-            enabled: false,
-            link: "https://forms.gle/Rumm2ApxBcAi41649",
-            title: "Early Bird Registration",
-            description: "Secure your spot with discounted rates",
-            deadline: "2025-10-31T23:59:59Z"
+            deadline: "2025-11-30T23:59:59Z",
+            price: "3570",
+            currency: "BDT"
         },
         regular: {
-            enabled: false,
-            link: "https://forms.gle/your-regular-registration-form-id",
+            enabled: true,
+            link: "https://forms.gle/Rumm2ApxBcAi41649",
             title: "Regular Registration",
             description: "Standard registration rates",
-            deadline: "2025-12-10T23:59:59Z"
+            deadline: "2025-12-10T23:59:59Z",
+            price: "3570",
+            currency: "BDT"
         },
         late: {
             enabled: false,
             link: "https://forms.gle/your-late-registration-form-id",
             title: "Late Registration",
-            description: "Last chance registration with additional fees",
+            description: "Will be announced soon",
             deadline: "2025-12-15T23:59:59Z"
         },
         executiveBoard: {
@@ -536,7 +526,7 @@ const appConfig = {
             link: "https://forms.gle/kruBU3Vr5336ZXXRA",
             title: "Payment Confirmation",
             description: "Submit your payment proof after registration",
-            deadline: "2025-12-20T23:59:59Z"
+            deadline: "2025-12-15T23:59:59Z"
         }
     },
     social: {
@@ -615,9 +605,9 @@ const appConfig = {
         hidden: false
     },
     event: {
-        title: "IGACMUN Session III",
+        title: "IGACMUN SESSION III",
         subtitle: "",
-        tagline: "Where Diplomacy Meets Destiny",
+        tagline: "United | Transformation | Innovation",
         dates: "TBA",
         expectedDelegates: "1700+",
         description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence."

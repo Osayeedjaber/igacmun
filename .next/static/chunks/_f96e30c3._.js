@@ -22,7 +22,7 @@ const appConfig = {
         },
         {
             name: "Rezwan Rashid Zidan",
-            role: "Co-founder",
+            role: "Co-chairman",
             photo: "/leadership/cofounder.jpg",
             description: "Building the foundation of youth diplomacy"
         }
@@ -54,17 +54,10 @@ const appConfig = {
     },
     registrationTypes: [
         {
-            key: 'earlyBird',
+            key: 'regular',
             icon: 'Star',
             color: 'from-emerald-500/20 to-emerald-600/5',
             borderColor: 'border-emerald-400/40',
-            flashMode: 'false'
-        },
-        {
-            key: 'regular',
-            icon: 'CheckCircle',
-            color: 'from-forest-500/20 to-forest-600/5',
-            borderColor: 'border-forest-400/40',
             flashMode: 'false'
         },
         {
@@ -95,27 +88,24 @@ const appConfig = {
             link: "https://forms.gle/PW95WFfWVVu2vPMD6",
             title: "Campus Ambassadors",
             description: "Represent your institution",
-            deadline: "2025-11-30T23:59:59Z"
-        },
-        earlyBird: {
-            enabled: false,
-            link: "https://forms.gle/Rumm2ApxBcAi41649",
-            title: "Early Bird Registration",
-            description: "Secure your spot with discounted rates",
-            deadline: "2025-10-31T23:59:59Z"
+            deadline: "2025-11-30T23:59:59Z",
+            price: "3570",
+            currency: "BDT"
         },
         regular: {
-            enabled: false,
-            link: "https://forms.gle/your-regular-registration-form-id",
+            enabled: true,
+            link: "https://forms.gle/Rumm2ApxBcAi41649",
             title: "Regular Registration",
             description: "Standard registration rates",
-            deadline: "2025-12-10T23:59:59Z"
+            deadline: "2025-12-10T23:59:59Z",
+            price: "3570",
+            currency: "BDT"
         },
         late: {
             enabled: false,
             link: "https://forms.gle/your-late-registration-form-id",
             title: "Late Registration",
-            description: "Last chance registration with additional fees",
+            description: "Will be announced soon",
             deadline: "2025-12-15T23:59:59Z"
         },
         executiveBoard: {
@@ -209,9 +199,9 @@ const appConfig = {
         hidden: false
     },
     event: {
-        title: "IGACMUN Session III",
+        title: "IGACMUN SESSION III",
         subtitle: "",
-        tagline: "Where Diplomacy Meets Destiny",
+        tagline: "United | Transformation | Innovation",
         dates: "TBA",
         expectedDelegates: "1700+",
         description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence."
@@ -471,7 +461,7 @@ function AboutPage() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed",
-                                children: "Empowering youth through diplomatic education and fostering global understanding through Model United Nations excellence."
+                                children: "Founded on August 14, 2023, the International Global Affairs Council (IGAC) is a youth-led organization dedicated to empowering the next generation of leaders through diplomacy, entrepreneurship, and essential skills development. As the number one youth-focused platform in Bangladesh, we equip young people with the skills and opportunities needed to thrive in an ever-evolving world."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
                                 lineNumber: 45,
@@ -505,26 +495,26 @@ function AboutPage() {
                                     children: "Our Mission"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/about/page.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto",
-                                    children: "To cultivate the next generation of global leaders by providing immersive diplomatic experiences that enhance critical thinking, cross-cultural understanding, and collaborative problem-solving skills through the Model United Nations platform."
+                                    children: "At IGAC, we embrace collaboration, teamwork, and resilience as the driving forces behind innovation and empowerment. By fostering critical thinking, leadership, negotiation, and cross-cultural communication, we equip young people to tackle global challenges and drive meaningful change. Our mission is to support the younger generation in finding sustainable sources of income, especially for students, while providing a platform for youth to engage in global discussions, overcome obstacles, and shape the future as confident change-makers."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/about/page.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/about/page.tsx",
-                            lineNumber: 58,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 52,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -547,7 +537,7 @@ function AboutPage() {
                                 children: "Our Core Values"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 77,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -596,17 +586,17 @@ function AboutPage() {
                                                         className: "h-6 w-6 text-accent-gold"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 110,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/about/page.tsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 109,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 111,
+                                                lineNumber: 108,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -614,7 +604,7 @@ function AboutPage() {
                                                 children: value.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 116,
+                                                lineNumber: 113,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -622,24 +612,24 @@ function AboutPage() {
                                                 children: value.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 119,
+                                                lineNumber: 116,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, value.title, true, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 81,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 71,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -667,14 +657,14 @@ function AboutPage() {
                                                 className: "h-6 w-6 text-accent-gold mr-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 137,
+                                                lineNumber: 134,
                                                 columnNumber: 15
                                             }, this),
-                                            "Programs & Activities"
+                                            "What We Do"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 133,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -684,84 +674,84 @@ function AboutPage() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                         className: "font-semibold text-foreground mb-2",
-                                                        children: "Model United Nations Conferences"
+                                                        children: "Diplomacy & Leadership"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 139,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-muted-foreground text-sm mb-3",
-                                                        children: "Organizing high-quality MUN conferences that simulate real UN proceedings and global diplomatic challenges."
+                                                        children: "Empowering youth through Model United Nations (MUN) conferences and fostering leadership skills to engage in meaningful global discussions."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 143,
+                                                        lineNumber: 140,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 138,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                         className: "font-semibold text-foreground mb-2",
-                                                        children: "Training Workshops"
+                                                        children: "Entrepreneurship & Innovation"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 145,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-muted-foreground text-sm mb-3",
-                                                        children: "Conducting comprehensive training sessions on parliamentary procedure, research methods, and public speaking."
+                                                        children: "Organizing business summits to inspire creativity, strategic thinking, and help students find sustainable sources of income."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 149,
+                                                        lineNumber: 146,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 144,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                                         className: "font-semibold text-foreground mb-2",
-                                                        children: "Educational Outreach"
+                                                        children: "Global Collaboration"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 151,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-muted-foreground text-sm",
-                                                        children: "Partnering with schools and universities to promote MUN education and diplomatic awareness."
+                                                        children: "Encouraging cross-cultural communication, diversity of thought, and building resilience to overcome global challenges."
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 155,
+                                                        lineNumber: 152,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 150,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 137,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 135,
+                                lineNumber: 132,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -774,14 +764,14 @@ function AboutPage() {
                                                 className: "h-6 w-6 text-accent-gold mr-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 162,
                                                 columnNumber: 15
                                             }, this),
                                             "Impact & Achievements"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 161,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -795,7 +785,7 @@ function AboutPage() {
                                                         children: "Delegates Trained"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 170,
+                                                        lineNumber: 167,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -803,13 +793,13 @@ function AboutPage() {
                                                         children: "5000+"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 171,
+                                                        lineNumber: 168,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 166,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -817,24 +807,24 @@ function AboutPage() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-foreground font-medium",
-                                                        children: "Conferences Organized"
+                                                        children: "Platform in Bangladesh"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 171,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-accent-gold font-bold text-xl",
-                                                        children: "15+"
+                                                        children: "#1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 172,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 173,
+                                                lineNumber: 170,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -845,7 +835,7 @@ function AboutPage() {
                                                         children: "Partner Institutions"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 178,
+                                                        lineNumber: 175,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -853,13 +843,13 @@ function AboutPage() {
                                                         children: "50+"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 176,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 177,
+                                                lineNumber: 174,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -867,42 +857,42 @@ function AboutPage() {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-foreground font-medium",
-                                                        children: "Years of Excellence"
+                                                        children: "Founded"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 182,
+                                                        lineNumber: 179,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-accent-gold font-bold text-xl",
-                                                        children: "8+"
+                                                        children: "2023"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                        lineNumber: 183,
+                                                        lineNumber: 180,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 178,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 165,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 163,
+                                lineNumber: 160,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 128,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -925,7 +915,7 @@ function AboutPage() {
                                 children: "Our Journey"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 196,
+                                lineNumber: 193,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -937,36 +927,51 @@ function AboutPage() {
                                             className: "absolute left-6 top-0 bottom-0 w-0.5 bg-accent-gold/30 hidden md:block"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/about/page.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 200,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "space-y-8",
                                             children: [
                                                 {
-                                                    year: "2016",
-                                                    title: "Foundation",
-                                                    description: "IGAC was established with a vision to promote diplomatic education among youth in Bangladesh."
+                                                    year: "2023",
+                                                    title: "Foundation - August 14",
+                                                    description: "IGAC was founded with a vision to empower the next generation of leaders through diplomacy, entrepreneurship, and essential skills development."
                                                 },
                                                 {
-                                                    year: "2018",
-                                                    title: "First Major Conference",
-                                                    description: "Successfully organized our first large-scale MUN conference with 500+ delegates."
+                                                    year: "Nov 2023",
+                                                    title: "IGACMUN Session I",
+                                                    description: "Our inaugural major conference established IGAC as a leading MUN organization with 1000+ delegates across 8 committees, setting the foundation for future diplomatic excellence."
                                                 },
                                                 {
-                                                    year: "2020",
-                                                    title: "Digital Innovation",
-                                                    description: "Adapted to virtual formats during the pandemic, pioneering online MUN experiences."
+                                                    year: "Aug 2024",
+                                                    title: "Imperial MUN (IMUN'24)",
+                                                    description: "A prestigious conference with 500+ delegates focusing on contemporary global issues with high-level diplomatic simulations and expert guest speakers across 8 committees."
                                                 },
                                                 {
-                                                    year: "2022",
-                                                    title: "Regional Recognition",
-                                                    description: "IGACMUN Session 2 became the largest MUN conference in South East Asia with 1700+ delegates."
+                                                    year: "Dec 2024",
+                                                    title: "IGACMUN Session II",
+                                                    description: "The largest MUN conference in South East Asia! Successfully hosted 1700+ delegates across 12 committees, setting new standards for diplomatic excellence and international participation with crisis committees and distinguished guest speakers."
                                                 },
                                                 {
-                                                    year: "2025",
-                                                    title: "Session III - ",
-                                                    description: "Launching our most ambitious conference yet with enhanced diplomatic challenges and experiences."
+                                                    year: "Dec 2024",
+                                                    title: "Big Bang Session 2",
+                                                    description: "Expanding horizons with 300+ delegates across 7 committees, featuring innovative formats, expert moderators, and cultural exchange programs."
+                                                },
+                                                {
+                                                    year: "May 2025",
+                                                    title: "Republic MUN (RMUN'25)",
+                                                    description: "Shaping tomorrow's leaders with 250+ delegates across 10 committees through intensive diplomatic training and real-world scenario simulations."
+                                                },
+                                                {
+                                                    year: "Aug 2025",
+                                                    title: "Big Bang Session 3",
+                                                    description: "Innovation & Growth with 250+ delegates across 6 committees, featuring dynamic sessions, youth-focused initiatives, and interactive workshops."
+                                                },
+                                                {
+                                                    year: "Dec 2025",
+                                                    title: "IGACMUN Session III",
+                                                    description: "Launching our most ambitious conference yet with enhanced diplomatic challenges, experiences, and building upon our legacy of excellence."
                                                 }
                                             ].map((milestone, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "relative flex items-start space-x-6",
@@ -979,17 +984,17 @@ function AboutPage() {
                                                                     className: "h-5 w-5 text-accent-gold"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/about/page.tsx",
-                                                                    lineNumber: 237,
+                                                                    lineNumber: 249,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                                lineNumber: 236,
+                                                                lineNumber: 248,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/about/page.tsx",
-                                                            lineNumber: 235,
+                                                            lineNumber: 247,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1005,7 +1010,7 @@ function AboutPage() {
                                                                                 children: milestone.year
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                                                lineNumber: 245,
+                                                                                lineNumber: 257,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1013,13 +1018,13 @@ function AboutPage() {
                                                                                 children: milestone.title
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                                                lineNumber: 246,
+                                                                                lineNumber: 258,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                                        lineNumber: 244,
+                                                                        lineNumber: 256,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1027,46 +1032,46 @@ function AboutPage() {
                                                                         children: milestone.description
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/about/page.tsx",
-                                                                        lineNumber: 250,
+                                                                        lineNumber: 262,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/about/page.tsx",
-                                                                lineNumber: 243,
+                                                                lineNumber: 255,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/about/page.tsx",
-                                                            lineNumber: 242,
+                                                            lineNumber: 254,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, milestone.year, true, {
                                                     fileName: "[project]/src/app/about/page.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 245,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/about/page.tsx",
-                                            lineNumber: 205,
+                                            lineNumber: 202,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/about/page.tsx",
-                                    lineNumber: 201,
+                                    lineNumber: 198,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 200,
+                                lineNumber: 197,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 190,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1089,7 +1094,7 @@ function AboutPage() {
                                 children: "Join Our Mission"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 269,
+                                lineNumber: 281,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1097,7 +1102,7 @@ function AboutPage() {
                                 children: "Be part of our continuing journey to shape future global leaders through diplomatic education and international understanding."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 272,
+                                lineNumber: 284,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1112,12 +1117,12 @@ function AboutPage() {
                                             children: "Register for Session III"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/about/page.tsx",
-                                            lineNumber: 278,
+                                            lineNumber: 290,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 277,
+                                        lineNumber: 289,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1131,24 +1136,24 @@ function AboutPage() {
                                             children: "Visit Our Website"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/about/page.tsx",
-                                            lineNumber: 283,
+                                            lineNumber: 295,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/about/page.tsx",
-                                        lineNumber: 282,
+                                        lineNumber: 294,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/about/page.tsx",
-                                lineNumber: 276,
+                                lineNumber: 288,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/about/page.tsx",
-                        lineNumber: 263,
+                        lineNumber: 275,
                         columnNumber: 9
                     }, this)
                 ]

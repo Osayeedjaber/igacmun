@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ShinyText } from '@/components/ui/shiny-text'
 import { appConfig } from '@/lib/config'
 
 const iconMap: Record<string, LucideIcon> = {
@@ -56,8 +57,8 @@ export default function RegisterPage() {
             </div>
           </div>
           
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Join the Throne
+          <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+            <ShinyText className="text-foreground">Claim Your Seat</ShinyText>
           </h1>
           <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
             Register for {event.title}
@@ -113,65 +114,31 @@ export default function RegisterPage() {
           {sortedRegistrationTypes.map((type, index) => {
             const { form } = type
             const Icon = type.icon
+            const isRegular = type.key === 'regular'
             
             return (
-              <motion.div
+              <div
                 key={type.key}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`
-                  relative ${
-                    type.flashMode
-                      ? 'bg-gradient-to-br from-red-500/20 to-orange-600/5 border-2 border-red-400/50 shadow-xl shadow-red-500/20'
-                      : `bg-gradient-to-br ${type.color} border ${type.borderColor}`
-                  } rounded-xl p-8 
-                  ${form.enabled ? (
-                    type.flashMode ? 'hover:shadow-2xl hover:shadow-red-500/30' :
-                    'hover:shadow-lg hover:shadow-accent-gold/10'
-                  ) : 'opacity-60'} 
+                  relative bg-gradient-to-br from-card to-forest-900/20 border-2 border-accent-gold/30 
+                  rounded-xl p-8 
+                  ${form.enabled ? 'hover:shadow-2xl hover:shadow-accent-gold/20 hover:border-accent-gold/50' : 'opacity-60'} 
                   transition-all duration-300 group
-                  ${type.flashMode ? 'ring-1 ring-red-400/30 hover:ring-red-400/50' : ''}
                 `}
               >
 
                 <div className="flex justify-center mb-6">
-                  <div className={`
-                    p-4 rounded-full 
-                    ${
-                      type.flashMode
-                        ? (form.enabled ? 'bg-red-500/20 group-hover:bg-red-500/30 ring-2 ring-red-400/30' : 'bg-muted/20')
-                        : (form.enabled ? 'bg-accent-gold/20 group-hover:bg-accent-gold/30' : 'bg-muted/20')
-                    } 
-                    transition-all duration-300
-                  `}>
-                    <Icon className={`h-8 w-8 ${
-                      type.flashMode
-                        ? (form.enabled ? 'text-red-300' : 'text-muted-foreground')
-                        : (form.enabled ? 'text-accent-gold' : 'text-muted-foreground')
-                    }`} />
+                  <div className="p-4 rounded-full bg-accent-gold/20 group-hover:bg-accent-gold/30 transition-all duration-300">
+                    <Icon className="h-8 w-8 text-accent-gold" />
                   </div>
                 </div>
 
-                {type.flashMode && (
-                  <div className="absolute -top-3 -right-3">
-                    <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
-                      FLASH
-                    </div>
-                  </div>
-                )}
 
                 <div className="text-center space-y-4">
-                  <h3 className={`font-display text-xl font-bold ${
-                    type.flashMode ? 'text-red-200' :
-                    'text-foreground'
-                  }`}>
+                  <h3 className="font-display text-xl font-bold text-foreground">
                     {form.title}
                   </h3>
-                  <p className={`${
-                    type.flashMode ? 'text-red-300/80' :
-                    'text-muted-foreground'
-                  }`}>
+                  <p className="text-muted-foreground text-sm">
                     {form.description}
                   </p>
 
@@ -218,8 +185,8 @@ export default function RegisterPage() {
                 <div className={`absolute bottom-4 left-4 w-1 h-1 ${
                   type.flashMode ? 'bg-red-400/30' :
                   'bg-accent-gold/20'
-                } rounded-full animate-pulse delay-1000`} />
-              </motion.div>
+                } rounded-full`} />
+              </div>
             )
           })}
         </div>
@@ -384,14 +351,14 @@ export default function RegisterPage() {
             <div className="space-y-4">
               <h3 className="font-semibold text-foreground flex items-center">
                 <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                Registration Guidelines
+                About IGACMUN Session III
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• All registrations are processed through external Google Forms</li>
-                <li>• Early registration is recommended for better committee preferences</li>
-                <li>• Payment instructions will be provided after form submission</li>
-                <li>• Submit payment confirmation using the form above after payment</li>
-                <li>• Registration confirmation will be sent via email</li>
+                <li>• Session III is the next chapter of IGAC's flagship conference</li>
+                <li>• Session II successfully hosted 1700+ delegates in 2024</li>
+                <li>• Building on proven excellence with enhanced experiences</li>
+                <li>• Taking place in December 2025 at AIUB Campus</li>
+                <li>• All registrations processed through Google Forms</li>
               </ul>
             </div>
             <div className="space-y-4">
@@ -400,11 +367,12 @@ export default function RegisterPage() {
                 What&apos;s Included
               </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Access to all committee sessions</li>
-                <li>• Conference materials and resources</li>
-                <li>• Networking opportunities with delegates</li>
+                <li>• Full access to all committee sessions</li>
+                <li>• Conference materials and delegate handbook</li>
+                <li>• Networking with delegates across the region</li>
                 <li>• Certificate of participation</li>
-                <li>• Awards ceremony and recognition</li>
+                <li>• Opportunity for awards and recognition</li>
+                <li>• Meals and refreshments during conference days</li>
               </ul>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { Instagram, Facebook, Mail, Phone, MapPin, Globe, Heart } from 'lucide-react'
 import { ElegantBackground } from '@/components/ui/elegant-background'
 import { Logo } from '@/components/ui/logo'
+import { ShinyText } from '@/components/ui/shiny-text'
 
 export function Footer() {
   const socialLinks = [
@@ -212,9 +213,8 @@ export function Footer() {
                     <div className="p-1.5 bg-accent-gold/30 rounded-full group-hover:bg-accent-gold/40 transition-colors duration-300">
                       <Heart className="h-4 w-4 text-accent-gold animate-pulse" />
                     </div>
-                    <span className="text-sm text-accent-gold font-semibold">CRAFTED WITH PASSION BY</span>
-                    <span className="font-display text-sm font-bold text-accent-gold">
-                      OSAYEED JABER
+                    <span className="text-sm font-semibold">
+                      <ShinyText className="text-accent-gold">CRAFTED WITH PASSION BY OSAYEED JABER</ShinyText>
                     </span>
                   </div>
                 </div>

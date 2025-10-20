@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter, Manrope, Cinzel } from "next/font/google";
 import "./globals.css";

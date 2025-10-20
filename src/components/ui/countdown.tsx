@@ -152,15 +152,15 @@ export function Countdown({
         )}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 relative z-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 relative z-10">
         {timeUnits.map((unit) => (
           <div
             key={unit.label}
             className="flex flex-col items-center space-y-2"
           >
             <div className="relative group">
-              <div className="bg-card/80 backdrop-blur-sm border border-accent-gold/30 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[90px] shadow-lg hover:border-accent-gold/50 transition-all duration-300 hover:shadow-xl">
-                <div className="text-xl md:text-3xl font-bold text-accent-gold text-center font-display tabular-nums">
+              <div className="bg-card/80 backdrop-blur-sm border border-accent-gold/30 rounded-xl p-5 md:p-7 min-w-[80px] md:min-w-[100px] shadow-lg hover:border-accent-gold/50 transition-all duration-300 hover:shadow-xl">
+                <div className="text-2xl md:text-4xl font-bold text-accent-gold text-center font-display tabular-nums">
                   {unit.value.toString().padStart(2, '0')}
                 </div>
               </div>

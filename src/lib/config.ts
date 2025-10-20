@@ -14,7 +14,7 @@ export const appConfig = {
     },
     { 
       name: "Rezwan Rashid Zidan", 
-      role: "Co-founder", 
+      role: "Co-chairman", 
       photo: "/leadership/cofounder.jpg",
       description: "Building the foundation of youth diplomacy"
     }
@@ -46,17 +46,10 @@ export const appConfig = {
   },
   registrationTypes: [
     {
-      key: 'earlyBird',
+      key: 'regular',
       icon: 'Star',
       color: 'from-emerald-500/20 to-emerald-600/5',
       borderColor: 'border-emerald-400/40',
-      flashMode: 'false'
-    },
-    {
-      key: 'regular',
-      icon: 'CheckCircle',
-      color: 'from-forest-500/20 to-forest-600/5',
-      borderColor: 'border-forest-400/40',
       flashMode: 'false'
     },
     {
@@ -87,27 +80,24 @@ export const appConfig = {
       link: "https://forms.gle/PW95WFfWVVu2vPMD6",
       title: "Campus Ambassadors",
       description: "Represent your institution",
-      deadline: "2025-11-30T23:59:59Z"
-    },
-    earlyBird: { 
-      enabled: false, 
-      link: "https://forms.gle/Rumm2ApxBcAi41649",
-      title: "Early Bird Registration",
-      description: "Secure your spot with discounted rates",
-      deadline: "2025-10-31T23:59:59Z"
+      deadline: "2025-11-30T23:59:59Z",
+      price: "3570",
+      currency: "BDT"
     },
     regular: { 
-      enabled: false,
-      link: "https://forms.gle/your-regular-registration-form-id",
+      enabled: true,
+      link: "https://forms.gle/Rumm2ApxBcAi41649",
       title: "Regular Registration",
       description: "Standard registration rates",
-      deadline: "2025-12-10T23:59:59Z"
+      deadline: "2025-12-10T23:59:59Z",
+      price: "3570",
+      currency: "BDT"
     },
     late: { 
       enabled: false,
       link: "https://forms.gle/your-late-registration-form-id",
       title: "Late Registration",
-      description: "Last chance registration with additional fees",
+      description: "Will be announced soon",
       deadline: "2025-12-15T23:59:59Z"
     },
     executiveBoard: { 
@@ -202,9 +192,9 @@ export const appConfig = {
     hidden: false
   },
   event: {
-    title: "IGACMUN Session III",
+    title: "IGACMUN SESSION III",
     subtitle: "",
-    tagline: "Where Diplomacy Meets Destiny",
+    tagline: "United | Transformation | Innovation",
     dates: "TBA",
     expectedDelegates: "1700+",
     description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence."

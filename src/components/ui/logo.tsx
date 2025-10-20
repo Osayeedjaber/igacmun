@@ -48,7 +48,7 @@ export function Logo({
         )}
       >
         <Image
-          src="/Untitled design (19).png"
+          src="/logo.png"
           alt="IGACMUN Logo"
           width={
             size === '5xl' ? 192 : 

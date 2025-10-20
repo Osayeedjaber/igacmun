@@ -121,6 +121,15 @@ export default function ContactPage() {
             Have questions about IGACMUN Session III? We&apos;re here to help. Reach out to us through 
             any of the channels below and we&apos;ll get back to you as soon as possible.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-6 text-muted-foreground"
+          >
+            <p className="font-semibold text-foreground">Our Office:</p>
+            <p>House #298, New Elephant Road, Dhaka - 1205</p>
+          </motion.div>
         </motion.div>
 
         {/* Contact Methods Grid */}

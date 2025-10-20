@@ -22,7 +22,7 @@ const appConfig = {
         },
         {
             name: "Rezwan Rashid Zidan",
-            role: "Co-founder",
+            role: "Co-chairman",
             photo: "/leadership/cofounder.jpg",
             description: "Building the foundation of youth diplomacy"
         }
@@ -54,17 +54,10 @@ const appConfig = {
     },
     registrationTypes: [
         {
-            key: 'earlyBird',
+            key: 'regular',
             icon: 'Star',
             color: 'from-emerald-500/20 to-emerald-600/5',
             borderColor: 'border-emerald-400/40',
-            flashMode: 'false'
-        },
-        {
-            key: 'regular',
-            icon: 'CheckCircle',
-            color: 'from-forest-500/20 to-forest-600/5',
-            borderColor: 'border-forest-400/40',
             flashMode: 'false'
         },
         {
@@ -95,27 +88,24 @@ const appConfig = {
             link: "https://forms.gle/PW95WFfWVVu2vPMD6",
             title: "Campus Ambassadors",
             description: "Represent your institution",
-            deadline: "2025-11-30T23:59:59Z"
-        },
-        earlyBird: {
-            enabled: false,
-            link: "https://forms.gle/Rumm2ApxBcAi41649",
-            title: "Early Bird Registration",
-            description: "Secure your spot with discounted rates",
-            deadline: "2025-10-31T23:59:59Z"
+            deadline: "2025-11-30T23:59:59Z",
+            price: "3570",
+            currency: "BDT"
         },
         regular: {
-            enabled: false,
-            link: "https://forms.gle/your-regular-registration-form-id",
+            enabled: true,
+            link: "https://forms.gle/Rumm2ApxBcAi41649",
             title: "Regular Registration",
             description: "Standard registration rates",
-            deadline: "2025-12-10T23:59:59Z"
+            deadline: "2025-12-10T23:59:59Z",
+            price: "3570",
+            currency: "BDT"
         },
         late: {
             enabled: false,
             link: "https://forms.gle/your-late-registration-form-id",
             title: "Late Registration",
-            description: "Last chance registration with additional fees",
+            description: "Will be announced soon",
             deadline: "2025-12-15T23:59:59Z"
         },
         executiveBoard: {
@@ -130,7 +120,7 @@ const appConfig = {
             link: "https://forms.gle/kruBU3Vr5336ZXXRA",
             title: "Payment Confirmation",
             description: "Submit your payment proof after registration",
-            deadline: "2025-12-20T23:59:59Z"
+            deadline: "2025-12-15T23:59:59Z"
         }
     },
     social: {
@@ -209,9 +199,9 @@ const appConfig = {
         hidden: false
     },
     event: {
-        title: "IGACMUN Session III",
+        title: "IGACMUN SESSION III",
         subtitle: "",
-        tagline: "Where Diplomacy Meets Destiny",
+        tagline: "United | Transformation | Innovation",
         dates: "TBA",
         expectedDelegates: "1700+",
         description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence."
@@ -370,8 +360,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/external-link.js [app-ssr] (ecmascript) <export default as ExternalLink>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/star.js [app-ssr] (ecmascript) <export default as Star>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$shiny$2d$text$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/shiny-text.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/config.ts [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -385,10 +377,10 @@ function EventsPage() {
         {
             id: 1,
             title: "IGACMUN Session 2",
-            subtitle: "",
-            date: "March 2024",
+            subtitle: "Largest Conference in South East Asia",
+            date: "December 2024",
             location: "Dhaka, Bangladesh",
-            delegates: "1700+",
+            delegates: "1700",
             committees: 12,
             description: "A groundbreaking conference that set new standards for MUN excellence in the region, featuring diverse committees and unprecedented participation.",
             highlights: [
@@ -402,11 +394,29 @@ function EventsPage() {
         },
         {
             id: 2,
+            title: "IGAC Model United Nations Session 1",
+            subtitle: "The Foundation",
+            date: "November 24-26, 2023",
+            location: "Dhaka, Bangladesh",
+            delegates: "1000",
+            committees: 8,
+            description: "Our inaugural major conference that established IGAC as a leading MUN organization, setting the foundation for future diplomatic excellence.",
+            highlights: [
+                "First major IGAC conference",
+                "Foundation establishment",
+                "Strong delegate engagement",
+                "Future growth platform"
+            ],
+            featured: false,
+            image: "/events/igacmun.jpg"
+        },
+        {
+            id: 3,
             title: "Imperial Model United Nations 2024 (IMUN'24)",
             subtitle: "Excellence in Diplomacy",
-            date: "September 2024",
+            date: "August 2024",
             location: "Dhaka, Bangladesh",
-            delegates: "500+",
+            delegates: "500",
             committees: 8,
             description: "A prestigious conference focusing on contemporary global issues with high-level diplomatic simulations and expert guest speakers.",
             highlights: [
@@ -419,12 +429,12 @@ function EventsPage() {
             image: "/events/imun.jpg"
         },
         {
-            id: 3,
-            title: "Republic Model United Nations 2025 (RMUN'25)",
+            id: 4,
+            title: "Republic Model United Nations (RMUN'25)",
             subtitle: "Shaping Tomorrow's Leaders",
-            date: "January 2025",
+            date: "May 2025",
             location: "Dhaka, Bangladesh",
-            delegates: "600+",
+            delegates: "250",
             committees: 10,
             description: "An innovative conference designed to prepare the next generation of global leaders through intensive diplomatic training and real-world scenario simulations.",
             highlights: [
@@ -437,22 +447,40 @@ function EventsPage() {
             image: "/events/rmun.jpg"
         },
         {
-            id: 4,
-            title: "IGAC Model United Nations Session 1",
-            subtitle: "The Foundation",
-            date: "November 2023",
+            id: 5,
+            title: "Big Bang Session 3",
+            subtitle: "Innovation & Growth",
+            date: "August 29-31, 2025",
             location: "Dhaka, Bangladesh",
-            delegates: "800+",
-            committees: 8,
-            description: "Our inaugural major conference that established IGAC as a leading MUN organization, setting the foundation for future diplomatic excellence.",
+            delegates: "250",
+            committees: 6,
+            description: "An exciting conference bringing together young diplomats for engaging debates and collaborative problem-solving sessions.",
             highlights: [
-                "First major IGAC conference",
-                "Foundation establishment",
-                "Strong delegate engagement",
-                "Future growth platform"
+                "Dynamic committee sessions",
+                "Youth-focused initiatives",
+                "Interactive workshops",
+                "Networking opportunities"
             ],
             featured: false,
-            image: "/events/igacmun.jpg"
+            image: "/events/bigbangs3.jpeg"
+        },
+        {
+            id: 6,
+            title: "Big Bang Session 2",
+            subtitle: "Expanding Horizons",
+            date: "December 2024",
+            location: "Dhaka, Bangladesh",
+            delegates: "300",
+            committees: 7,
+            description: "Building on the success of previous sessions, this conference featured expanded participation and innovative committee formats.",
+            highlights: [
+                "Expanded participation",
+                "Innovative formats",
+                "Expert moderators",
+                "Cultural exchange programs"
+            ],
+            featured: false,
+            image: "/events/igacmunbannerjpg.jpg"
         }
     ];
     const EventCard = ({ event, index })=>{
@@ -490,7 +518,7 @@ function EventsPage() {
                                     className: "h-4 w-4 mr-1 text-forest-900"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 160,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -498,25 +526,25 @@ function EventsPage() {
                                     children: "FEATURED"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 161,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 121,
+                            lineNumber: 159,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/events/page.tsx",
-                        lineNumber: 120,
+                        lineNumber: 158,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-br from-forest-800/30 to-forest-900/30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     }, void 0, false, {
                         fileName: "[project]/src/app/events/page.tsx",
-                        lineNumber: 129,
+                        lineNumber: 167,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -537,14 +565,14 @@ function EventsPage() {
                                             className: "object-cover"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/events/page.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 176,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/events/page.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 182,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -554,23 +582,23 @@ function EventsPage() {
                                                 children: event.date
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 146,
+                                                lineNumber: 184,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/events/page.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 183,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 172,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/events/page.tsx",
-                                lineNumber: 133,
+                                lineNumber: 171,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -584,7 +612,7 @@ function EventsPage() {
                                         children: event.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 193,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -592,7 +620,7 @@ function EventsPage() {
                                         children: event.subtitle
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 199,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -600,7 +628,7 @@ function EventsPage() {
                                         children: event.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 202,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -613,7 +641,7 @@ function EventsPage() {
                                                         className: "h-4 w-4 text-accent-gold"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 171,
+                                                        lineNumber: 209,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -621,13 +649,13 @@ function EventsPage() {
                                                         children: event.date
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 172,
+                                                        lineNumber: 210,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 170,
+                                                lineNumber: 208,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,7 +665,7 @@ function EventsPage() {
                                                         className: "h-4 w-4 text-accent-gold"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 213,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -645,13 +673,13 @@ function EventsPage() {
                                                         children: event.location
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 176,
+                                                        lineNumber: 214,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 212,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -661,7 +689,7 @@ function EventsPage() {
                                                         className: "h-4 w-4 text-accent-gold"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 217,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -672,13 +700,13 @@ function EventsPage() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 180,
+                                                        lineNumber: 218,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 178,
+                                                lineNumber: 216,
                                                 columnNumber: 17
                                             }, this),
                                             event.committees > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -688,7 +716,7 @@ function EventsPage() {
                                                         className: "h-4 w-4 text-accent-gold"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 222,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -699,19 +727,19 @@ function EventsPage() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 223,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 183,
+                                                lineNumber: 221,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 207,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -721,7 +749,7 @@ function EventsPage() {
                                                 children: "Key Highlights:"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 192,
+                                                lineNumber: 230,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -734,69 +762,69 @@ function EventsPage() {
                                                                 children: "•"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                                lineNumber: 196,
+                                                                lineNumber: 234,
                                                                 columnNumber: 23
                                                             }, this),
                                                             highlight
                                                         ]
                                                     }, idx, true, {
                                                         fileName: "[project]/src/app/events/page.tsx",
-                                                        lineNumber: 195,
+                                                        lineNumber: 233,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 193,
+                                                lineNumber: 231,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 191,
+                                        lineNumber: 229,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/events/page.tsx",
-                                lineNumber: 154,
+                                lineNumber: 192,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/events/page.tsx",
-                        lineNumber: 131,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute top-4 right-4 w-2 h-2 bg-accent-gold/30 rounded-full animate-pulse opacity-60"
                     }, void 0, false, {
                         fileName: "[project]/src/app/events/page.tsx",
-                        lineNumber: 206,
+                        lineNumber: 244,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute bottom-4 left-4 w-1 h-1 bg-accent-gold/20 rounded-full animate-pulse delay-1000 opacity-60"
                     }, void 0, false, {
                         fileName: "[project]/src/app/events/page.tsx",
-                        lineNumber: 207,
+                        lineNumber: 245,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 rounded-xl bg-gradient-to-br from-accent-gold/5 via-transparent to-forest-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/src/app/events/page.tsx",
-                        lineNumber: 210,
+                        lineNumber: 248,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/events/page.tsx",
-                lineNumber: 112,
+                lineNumber: 150,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/events/page.tsx",
-            lineNumber: 105,
+            lineNumber: 143,
             columnNumber: 7
         }, this);
     };
@@ -828,33 +856,40 @@ function EventsPage() {
                                         className: "h-16 w-16 text-accent-gold"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 228,
+                                        lineNumber: 266,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 267,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/events/page.tsx",
-                                lineNumber: 227,
+                                lineNumber: 265,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 226,
+                            lineNumber: 264,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "font-display text-5xl md:text-6xl font-bold text-foreground mb-6",
-                            children: "Events Archive"
+                            className: "font-display text-5xl md:text-6xl font-bold mb-6",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$shiny$2d$text$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ShinyText"], {
+                                className: "text-foreground",
+                                children: "Events Archive"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/events/page.tsx",
+                                lineNumber: 272,
+                                columnNumber: 13
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 233,
+                            lineNumber: 271,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -862,7 +897,7 @@ function EventsPage() {
                             children: "A Legacy of Diplomatic Excellence"
                         }, void 0, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 236,
+                            lineNumber: 274,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -870,13 +905,13 @@ function EventsPage() {
                             children: "Explore our journey through past conferences and events that have shaped the MUN landscape in South East Asia and beyond."
                         }, void 0, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 239,
+                            lineNumber: 277,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/events/page.tsx",
-                    lineNumber: 220,
+                    lineNumber: 258,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -892,27 +927,22 @@ function EventsPage() {
                         duration: 0.8,
                         delay: 0.2
                     },
-                    className: "grid grid-cols-2 md:grid-cols-4 gap-8 mb-16",
+                    className: "grid grid-cols-1 md:grid-cols-3 gap-8 mb-16",
                     children: [
                         {
                             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"],
                             label: "Total Events",
-                            value: "15+"
+                            value: "6+"
                         },
                         {
                             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"],
                             label: "Total Delegates",
-                            value: "5000+"
-                        },
-                        {
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$award$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Award$3e$__["Award"],
-                            label: "Committees Hosted",
-                            value: "50+"
+                            value: "4000+"
                         },
                         {
                             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__["MapPin"],
                             label: "Years Active",
-                            value: "8+"
+                            value: "3+"
                         }
                     ].map((stat, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                             initial: {
@@ -937,17 +967,17 @@ function EventsPage() {
                                             className: "h-6 w-6 text-accent-gold"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/events/page.tsx",
-                                            lineNumber: 267,
+                                            lineNumber: 304,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 303,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 265,
+                                    lineNumber: 302,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -955,7 +985,7 @@ function EventsPage() {
                                     children: stat.value
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 270,
+                                    lineNumber: 307,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -963,18 +993,18 @@ function EventsPage() {
                                     children: stat.label
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 310,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, stat.label, true, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 258,
+                            lineNumber: 295,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/events/page.tsx",
-                    lineNumber: 246,
+                    lineNumber: 284,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -984,12 +1014,12 @@ function EventsPage() {
                             index: index
                         }, event.id, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 283,
+                            lineNumber: 320,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/events/page.tsx",
-                    lineNumber: 281,
+                    lineNumber: 318,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1012,7 +1042,7 @@ function EventsPage() {
                             children: "Be Part of Our Next Chapter"
                         }, void 0, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 294,
+                            lineNumber: 331,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1020,7 +1050,7 @@ function EventsPage() {
                             children: "Join us for IGACMUN Session III and become part of our continuing legacy of diplomatic excellence and international understanding."
                         }, void 0, false, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 297,
+                            lineNumber: 334,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1035,12 +1065,12 @@ function EventsPage() {
                                         children: "Register for Session III"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 303,
+                                        lineNumber: 340,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 302,
+                                    lineNumber: 339,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1056,42 +1086,42 @@ function EventsPage() {
                                                 className: "mr-2 h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/events/page.tsx",
-                                                lineNumber: 309,
+                                                lineNumber: 346,
                                                 columnNumber: 17
                                             }, this),
                                             "Follow Our Journey"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/events/page.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 345,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/events/page.tsx",
-                                    lineNumber: 307,
+                                    lineNumber: 344,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/events/page.tsx",
-                            lineNumber: 301,
+                            lineNumber: 338,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/events/page.tsx",
-                    lineNumber: 288,
+                    lineNumber: 325,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/events/page.tsx",
-            lineNumber: 218,
+            lineNumber: 256,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/events/page.tsx",
-        lineNumber: 217,
+        lineNumber: 255,
         columnNumber: 5
     }, this);
 }

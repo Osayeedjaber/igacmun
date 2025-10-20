@@ -89,14 +89,14 @@ export default function CommitteesPage() {
           </div>
           
           <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Committees
+            Conference Committees
           </h1>
           <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
-            Diplomatic Battlegrounds Await
+            10 Diplomatic Arenas
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Engage in high-level diplomatic discussions across diverse global issues. 
-            Each committee offers unique challenges and opportunities for diplomatic excellence.
+            Each committee offers unique challenges for diplomatic excellence.
           </p>
         </motion.div>
 
@@ -201,10 +201,10 @@ export default function CommitteesPage() {
           </div>
           
           <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Committees
+            Conference Committees
           </h1>
           <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
-            Diplomatic Battlegrounds
+            10 Diplomatic Arenas
           </p>
         </motion.div>
 
@@ -217,8 +217,8 @@ export default function CommitteesPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="bg-forest-950/60 border border-accent-gold/20 rounded-xl p-8 backdrop-blur-sm">
-              <p className="text-accent-gold font-semibold text-2xl mb-6 tracking-wide">
-                COMMITTEES WILL BE REVEALED IN
+              <p className="text-accent-gold font-semibold text-xl mb-4 tracking-wide">
+                Committee Details Coming Soon
               </p>
               
               <Countdown
@@ -228,8 +228,8 @@ export default function CommitteesPage() {
                 className="[&>div]:bg-gradient-to-br [&>div]:from-forest-700 [&>div]:to-forest-800 [&>div]:border-accent-gold/30 [&>div]:text-accent-gold"
               />
               
-              <p className="text-muted-foreground mt-6 text-lg">
-                The diplomatic battlegrounds will be unveiled soon. Prepare for unprecedented challenges across diverse global issues.
+              <p className="text-muted-foreground mt-6">
+                Information about all 10 committees will be announced soon.
               </p>
             </div>
           </motion.div>

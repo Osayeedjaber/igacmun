@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Calendar, Users, MapPin, Award, ExternalLink, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ShinyText } from '@/components/ui/shiny-text'
+import { GlareCard } from '@/components/ui/glare-card'
 import { appConfig } from '@/lib/config'
 
 export default function EventsPage() {
@@ -15,10 +17,10 @@ export default function EventsPage() {
     {
       id: 1,
       title: "IGACMUN Session 2",
-      subtitle: "",
-      date: "March 2024",
+      subtitle: "Largest Conference in South East Asia",
+      date: "December 2024",
       location: "Dhaka, Bangladesh",
-      delegates: "1700+",
+      delegates: "1700",
       committees: 12,
       description: "A groundbreaking conference that set new standards for MUN excellence in the region, featuring diverse committees and unprecedented participation.",
       highlights: [
@@ -32,11 +34,29 @@ export default function EventsPage() {
     },
     {
       id: 2,
+      title: "IGAC Model United Nations Session 1",
+      subtitle: "The Foundation",
+      date: "November 24-26, 2023",
+      location: "Dhaka, Bangladesh",
+      delegates: "1000",
+      committees: 8,
+      description: "Our inaugural major conference that established IGAC as a leading MUN organization, setting the foundation for future diplomatic excellence.",
+      highlights: [
+        "First major IGAC conference",
+        "Foundation establishment",
+        "Strong delegate engagement",
+        "Future growth platform"
+      ],
+      featured: false,
+      image: "/events/igacmun.jpg"
+    },
+    {
+      id: 3,
       title: "Imperial Model United Nations 2024 (IMUN'24)",
       subtitle: "Excellence in Diplomacy",
-      date: "September 2024",
+      date: "August 2024",
       location: "Dhaka, Bangladesh",
-      delegates: "500+",
+      delegates: "500",
       committees: 8,
       description: "A prestigious conference focusing on contemporary global issues with high-level diplomatic simulations and expert guest speakers.",
       highlights: [
@@ -49,12 +69,12 @@ export default function EventsPage() {
       image: "/events/imun.jpg"
     },
     {
-      id: 3,
-      title: "Republic Model United Nations 2025 (RMUN'25)",
+      id: 4,
+      title: "Republic Model United Nations (RMUN'25)",
       subtitle: "Shaping Tomorrow's Leaders",
-      date: "January 2025",
+      date: "May 2025",
       location: "Dhaka, Bangladesh",
-      delegates: "600+",
+      delegates: "250",
       committees: 10,
       description: "An innovative conference designed to prepare the next generation of global leaders through intensive diplomatic training and real-world scenario simulations.",
       highlights: [
@@ -67,22 +87,40 @@ export default function EventsPage() {
       image: "/events/rmun.jpg"
     },
     {
-      id: 4,
-      title: "IGAC Model United Nations Session 1",
-      subtitle: "The Foundation",
-      date: "November 2023",
+      id: 5,
+      title: "Big Bang Session 3",
+      subtitle: "Innovation & Growth",
+      date: "August 29-31, 2025",
       location: "Dhaka, Bangladesh",
-      delegates: "800+",
-      committees: 8,
-      description: "Our inaugural major conference that established IGAC as a leading MUN organization, setting the foundation for future diplomatic excellence.",
+      delegates: "250",
+      committees: 6,
+      description: "An exciting conference bringing together young diplomats for engaging debates and collaborative problem-solving sessions.",
       highlights: [
-        "First major IGAC conference",
-        "Foundation establishment",
-        "Strong delegate engagement",
-        "Future growth platform"
+        "Dynamic committee sessions",
+        "Youth-focused initiatives",
+        "Interactive workshops",
+        "Networking opportunities"
       ],
       featured: false,
-      image: "/events/igacmun.jpg"
+      image: "/events/bigbangs3.jpeg"
+    },
+    {
+      id: 6,
+      title: "Big Bang Session 2",
+      subtitle: "Expanding Horizons",
+      date: "December 2024",
+      location: "Dhaka, Bangladesh",
+      delegates: "300",
+      committees: 7,
+      description: "Building on the success of previous sessions, this conference featured expanded participation and innovative committee formats.",
+      highlights: [
+        "Expanded participation",
+        "Innovative formats",
+        "Expert moderators",
+        "Cultural exchange programs"
+      ],
+      featured: false,
+      image: "/events/igacmunbannerjpg.jpg"
     }
   ]
 
@@ -230,8 +268,8 @@ export default function EventsPage() {
             </div>
           </div>
           
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Events Archive
+          <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
+            <ShinyText className="text-foreground">Events Archive</ShinyText>
           </h1>
           <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
             A Legacy of Diplomatic Excellence
@@ -247,13 +285,12 @@ export default function EventsPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
         >
           {[
-            { icon: Calendar, label: "Total Events", value: "15+" },
-            { icon: Users, label: "Total Delegates", value: "5000+" },
-            { icon: Award, label: "Committees Hosted", value: "50+" },
-            { icon: MapPin, label: "Years Active", value: "8+" },
+            { icon: Calendar, label: "Total Events", value: "6+" },
+            { icon: Users, label: "Total Delegates", value: "4000+" },
+            { icon: MapPin, label: "Years Active", value: "3+" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

@@ -379,7 +379,7 @@ function Logo({ size = 'md', className, animated = true, showText = false }) {
                 },
                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("relative rounded-full overflow-hidden bg-accent-gold/10 p-1", sizeClasses[size]),
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    src: "/Untitled design (19).png",
+                    src: "/logo.png",
                     alt: "IGACMUN Logo",
                     width: size === '5xl' ? 192 : size === '4xl' ? 160 : size === '3xl' ? 128 : size === '2xl' ? 96 : size === 'xl' ? 80 : size === 'lg' ? 64 : size === 'md' ? 40 : size === 'sm' ? 24 : 16,
                     height: size === '5xl' ? 192 : size === '4xl' ? 160 : size === '3xl' ? 128 : size === '2xl' ? 96 : size === 'xl' ? 80 : size === 'lg' ? 64 : size === 'md' ? 40 : size === 'sm' ? 24 : 16,
