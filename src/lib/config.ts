@@ -245,6 +245,43 @@ export const appConfig = {
       ]
     }
   }
+  ,
+  faqs: [
+    {
+      icon: "Users",
+      category: "General",
+      questions: [
+        {
+          q: "What is IGACMUN Session III?",
+          a: "IGACMUN Session III is the flagship Model United Nations conference by IGAC, scheduled for December 2025 at AIUB."
+        },
+        {
+          q: "Who can register?",
+          a: "Students and young professionals interested in diplomacy, debate, and international relations are welcome to register."
+        }
+      ]
+    },
+    {
+      icon: "Calendar",
+      category: "Schedule",
+      questions: [
+        {
+          q: "When will the schedule be published?",
+          a: "The detailed schedule will be revealed according to the countdown on the Schedule page."
+        }
+      ]
+    },
+    {
+      icon: "CreditCard",
+      category: "Registration & Fees",
+      questions: [
+        {
+          q: "How do I complete payment?",
+          a: "After submitting the registration form, follow the payment instructions and submit proof via the Payment Confirmation form."
+        }
+      ]
+    }
+  ]
 } as const;
 
 export type AppConfig = typeof appConfig;
