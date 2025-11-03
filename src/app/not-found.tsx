@@ -90,7 +90,7 @@ export default function NotFound() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { name: "Home", href: "/" },
-              { name: "Register", href: "/session-3/register" },
+              { name: "Register", href: "/register" },
               { name: "Committees", href: "/session-3/committees" },
               { name: "Contact", href: "/contact" }
             ].map((link, index) => (

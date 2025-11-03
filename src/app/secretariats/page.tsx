@@ -327,7 +327,7 @@ export default function SecretariatsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="thorn" size="lg" asChild>
-              <a href="/session-3/register">
+              <a href="/register">
                 Register Now
               </a>
             </Button>

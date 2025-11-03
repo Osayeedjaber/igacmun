@@ -1,4 +1,7 @@
 export const appConfig = {
+  site: {
+    url: "https://igacmun.vercel.app",
+  },
   leadership: [
     { 
       name: "Al Rashidus Sabru Farabi", 
@@ -85,7 +88,7 @@ export const appConfig = {
       currency: "BDT"
     },
     regular: { 
-      enabled: true,
+      enabled: false,
       link: "https://forms.gle/Rumm2ApxBcAi41649",
       title: "Regular Registration",
       description: "Standard registration rates",

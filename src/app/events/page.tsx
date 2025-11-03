@@ -102,24 +102,6 @@ export default function EventsPage() {
       ],
       featured: false,
       image: "/events/bigbangs3.jpeg"
-    },
-    {
-      id: 6,
-      title: "Big Bang Session 2",
-      subtitle: "Expanding Horizons",
-      date: "December 2024",
-      location: "Dhaka, Bangladesh",
-      delegates: "300",
-      committees: 7,
-      description: "Building on the success of previous sessions, this conference featured expanded participation and innovative committee formats.",
-      highlights: [
-        "Expanded participation",
-        "Innovative formats",
-        "Expert moderators",
-        "Cultural exchange programs"
-      ],
-      featured: false,
-      image: "/events/igacmunbannerjpg.jpg"
     }
   ]
 
@@ -287,7 +269,7 @@ export default function EventsPage() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
         >
           {[
-            { icon: Calendar, label: "Total Events", value: "6+" },
+            { icon: Calendar, label: "Total Events", value: "5+" },
             { icon: Users, label: "Total Delegates", value: "4000+" },
             { icon: MapPin, label: "Years Active", value: "3+" },
           ].map((stat, index) => (
@@ -336,7 +318,7 @@ export default function EventsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="thorn" size="lg" asChild>
-              <a href="/session-3/register">
+              <a href="/register">
                 Register for Session III
               </a>
             </Button>

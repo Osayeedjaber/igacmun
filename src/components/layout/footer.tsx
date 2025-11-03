@@ -28,7 +28,7 @@ export function Footer() {
     { name: 'About IGAC', href: '/about' },
     { name: 'Session III', href: '/session-3' },
     { name: 'Committees', href: '/session-3/committees' },
-    { name: 'Registration', href: '/session-3/register' },
+    { name: 'Registration', href: '/register' },
     { name: 'Venue', href: '/session-3/venue' },
     { name: 'Contact', href: '/contact' }
   ]

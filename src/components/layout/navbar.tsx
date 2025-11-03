@@ -15,7 +15,7 @@ const navigation = [
   { name: 'Committees', href: '/session-3/committees' },
   { name: 'Schedule', href: '/session-3/schedule' },
   { name: 'Venue', href: '/session-3/venue' },
-  { name: 'Registration', href: '/session-3/register' },
+  { name: 'Registration', href: '/register' },
   { name: 'Secretariats', href: '/secretariats' },
   { name: 'Events', href: '/events' },
   { name: 'About', href: '/about' },
@@ -36,14 +36,19 @@ export function Navbar() {
   }, [])
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled 
-        ? "bg-background/95 backdrop-blur-md border-b border-accent-gold/20 shadow-lg" 
-        : "bg-transparent"
-    )}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <>
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          scrolled
+            ? "bg-background/95 backdrop-blur-md border-b border-accent-gold/20 shadow-lg"
+            : "bg-transparent"
+        )}
+      >
+        <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
+          <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -62,7 +67,7 @@ export function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1.5 lg:space-x-2">
             {navigation.map((item) => (
               <motion.div
                 key={item.name}
@@ -73,7 +78,7 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group overflow-hidden",
+                    "px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative group overflow-hidden flex items-center whitespace-nowrap",
                     pathname === item.href
                       ? "text-accent-gold bg-accent-gold/10"
                       : "text-foreground hover:text-accent-gold"
@@ -83,7 +88,7 @@ export function Navbar() {
                   <div className="absolute inset-0 bg-gradient-to-r from-accent-gold/0 via-accent-gold/10 to-accent-gold/0 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -skew-x-12 group-hover:skew-x-0" />
                   
                   {/* Text with enhanced hover effect */}
-                  <span className="relative z-10 group-hover:drop-shadow-sm transition-all duration-300">
+                  <span className="relative z-10 group-hover:drop-shadow-sm transition-all duration-300 whitespace-nowrap">
                     {item.name}
                   </span>
                   
@@ -109,8 +114,8 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="thorn" size="sm" asChild>
-              <Link href="/session-3/register">
+            <Button variant="thorn" size="sm" className="h-8 px-3" asChild>
+              <Link href="/register">
                 Register Now
               </Link>
             </Button>
@@ -154,7 +159,7 @@ export function Navbar() {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 relative group overflow-hidden",
+                      "block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 relative group overflow-hidden whitespace-nowrap",
                       pathname === item.href
                         ? "text-accent-gold bg-accent-gold/15 border-l-2 border-accent-gold"
                         : "text-foreground hover:text-accent-gold hover:bg-accent-gold/10"
@@ -172,7 +177,7 @@ export function Navbar() {
               ))}
               <div className="pt-2">
                 <Button variant="thorn" className="w-full" asChild>
-                  <Link href="/session-3/register" onClick={() => setIsOpen(false)}>
+                  <Link href="/register" onClick={() => setIsOpen(false)}>
                     Register Now
                   </Link>
                 </Button>
@@ -182,8 +187,9 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Decorative thorn divider */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent" />
-    </nav>
+        {/* Decorative thorn divider */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent" />
+      </motion.nav>
+    </>
   )
 }

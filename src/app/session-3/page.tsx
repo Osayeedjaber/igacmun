@@ -95,7 +95,7 @@ export default function Session3Page() {
             >
               <MagneticElement strength={0.2}>
                 <Button variant="thorn" size="xl" asChild>
-                  <Link href="/session-3/register" className="group">
+                  <Link href="/register" className="group">
                     Register Now
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -355,7 +355,7 @@ export default function Session3Page() {
                   </div>
 
                   <Button variant="thorn" size="lg" asChild className="w-full mt-4">
-                    <Link href="/session-3/register">
+                    <Link href="/register">
                       Register Now
                     </Link>
                   </Button>
@@ -445,7 +445,7 @@ export default function Session3Page() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="thorn" size="xl" asChild>
-                <Link href="/session-3/register" className="group">
+                <Link href="/register" className="group">
                   Register Now
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>

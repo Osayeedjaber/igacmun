@@ -37,7 +37,7 @@ const ExecutiveTeamCard = React.memo<{ leader: ExecutiveTeamMember; index: numbe
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true, margin: "-50px" }}
-      className="flex-shrink-0 w-72 sm:w-80 snap-center"
+      className="flex-shrink-0 w-64 sm:w-72 md:w-80 snap-center"
     >
       <div className="relative group cursor-pointer">
         <div className="relative h-96 rounded-2xl overflow-hidden bg-forest-800/50">
@@ -85,6 +85,7 @@ export default function Home() {
   const { leadership, event, reveals, venue, committees } = appConfig
   const carouselRef = useRef<HTMLDivElement>(null)
   const [showScrollArrow, setShowScrollArrow] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY
@@ -94,8 +95,14 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768)
+    onResize()
+    window.addEventListener('resize', onResize)
     window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('resize', onResize)
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [handleScroll])
 
   // Memoized Executive Team Data for Performance
@@ -182,7 +189,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 px-4"
           >
             {event.title}
           </motion.h1>
@@ -191,7 +198,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="font-display text-xl md:text-3xl text-accent-gold mb-6"
+            className="font-display text-lg sm:text-xl md:text-3xl text-accent-gold mb-6 px-4"
           >
             {event.subtitle}
           </motion.p>
@@ -200,7 +207,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="text-base md:text-lg text-accent-gold font-semibold max-w-3xl mx-auto mb-8"
+            className="text-sm sm:text-base md:text-lg text-accent-gold font-semibold max-w-3xl mx-auto mb-8 px-4"
           >
             United | Transformation | Innovation
           </motion.p>
@@ -217,7 +224,7 @@ export default function Home() {
               <Calendar className="h-5 w-5 text-accent-gold/70" />
               <div className="w-8 h-px bg-gradient-to-l from-transparent to-accent-gold/50"></div>
             </div>
-            <p className="text-base md:text-lg text-foreground font-display font-semibold">
+            <p className="text-sm sm:text-base md:text-lg text-foreground font-display font-semibold">
               19 - 21 December 2025
             </p>
           </motion.div>
@@ -236,7 +243,7 @@ export default function Home() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <Button size="xl" variant="default" asChild>
-                    <Link href="/session-3/register">
+                    <Link href="/register">
                       Register Now
                     </Link>
                   </Button>
@@ -259,7 +266,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Arrow */}
-        {showScrollArrow && (
+        {showScrollArrow && !isMobile && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -427,6 +434,7 @@ export default function Home() {
                   src="/events/members.jpg" 
                   alt="IGAC Team Members" 
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />
@@ -623,7 +631,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* The Core Section - Infinite Carousel */}
+          {/* The Core Section - Infinite Carousel (disabled on mobile for smoother scroll) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -642,36 +650,46 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Infinite Scrolling Carousel */}
-            <div className="relative overflow-hidden">
-              <motion.div 
-                ref={carouselRef}
-                className="flex gap-6 pb-6"
-                animate={{ 
-                  x: [-320 * executiveTeam.length, 0]
-                }}
-                transition={{
-                  duration: executiveTeam.length * 6,
-                  repeat: Infinity,
-                  ease: "linear",
-                  repeatType: "loop"
-                }}
-                style={{ 
-                  width: `${(executiveTeam.length * 3) * 320}px`
-                }}
-              >
-                {/* Triple set for seamless infinite scroll */}
-                {executiveTeam.map((leader, index) => (
-                  <ExecutiveTeamCard key={`first-${leader.name}`} leader={leader} index={index} />
-                ))}
-                {executiveTeam.map((leader, index) => (
-                  <ExecutiveTeamCard key={`second-${leader.name}`} leader={leader} index={index} />
-                ))}
-                {executiveTeam.map((leader, index) => (
-                  <ExecutiveTeamCard key={`third-${leader.name}`} leader={leader} index={index} />
-                ))}
-              </motion.div>
-            </div>
+            {/* Infinite Scrolling Carousel (desktop) / Scrollable list (mobile) */}
+            {isMobile ? (
+              <div className="relative overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4">
+                <div className="flex gap-4 will-change-transform">
+                  {executiveTeam.map((leader, index) => (
+                    <ExecutiveTeamCard key={`mobile-${leader.name}`} leader={leader} index={index} />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="relative overflow-hidden">
+                <motion.div 
+                  ref={carouselRef}
+                  className="flex gap-4 sm:gap-6 pb-6 will-change-transform"
+                  animate={{ 
+                    x: [-(280 * executiveTeam.length), 0]
+                  }}
+                  transition={{
+                    duration: executiveTeam.length * 8,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop"
+                  }}
+                  style={{ 
+                    width: `${(executiveTeam.length * 3) * 280}px`
+                  }}
+                >
+                  {/* Triple set for seamless infinite scroll */}
+                  {executiveTeam.map((leader, index) => (
+                    <ExecutiveTeamCard key={`first-${leader.name}`} leader={leader} index={index} />
+                  ))}
+                  {executiveTeam.map((leader, index) => (
+                    <ExecutiveTeamCard key={`second-${leader.name}`} leader={leader} index={index} />
+                  ))}
+                  {executiveTeam.map((leader, index) => (
+                    <ExecutiveTeamCard key={`third-${leader.name}`} leader={leader} index={index} />
+                  ))}
+                </motion.div>
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
@@ -873,6 +891,7 @@ export default function Home() {
                   src="/aiub.jpg" 
                   alt="American International University-Bangladesh Campus" 
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />
@@ -980,6 +999,7 @@ export default function Home() {
                     src="/logo (1).png"
                     alt="IGACMUN Session 2 Logo"
                     fill
+                    sizes="48px"
                     className="object-contain"
                   />
                 </div>
@@ -1000,6 +1020,7 @@ export default function Home() {
                     src="/events/igacmunbannerjpg.jpg" 
                     alt="IGACMUN Session II Conference" 
                     fill
+                    sizes="100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />

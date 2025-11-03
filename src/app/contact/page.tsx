@@ -45,7 +45,7 @@ export default function ContactPage() {
   ]
 
   const quickLinks = [
-    { title: "Registration", href: "/session-3/register", description: "Register for Session III" },
+    { title: "Registration", href: "/register", description: "Register for Session III" },
     { title: "Committees", href: "/session-3/committees", description: "View available committees" },
     { title: "Schedule", href: "/session-3/schedule", description: "Conference timeline" },
     { title: "Venue", href: "/session-3/venue", description: "Location details" },
@@ -350,7 +350,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="thorn" size="lg" asChild>
-              <a href="/session-3/register">
+              <a href="/register">
                 Register Now
               </a>
             </Button>

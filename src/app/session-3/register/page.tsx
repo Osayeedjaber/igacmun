@@ -110,7 +110,7 @@ export default function RegisterPage() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {sortedRegistrationTypes.map((type) => {
             const { form } = type
             const Icon = type.icon
@@ -120,7 +120,7 @@ export default function RegisterPage() {
                 key={type.key}
                 className={`
                   relative bg-gradient-to-br from-card to-forest-900/20 border-2 border-accent-gold/30 
-                  rounded-xl p-8 
+                  rounded-xl p-6 md:p-8 
                   ${form.enabled ? 'hover:shadow-2xl hover:shadow-accent-gold/20 hover:border-accent-gold/50' : 'opacity-60'} 
                   transition-all duration-300 group
                 `}

@@ -243,7 +243,7 @@ export default function GalleryPage() {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="/session-3/register">
+              <a href="/register">
                 Be Part of Session III
               </a>
             </Button>

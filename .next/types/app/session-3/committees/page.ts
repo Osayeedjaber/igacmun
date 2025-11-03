@@ -1,4 +1,4 @@
-// File: C:\Users\laiya\OneDrive\Desktop\igacweb\igacmun\src\app\session-3\committees\page.tsx
+// File: C:\Users\laiya\OneDrive\Desktop\cmd\igacmun\src\app\session-3\committees\page.tsx
 import * as entry from '../../../../../src/app/session-3/committees/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

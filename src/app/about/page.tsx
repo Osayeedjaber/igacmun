@@ -182,93 +182,7 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
-        {/* History & Legacy */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="bg-card border border-accent-gold/20 rounded-xl p-8 mb-16"
-        >
-          <h2 className="font-display text-3xl font-bold text-foreground text-center mb-8">
-            Our Journey
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-accent-gold/30 hidden md:block" />
-              
-              <div className="space-y-8">
-                {[
-                  {
-                    year: "2023",
-                    title: "Foundation - August 14",
-                    description: "IGAC was founded with a vision to empower the next generation of leaders through diplomacy, entrepreneurship, and essential skills development."
-                  },
-                  {
-                    year: "Nov 2023",
-                    title: "IGACMUN Session I",
-                    description: "Our inaugural major conference established IGAC as a leading MUN organization with 1000+ delegates across 8 committees, setting the foundation for future diplomatic excellence."
-                  },
-                  {
-                    year: "Aug 2024",
-                    title: "Imperial MUN (IMUN'24)",
-                    description: "A prestigious conference with 500+ delegates focusing on contemporary global issues with high-level diplomatic simulations and expert guest speakers across 8 committees."
-                  },
-                  {
-                    year: "Dec 2024",
-                    title: "IGACMUN Session II",
-                    description: "The largest MUN conference in South East Asia! Successfully hosted 1700+ delegates across 12 committees, setting new standards for diplomatic excellence and international participation with crisis committees and distinguished guest speakers."
-                  },
-                  {
-                    year: "Dec 2024",
-                    title: "Big Bang Session 2",
-                    description: "Expanding horizons with 300+ delegates across 7 committees, featuring innovative formats, expert moderators, and cultural exchange programs."
-                  },
-                  {
-                    year: "May 2025",
-                    title: "Republic MUN (RMUN'25)",
-                    description: "Shaping tomorrow's leaders with 250+ delegates across 10 committees through intensive diplomatic training and real-world scenario simulations."
-                  },
-                  {
-                    year: "Aug 2025",
-                    title: "Big Bang Session 3",
-                    description: "Innovation & Growth with 250+ delegates across 6 committees, featuring dynamic sessions, youth-focused initiatives, and interactive workshops."
-                  },
-                  {
-                    year: "Dec 2025",
-                    title: "IGACMUN Session III",
-                    description: "Launching our most ambitious conference yet with enhanced diplomatic challenges, experiences, and building upon our legacy of excellence."
-                  }
-                ].map((milestone) => (
-                  <div key={milestone.year} className="relative flex items-start space-x-6">
-                    {/* Timeline dot */}
-                    <div className="relative z-10 flex-shrink-0 hidden md:block">
-                      <div className="w-12 h-12 bg-accent-gold/20 border-2 border-accent-gold/40 rounded-full flex items-center justify-center">
-                        <Crown className="h-5 w-5 text-accent-gold" />
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 min-w-0 md:ml-0 ml-6">
-                      <div className="bg-gradient-to-r from-accent-gold/10 to-transparent p-4 rounded-lg">
-                        <div className="flex items-center space-x-3 mb-2">
-                          <span className="text-accent-gold font-bold text-lg">{milestone.year}</span>
-                          <h3 className="font-display text-lg font-semibold text-foreground">
-                            {milestone.title}
-                          </h3>
-                        </div>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {milestone.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        {/* History & Legacy removed as requested */}
 
         {/* Call to Action */}
         <motion.div
@@ -286,7 +200,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="thorn" size="lg" asChild>
-              <a href="/session-3/register">
+              <a href="/register">
                 Register for Session III
               </a>
             </Button>
