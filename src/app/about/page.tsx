@@ -3,10 +3,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Users, Award, Target, Heart, Lightbulb, Shield, Crown } from 'lucide-react'
+import { Users, Award, Target, Heart, Lightbulb, Shield } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ElegantBackground } from '@/components/ui/elegant-background'
-import { appConfig } from '@/lib/config'
 
 export default function AboutPage() {
 

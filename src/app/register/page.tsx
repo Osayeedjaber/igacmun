@@ -320,7 +320,7 @@ export default function RegisterPage() {
                 About IGACMUN Session III
               </h3>
               <ul className="space-y-2 text-muted-foreground text-xs sm:text-sm">
-                <li>• Session III continues IGAC's flagship conference</li>
+                <li>• Session III continues IGAC&apos;s flagship conference</li>
                 <li>• Session II hosted 1700+ delegates in 2024</li>
                 <li>• Enhanced diplomatic experience</li>
                 <li>• December 2025 at AIUB Campus</li>
@@ -329,7 +329,7 @@ export default function RegisterPage() {
             <div className="space-y-4">
               <h3 className="font-semibold text-foreground flex items-center text-sm sm:text-base">
                 <Award className="h-5 w-5 text-accent-gold mr-2 flex-shrink-0" />
-                What's Included
+                What&apos;s Included
               </h3>
               <ul className="space-y-2 text-muted-foreground text-xs sm:text-sm">
                 <li>• Full access to all committees</li>

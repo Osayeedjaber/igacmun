@@ -71,7 +71,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-            Everything you need to know about IGACMUN Session III. Can't find your answer? 
+            Everything you need to know about IGACMUN Session III. Can&apos;t find your answer? 
             <a href="/contact" className="text-accent-gold hover:underline ml-1">
               Contact our team
             </a>
@@ -249,7 +249,7 @@ export default function FAQPage() {
                   No Results Found
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  We couldn't find any FAQs matching "{searchQuery}". Try different keywords or browse by category.
+                  We couldn&apos;t find any FAQs matching &quot;{searchQuery}&quot;. Try different keywords or browse by category.
                 </p>
                 <Button variant="outline" onClick={() => setSearchQuery("")}>
                   Clear Search
@@ -276,7 +276,7 @@ export default function FAQPage() {
             Still Have Questions?
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our team is here to help! Reach out to us and we'll get back to you within 24 hours.
+            Our team is here to help! Reach out to us and we&apos;ll get back to you within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="thorn" size="lg" asChild>
