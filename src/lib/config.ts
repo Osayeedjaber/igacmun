@@ -50,7 +50,7 @@ export const appConfig = {
   registrationTypes: [
     {
       key: 'regular',
-      icon: 'Star',
+      icon: 'Bird',
       color: 'from-emerald-500/20 to-emerald-600/5',
       borderColor: 'border-emerald-400/40',
       flashMode: 'false'
@@ -79,7 +79,7 @@ export const appConfig = {
   ],
   forms: {
     campusAmbassadors: { 
-      enabled: true, 
+      enabled: false, 
       link: "https://forms.gle/PW95WFfWVVu2vPMD6",
       title: "Campus Ambassadors",
       description: "Represent your institution",
@@ -88,9 +88,9 @@ export const appConfig = {
       currency: "BDT"
     },
     regular: { 
-      enabled: false,
+      enabled: true,
       link: "https://forms.gle/Rumm2ApxBcAi41649",
-      title: "Regular Registration",
+      title: "Regular Bird Registration",
       description: "Standard registration rates",
       deadline: "2025-12-10T23:59:59Z",
       price: "3570",

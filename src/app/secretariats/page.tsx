@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Users, Crown, Shield, Award } from 'lucide-react'
 import { Countdown } from '@/components/ui/countdown'
@@ -9,9 +9,9 @@ import { appConfig } from '@/lib/config'
 
 export default function SecretariatsPage() {
   const { reveals } = appConfig
-  const now = new Date()
-  const revealTime = new Date(reveals.secretariats.revealAt)
-  const isRevealed = now >= revealTime
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const isRevealed = mounted && new Date() >= new Date(reveals.secretariats.revealAt)
 
   // Placeholder secretariat data that would be revealed
   const secretariats = [

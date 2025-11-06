@@ -1,8 +1,8 @@
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, LucideIcon } from 'lucide-react'
+import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, Bird, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ShinyText } from '@/components/ui/shiny-text'
 import { appConfig } from '@/lib/config'
@@ -14,11 +14,17 @@ const iconMap: Record<string, LucideIcon> = {
   Clock,
   Crown,
   Award,
-  CreditCard
+  CreditCard,
+  Bird
 }
 
 export default function RegisterPage() {
   const { forms, event, registrationTypes } = appConfig
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleRegistration = (formKey: string) => {
     const form = forms[formKey as keyof typeof forms]
@@ -127,7 +133,7 @@ export default function RegisterPage() {
               >
                 <div className="flex justify-center mb-6">
                   <div className="p-4 rounded-full bg-accent-gold/20 group-hover:bg-accent-gold/30 transition-all duration-300">
-                    <Icon className="h-8 w-8 text-accent-gold" />
+                    <Icon className={`${type.key === 'regular' ? 'h-10 w-10' : 'h-8 w-8'} text-accent-gold`} />
                   </div>
                 </div>
 
@@ -259,10 +265,10 @@ export default function RegisterPage() {
                 <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">
                   <span className="text-xs sm:text-sm font-medium text-foreground">Deadline:</span>
                   <span className="text-xs sm:text-sm text-accent-gold font-bold">
-                    {new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
+                    {mounted ? new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
                       month: 'short',
                       day: 'numeric'
-                    })}
+                    }) : 'Loading...'}
                   </span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">

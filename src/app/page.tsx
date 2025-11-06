@@ -83,6 +83,7 @@ ExecutiveTeamCard.displayName = 'ExecutiveTeamCard'
 
 export default function Home() {
   const { leadership, event, reveals, venue, committees } = appConfig
+  const [mounted, setMounted] = useState(false)
   const carouselRef = useRef<HTMLDivElement>(null)
   const [showScrollArrow, setShowScrollArrow] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
@@ -104,6 +105,10 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [handleScroll])
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Memoized Executive Team Data for Performance
   const executiveTeam = useMemo(() => [
@@ -781,7 +786,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {!isRevealed(reveals.committees.revealAt) ? (
+          {!(mounted && isRevealed(reveals.committees.revealAt)) ? (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
