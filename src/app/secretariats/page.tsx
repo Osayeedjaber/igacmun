@@ -11,7 +11,7 @@ export default function SecretariatsPage() {
   const { reveals } = appConfig
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
-  const isRevealed = mounted && new Date() >= new Date(reveals.secretariats.revealAt)
+  const isRevealed = typeof window !== 'undefined' && new Date() >= new Date(reveals.secretariats.revealAt)
 
   // Placeholder secretariat data that would be revealed
   const secretariats = [
@@ -66,7 +66,7 @@ export default function SecretariatsPage() {
   ]
 
   // Show countdown if not yet revealed
-  if (!isRevealed) {
+  if (!mounted || !isRevealed) {
     return (
       <div className="min-h-screen py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

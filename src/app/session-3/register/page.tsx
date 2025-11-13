@@ -297,12 +297,12 @@ export default function RegisterPage() {
               <div className="space-y-4 mb-6">
                 <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">
                   <span className="text-sm font-medium text-foreground">Deadline:</span>
-                  <span className="text-sm text-accent-gold font-bold">
-                    {mounted ? new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
+                  <span className="text-sm text-accent-gold font-bold" suppressHydrationWarning>
+                    {new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
-                    }) : 'Loading...'}
+                    })}
                   </span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">

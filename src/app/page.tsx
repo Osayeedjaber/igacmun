@@ -786,7 +786,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {!(mounted && isRevealed(reveals.committees.revealAt)) ? (
+          {!mounted || !isRevealed(reveals.committees.revealAt) ? (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

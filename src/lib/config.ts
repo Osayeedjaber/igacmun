@@ -56,8 +56,22 @@ export const appConfig = {
       flashMode: 'false'
     },
     {
-      key: 'campusAmbassadors',
+      key: 'doubleDelegation',
       icon: 'Users',
+      color: 'from-blue-500/20 to-blue-600/5',
+      borderColor: 'border-blue-400/40',
+      flashMode: 'false'
+    },
+    {
+      key: 'executiveBoard',
+      icon: 'Crown',
+      color: 'from-purple-900/30 via-indigo-800/20 to-purple-900/30',
+      borderColor: 'border-purple-400/50',
+      flashMode: 'false'
+    },
+    {
+      key: 'campusAmbassadors',
+      icon: 'Building',
       color: 'from-accent-gold/20 to-accent-gold/5',
       borderColor: 'border-accent-gold/40',
       flashMode: 'false'
@@ -67,13 +81,6 @@ export const appConfig = {
       icon: 'Clock',
       color: 'from-destructive/20 to-destructive/5',
       borderColor: 'border-destructive/40',
-      flashMode: 'false'
-    },
-    {
-      key: 'executiveBoard',
-      icon: 'Crown',
-      color: 'from-purple-900/30 via-indigo-800/20 to-purple-900/30',
-      borderColor: 'border-purple-400/50',
       flashMode: 'false'
     },
   ],
@@ -109,6 +116,15 @@ export const appConfig = {
       title: "Executive Board Registration",
       description: "Exclusive registration for executive positions and leadership roles",
       deadline: "2025-11-15T23:59:59Z"
+    },
+    doubleDelegation: { 
+      enabled: true, 
+      link: "https://forms.gle/fgYbUYox6H8bCj546",
+      title: "Double Delegation",
+      description: "Register as a pair of delegates",
+      deadline: "2025-12-10T23:59:59Z",
+      price: "7140",
+      currency: "BDT"
     },
     paymentConfirmation: {
       enabled: true,

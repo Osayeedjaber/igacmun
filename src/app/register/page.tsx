@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, Bird, LucideIcon } from 'lucide-react'
+import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, Bird, Building, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ShinyText } from '@/components/ui/shiny-text'
 import { appConfig } from '@/lib/config'
@@ -15,7 +15,8 @@ const iconMap: Record<string, LucideIcon> = {
   Crown,
   Award,
   CreditCard,
-  Bird
+  Bird,
+  Building
 }
 
 export default function RegisterPage() {
@@ -41,11 +42,6 @@ export default function RegisterPage() {
       flashMode: false
     }))
     .filter(type => type.form)
-    .sort((a, b) => {
-      if (a.form.enabled && !b.form.enabled) return -1
-      if (!a.form.enabled && b.form.enabled) return 1
-      return 0
-    })
 
   return (
     <div className="min-h-screen py-20">
@@ -264,11 +260,11 @@ export default function RegisterPage() {
               <div className="space-y-4 mb-6">
                 <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">
                   <span className="text-xs sm:text-sm font-medium text-foreground">Deadline:</span>
-                  <span className="text-xs sm:text-sm text-accent-gold font-bold">
-                    {mounted ? new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
+                  <span className="text-xs sm:text-sm text-accent-gold font-bold" suppressHydrationWarning>
+                    {new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
                       month: 'short',
                       day: 'numeric'
-                    }) : 'Loading...'}
+                    })}
                   </span>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">
