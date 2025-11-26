@@ -1,3 +1,19 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/verify/[certificateId]/route": "app/api/verify/[certificateId]/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/about/page": "app/about/page.js",
+  "/events/page": "app/events/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/certificate-portal/page": "app/certificate-portal/page.js",
+  "/secretariats/page": "app/secretariats/page.js",
+  "/register/page": "app/register/page.js",
+  "/session-3/page": "app/session-3/page.js",
+  "/session-3/schedule/page": "app/session-3/schedule/page.js",
+  "/session-3/committees/page": "app/session-3/committees/page.js",
+  "/session-3/register/page": "app/session-3/register/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/page": "app/page.js",
+  "/session-3/venue/page": "app/session-3/venue/page.js",
+  "/certificate-portal/[certificateId]/page": "app/certificate-portal/[certificateId]/page.js"
 }

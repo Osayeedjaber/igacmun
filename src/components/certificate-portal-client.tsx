@@ -1,26 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Loader2, ArrowRight, Trophy, User, Globe, School, FileCheck, ShieldCheck, Download } from 'lucide-react';
+import { Search, Loader2, Trophy, User, Globe, School, FileCheck, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ElegantBackground } from '@/components/ui/elegant-background';
-import { searchCertificate, Certificate } from '@/app/certificate-portal/actions';
+import { searchCertificate } from '@/app/certificate-portal/actions';
 import { CertificateDisplay } from '@/components/certificate-display';
+import type { CertificateData } from '@/components/certificate-display';
 import { appConfig } from '@/lib/config';
 import Image from 'next/image';
 
 interface CertificatePortalClientProps {
-  initialCertificate?: any;
+  initialCertificate?: CertificateData | null;
   initialId?: string;
 }
 
 export function CertificatePortalClient({ initialCertificate, initialId }: CertificatePortalClientProps) {
   const [query, setQuery] = useState(initialId || '');
-  const [result, setResult] = useState<any | null>(initialCertificate || null);
+  const [result, setResult] = useState<CertificateData | null>(initialCertificate ?? null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [cache, setCache] = useState<Record<string, any>>(
+  const [cache, setCache] = useState<Record<string, CertificateData>>(
     initialCertificate && initialId ? { [initialId]: initialCertificate } : {}
   );
 
@@ -46,13 +47,13 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
     try {
       const response = await searchCertificate(trimmedQuery);
       if (response.success && response.data && response.data.length > 0) {
-        const certData = response.data[0];
+        const certData = response.data[0] as CertificateData;
         setResult(certData);
         setCache(prev => ({ ...prev, [trimmedQuery]: certData }));
       } else {
         setError(response.error || 'No certificate found with this ID');
       }
-    } catch (err) {
+    } catch {
       setError('An error occurred while searching');
     } finally {
       setLoading(false);
@@ -277,7 +278,7 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
                 certificate={result} 
                 valid={result.status !== 'revoked'}
                 revoked={result.status === 'revoked'}
-                revokedInfo={result.status === 'revoked' ? {
+                revokedInfo={result.status === 'revoked' && result.revoked_at && result.revoked_reason ? {
                   revoked_at: result.revoked_at,
                   revoked_reason: result.revoked_reason
                 } : null}

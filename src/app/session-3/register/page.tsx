@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, Bird, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'

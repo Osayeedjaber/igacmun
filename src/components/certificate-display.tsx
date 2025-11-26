@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Hash, School, Globe, Users, Download, Share2, CheckCircle, AlertTriangle } from "lucide-react";
+import { School, Download, Share2, CheckCircle, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatDateReadable } from "@/lib/utils";
 import Image from "next/image";
-import { BentoGrid, BentoCard } from "@/components/ui/magic-bento";
 
 type CertificateData = {
   certificate_id: string;
@@ -23,8 +22,13 @@ type CertificateData = {
   segment?: string;
   team_name?: string;
   level?: string;
-  [key: string]: any;
+  certificate_metadata?: Record<string, unknown>[];
+  revoked_at?: string;
+  revoked_reason?: string;
+  [key: string]: string | number | boolean | null | undefined | Record<string, unknown>[];
 };
+
+export type { CertificateData };
 
 interface CertificateDisplayProps {
   certificate: CertificateData;

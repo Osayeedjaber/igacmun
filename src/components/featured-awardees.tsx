@@ -8,7 +8,7 @@ import { ElegantBackground } from '@/components/ui/elegant-background'
 import { appConfig } from '@/lib/config'
 
 export function FeaturedAwardees() {
-  // @ts-ignore - Length check for safety even if typed as const
+  // @ts-expect-error - Length check for safety even if typed as const
   if (!appConfig.certificateShowcase || appConfig.certificateShowcase.length === 0) {
     return null
   }

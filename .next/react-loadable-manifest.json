@@ -10,5 +10,29 @@
     "files": [
       "static/chunks/646.f342b7cffc01feb0.js"
     ]
+  },
+  "app\\page.tsx -> @/components/home/about-section": {
+    "id": 1955,
+    "files": [
+      "static/chunks/955.30824ecb58c8954a.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/home/executive-team": {
+    "id": 8779,
+    "files": [
+      "static/chunks/779.896f5ce6ba1cd5dd.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/home/legacy-section": {
+    "id": 3944,
+    "files": [
+      "static/chunks/944.212339102e1509ae.js"
+    ]
+  },
+  "app\\page.tsx -> @/components/home/venue-section": {
+    "id": 8627,
+    "files": [
+      "static/chunks/627.63311685db40ca6c.js"
+    ]
   }
 }
