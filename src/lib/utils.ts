@@ -57,3 +57,22 @@ export function openExternalLink(url: string): void {
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 }
+
+/**
+ * Format date in a readable format (e.g., "Jan 15, 2025")
+ * Uses consistent format to avoid locale differences
+ */
+export function formatDateReadable(date: Date | string): string {
+  const d = typeof date === 'string' ? new Date(date) : date;
+  
+  if (isNaN(d.getTime())) {
+    return 'Invalid date';
+  }
+
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = months[d.getMonth()];
+  const day = d.getDate();
+  const year = d.getFullYear();
+  
+  return `${month} ${day}, ${year}`;
+}

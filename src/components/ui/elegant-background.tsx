@@ -8,6 +8,49 @@ interface ElegantBackgroundProps {
   className?: string
 }
 
+const Star = () => {
+  const [style, setStyle] = React.useState({ left: '0%', top: '0%' })
+  const [mounted, setMounted] = React.useState(false)
+  const [animationProps, setAnimationProps] = React.useState({ duration: 4, delay: 0 })
+
+  React.useEffect(() => {
+    setStyle({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+    })
+    setAnimationProps({
+      duration: 4 + Math.random() * 6,
+      delay: Math.random() * 5,
+    })
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  return (
+    <motion.div
+      className="absolute"
+      style={style}
+      animate={{
+        opacity: [0.1, 0.6, 0.1],
+        scale: [0.5, 1, 0.5],
+      }}
+      transition={{
+        duration: animationProps.duration,
+        repeat: Infinity,
+        delay: animationProps.delay,
+        ease: "easeInOut",
+      }}
+    >
+      {/* Star shape */}
+      <div className="relative w-1 h-1">
+        <div className="absolute inset-0 bg-accent-gold/40 rounded-full" />
+        <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-sm scale-150" />
+      </div>
+    </motion.div>
+  )
+}
+
 export const ElegantBackground = React.memo<ElegantBackgroundProps>(({ 
   variant = 'section', 
   className = '' 
@@ -36,30 +79,7 @@ export const ElegantBackground = React.memo<ElegantBackgroundProps>(({
       {/* Elegant floating stars/particles */}
       <div className="absolute inset-0">
         {[...Array(variant === 'hero' ? 25 : 15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              opacity: [0.1, 0.6, 0.1],
-              scale: [0.5, 1, 0.5],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 6,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: "easeInOut",
-            }}
-          >
-            {/* Star shape */}
-            <div className="relative w-1 h-1">
-              <div className="absolute inset-0 bg-accent-gold/40 rounded-full" />
-              <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-sm scale-150" />
-            </div>
-          </motion.div>
+          <Star key={i} />
         ))}
       </div>
 

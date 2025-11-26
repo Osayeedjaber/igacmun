@@ -1,0 +1,31 @@
+{
+  "pages": {
+    "/session-3/schedule/page": [
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_src_ecb67d11._.js",
+      "static/chunks/9a710_next_1720b0d7._.js",
+      "static/chunks/9a710_motion-dom_dist_es_b971f96e._.js",
+      "static/chunks/9a710_framer-motion_dist_es_9a524a39._.js",
+      "static/chunks/9a710_tailwind-merge_dist_bundle-mjs_mjs_1877566a._.js",
+      "static/chunks/9a710_551ac6f0._.js",
+      "static/chunks/[root-of-the-server]__a6d9eaac._.css",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_src_app_layout_tsx_c5f06c8a._.js",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_612542d8._.js",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_src_app_error_tsx_6840e768._.js",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_cac52de2._.js",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_src_app_not-found_tsx_6840e768._.js",
+      "static/chunks/9a710_next_dist_client_components_builtin_global-error_6840e768.js",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_src_636d78d8._.js",
+      "static/chunks/9a710_lucide-react_dist_esm_icons_40fb2d30._.js",
+      "static/chunks/13466_Desktop_making it together_igacmun_src_app_session-3_schedule_page_tsx_6840e768._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_5e3a7156._.js",
+      "static/chunks/9a710_next_dist_compiled_react-dom_c3206ede._.js",
+      "static/chunks/9a710_next_dist_compiled_next-devtools_index_bb4712d3.js",
+      "static/chunks/9a710_next_dist_compiled_5988cd28._.js",
+      "static/chunks/9a710_next_dist_client_8361329c._.js",
+      "static/chunks/9a710_next_dist_aecb3de1._.js",
+      "static/chunks/9a710_@swc_helpers_cjs_c34439de._.js",
+      "static/chunks/OneDrive_Desktop_making it together_igacmun_a0ff3932._.js",
+      "static/chunks/turbopack-OneDrive_Desktop_making it together_igacmun_760ce094._.js"
+    ]
+  }
+}

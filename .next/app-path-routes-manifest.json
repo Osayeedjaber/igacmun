@@ -1,16 +1,5 @@
 {
-  "/about/page": "/about",
-  "/events/page": "/events",
-  "/contact/page": "/contact",
-  "/gallery/page": "/gallery",
-  "/secretariats/page": "/secretariats",
-  "/register/page": "/register",
-  "/session-3/committees/page": "/session-3/committees",
-  "/faq/page": "/faq",
-  "/page": "/",
-  "/session-3/register/page": "/session-3/register",
-  "/session-3/page": "/session-3",
-  "/session-3/schedule/page": "/session-3/schedule",
-  "/session-3/venue/page": "/session-3/venue",
-  "/_not-found/page": "/_not-found"
+  "/_not-found/page": "/_not-found",
+  "/certificate-portal/page": "/certificate-portal",
+  "/page": "/"
 }

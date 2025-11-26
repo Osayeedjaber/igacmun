@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40cf8a7719431842ca949efb9c5937b95b6e3e1865": {
+      "workers": {
+        "app/certificate-portal/page": {
+          "moduleId": "[project]/OneDrive/Desktop/making it together/igacmun/.next-internal/server/app/certificate-portal/page/actions.js { ACTIONS_MODULE0 => \"[project]/OneDrive/Desktop/making it together/igacmun/src/app/certificate-portal/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "searchCertificate",
+          "filename": "OneDrive/Desktop/making it together/igacmun/src/app/certificate-portal/actions.ts"
+        }
+      },
+      "layer": {
+        "app/certificate-portal/page": "action-browser"
+      },
+      "exportedName": "searchCertificate",
+      "filename": "OneDrive/Desktop/making it together/igacmun/src/app/certificate-portal/actions.ts"
+    }
+  },
+  "edge": {}
+}

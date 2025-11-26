@@ -5,6 +5,7 @@ import { Inter, Manrope, Cinzel } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { BackToTop } from "@/components/ui/back-to-top";
 import { appConfig } from "@/lib/config";
 
 const inter = Inter({
@@ -140,6 +141,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

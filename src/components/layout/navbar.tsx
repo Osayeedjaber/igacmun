@@ -18,6 +18,7 @@ const navigation = [
   { name: 'Registration', href: '/register' },
   { name: 'Secretariats', href: '/secretariats' },
   { name: 'Events', href: '/events' },
+  { name: 'Certificates', href: '/certificate-portal' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -128,6 +129,7 @@ export function Navbar() {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-accent-gold"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>

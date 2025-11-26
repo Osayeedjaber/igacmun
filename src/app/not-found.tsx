@@ -6,6 +6,42 @@ import { motion } from 'framer-motion'
 import { Crown, Home, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+const BackgroundParticle = () => {
+  const [style, setStyle] = React.useState({ left: '0%', top: '0%' })
+  const [mounted, setMounted] = React.useState(false)
+  const [animationProps, setAnimationProps] = React.useState({ duration: 3, delay: 0 })
+
+  React.useEffect(() => {
+    setStyle({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+    })
+    setAnimationProps({
+      duration: 3 + Math.random() * 2,
+      delay: Math.random() * 2,
+    })
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  return (
+    <motion.div
+      className="absolute w-1 h-1 bg-accent-gold/20 rounded-full"
+      style={style}
+      animate={{
+        y: [0, -20, 0],
+        opacity: [0.2, 0.6, 0.2],
+      }}
+      transition={{
+        duration: animationProps.duration,
+        repeat: Infinity,
+        delay: animationProps.delay,
+      }}
+    />
+  )
+}
+
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -114,23 +150,7 @@ export default function NotFound() {
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
           {[...Array(15)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-accent-gold/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.6, 0.2],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
+            <BackgroundParticle key={i} />
           ))}
         </div>
       </div>

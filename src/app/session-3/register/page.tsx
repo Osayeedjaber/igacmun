@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, Bird, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -20,11 +20,6 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function RegisterPage() {
   const { forms, event, registrationTypes } = appConfig
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const handleRegistration = (formKey: string) => {
     const form = forms[formKey as keyof typeof forms]

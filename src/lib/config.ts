@@ -297,6 +297,26 @@ export const appConfig = {
         }
       ]
     }
+  ],
+  certificateShowcase: [
+    {
+      title: "Best Secretariat",
+      name: "To Be Announced",
+      school: "TBA",
+      description: "Awarded for exceptional leadership and organization.",
+      certificateId: "", 
+      image: "/logo.png",
+      recipientImage: null // Set to image path when announced
+    },
+    {
+      title: "Best Campus Ambassador",
+      name: "To Be Announced",
+      school: "TBA",
+      description: "Recognizing outstanding representation and outreach.",
+      certificateId: "", 
+      image: "/logo.png",
+      recipientImage: null // Set to image path when announced
+    }
   ]
 } as const;
 

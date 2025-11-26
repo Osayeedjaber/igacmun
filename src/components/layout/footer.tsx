@@ -30,6 +30,7 @@ export function Footer() {
     { name: 'Committees', href: '/session-3/committees' },
     { name: 'Registration', href: '/register' },
     { name: 'Venue', href: '/session-3/venue' },
+    { name: 'Verify Certificate', href: '/certificate-portal' },
     { name: 'Contact', href: '/contact' }
   ]
 
@@ -97,6 +98,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={social.name}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}

@@ -126,6 +126,22 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
+## 🚀 Vercel Deployment (Recommended)
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+1.  Push your code to a git repository (GitHub, GitLab, BitBucket).
+2.  Import your project into Vercel.
+3.  **Important**: Configure the Environment Variables in the Vercel Project Settings.
+
+### Environment Variables
+
+You must set the following environment variables in your Vercel project settings for the application to work correctly:
+
+- `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase Project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase Anon Key
+- `SUPABASE_SERVICE_ROLE_KEY`: Your Supabase Service Role Key (Required for admin functions)
+
 ## 🌐 Netlify Deployment
 
 ### Quick Deploy

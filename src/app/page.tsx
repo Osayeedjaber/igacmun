@@ -1,90 +1,32 @@
 "use client"
 
-import React, { useRef, useState, useEffect, useMemo, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import { motion } from 'framer-motion'
-import { Users, Calendar, MapPin, Award, Target, Globe, Handshake, Lightbulb, ChevronDown } from 'lucide-react'
+import { Users, Calendar, MapPin, Award, ChevronDown, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { LeadershipCard } from '@/components/ui/leadership-card'
 import { Countdown } from '@/components/ui/countdown'
 import { ElegantBackground } from '@/components/ui/elegant-background'
-import { ShinyText } from '@/components/ui/shiny-text'
 import { MagneticElement } from '@/components/ui/magnetic-element'
 import { GlareCard } from '@/components/ui/glare-card'
-import { SplitText } from '@/components/ui/split-text'
-import { BentoGrid, BentoCard } from '@/components/ui/magic-bento'
+import { FeaturedAwardees } from '@/components/featured-awardees'
 import { appConfig } from '@/lib/config'
 import { isRevealed } from '@/lib/utils'
+import dynamic from 'next/dynamic'
 
-// Executive Team Component with Optimized Performance
-interface ExecutiveTeamMember {
-  name: string;
-  title: string;
-  image: string;
-}
-
-const ExecutiveTeamCard = React.memo<{ leader: ExecutiveTeamMember; index: number }>(({ leader, index }) => {
-  const [imageLoaded, setImageLoaded] = useState(false)
-  
-  const handleImageLoad = useCallback(() => {
-    setImageLoaded(true)
-  }, [])
-  
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      viewport={{ once: true, margin: "-50px" }}
-      className="flex-shrink-0 w-64 sm:w-72 md:w-80 snap-center"
-    >
-      <div className="relative group cursor-pointer">
-        <div className="relative h-96 rounded-2xl overflow-hidden bg-forest-800/50">
-          {!imageLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-accent-gold"></div>
-            </div>
-          )}
-          <Image
-            src={leader.image}
-            alt={leader.name}
-            fill
-            sizes="(max-width: 768px) 280px, 320px"
-            className={`object-cover transition-all duration-500 group-hover:scale-110 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            onLoad={handleImageLoad}
-            {...(index < 2 ? { priority: true } : { loading: "lazy" })}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-forest-900/20 to-transparent" />
-          
-          {/* Text overlay with blur background */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-            <div className="backdrop-blur-md bg-forest-900/60 rounded-lg p-3 sm:p-4 border border-accent-gold/20">
-              <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-2">
-                {leader.name}
-              </h3>
-              <p className="text-accent-gold font-medium text-xs sm:text-sm">
-                {leader.title}
-              </p>
-            </div>
-          </div>
-
-          {/* Hover overlay */}
-          <div className="absolute inset-0 bg-accent-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        </div>
-      </div>
-    </motion.div>
-  )
+const ExecutiveTeam = dynamic(() => import('@/components/home/executive-team').then(mod => mod.ExecutiveTeam), {
+  loading: () => <div className="h-96 w-full animate-pulse bg-muted/10 rounded-xl" />
 })
-
-ExecutiveTeamCard.displayName = 'ExecutiveTeamCard'
+const AboutSection = dynamic(() => import('@/components/home/about-section').then(mod => mod.AboutSection))
+const VenueSection = dynamic(() => import('@/components/home/venue-section').then(mod => mod.VenueSection))
+const LegacySection = dynamic(() => import('@/components/home/legacy-section').then(mod => mod.LegacySection))
 
 export default function Home() {
   const { leadership, event, reveals, venue, committees } = appConfig
   const [mounted, setMounted] = useState(false)
-  const carouselRef = useRef<HTMLDivElement>(null)
   const [showScrollArrow, setShowScrollArrow] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -110,58 +52,39 @@ export default function Home() {
     setMounted(true)
   }, [])
 
-  // Memoized Executive Team Data for Performance
-  const executiveTeam = useMemo(() => [
-    {
-      name: "ABID FAHAD KHAN",
-      title: "GENERAL SECRETARY",
-      image: "/Joint secretaries/GENERAL SECRETARY _ ABID FAHAD KHAN.jpg"
-    },
-    {
-      name: "HUZAIFA ABRAR SAHAL",
-      title: "ADDITIONAL GENERAL SECRETARY",
-      image: "/Joint secretaries/joint secretary HUZAIFA ABRAR SAHAL.jpg"
-    },
-    {
-      name: "AREEB FAROOQUI",
-      title: "ADDITIONAL GENERAL SECRETARY",
-      image: "/Joint secretaries/areeb farooqui.jpg ADDITIONAL GENERAL SECRETARY.JPG"
-    },
-    {
-      name: "FARHAT LAMISHA",
-      title: "JOINT SECRETARY",
-      image: "/Joint secretaries/joint secretar Farhat lamisha.jpg"
-    },
-    {
-      name: "NUSRAT JAHAN",
-      title: "JOINT SECRETARY",
-      image: "/Joint secretaries/joint secretary NUSRAT JAHAN.jpg"
-    },
-    {
-      name: "RAIYAN ABDULLAH",
-      title: "ORGANIZING SECRETARY",
-      image: "/Joint secretaries/ORGANIZING SECRETARY RAIYAN ABDULLAH.jpg"
-    },
-    {
-      name: "MIFTAHUL JANNAT MUNTAHA",
-      title: "ORGANIZING SECRETARY",
-      image: "/Joint secretaries/ORGANIZING SECRETARY _ miftahul Jannat muntaha.jpg"
-    },
-    {
-      name: "AREFIN ABIR SAAD",
-      title: "ORGANIZING SECRETARY",
-      image: "/Joint secretaries/ORGANIZING SECRETARY arefin abir saad.jpg"
-    },
-    {
-      name: "AFSAN TALUKDER",
-      title: "ORGANIZING SECRETARY",
-      image: "/Joint secretaries/afsan talukder  ORGANIZING SECRETARY.jpg"
-    }
-  ], [])
-
 
   return (
     <div className="min-h-screen">
+      <Script id="ld-json-event" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": event.title,
+          "startDate": "2025-12-19",
+          "endDate": "2025-12-21",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": venue.fullName,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": venue.address,
+              "addressLocality": "Dhaka",
+              "addressCountry": "BD"
+            }
+          },
+          "image": [
+            `${appConfig.site?.url || 'https://igacmun.com'}/logo.png`
+          ],
+          "description": event.subtitle,
+          "organizer": {
+            "@type": "Organization",
+            "name": "International Global Affairs Council",
+            "url": appConfig.site?.url || 'https://igacmun.com'
+          }
+        })}
+      </Script>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <ElegantBackground variant="hero" />
@@ -325,137 +248,7 @@ export default function Home() {
 
 
       {/* About IGAC Section */}
-      <section className="py-24 relative">
-        <ElegantBackground variant="section" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-              <ShinyText className="text-accent-gold">IGAC</ShinyText>
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground font-display mb-4">
-              <SplitText>International Global Affairs Council</SplitText>
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* About IGAC Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-6 order-1"
-            >
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-                  About Us
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                  The International Global Affairs Council (IGAC), founded on August 14, 2023, is a youth-led 
-                  organization dedicated to empowering the next generation of leaders through diplomacy, 
-                  entrepreneurship, and essential skills development.
-                </p>
-                <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                  By fostering critical thinking, leadership, negotiation, and cross-cultural communication, 
-                  IGAC equips young people to tackle global challenges and drive meaningful change.
-                </p>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  With a strong focus on collaboration, teamwork, and resilience, IGAC provides a platform 
-                  for youth to engage in global discussions, overcome obstacles, and shape the future as 
-                  confident change-makers.
-                </p>
-              </div>
-
-              {/* IGAC Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { icon: Target, label: "Youth Leadership", desc: "Empowering next generation", color: "from-blue-500/20 to-blue-600/5", borderColor: "border-blue-400/40", iconBg: "bg-blue-500/20", iconColor: "text-blue-400", textColor: "text-blue-400" },
-                  { icon: Globe, label: "Global Impact", desc: "Tackling world challenges", color: "from-green-500/20 to-green-600/5", borderColor: "border-green-400/40", iconBg: "bg-green-500/20", iconColor: "text-green-400", textColor: "text-green-400" },
-                  { icon: Handshake, label: "Collaboration", desc: "Building partnerships", color: "from-purple-500/20 to-purple-600/5", borderColor: "border-purple-400/40", iconBg: "bg-purple-500/20", iconColor: "text-purple-400", textColor: "text-purple-400" },
-                  { icon: Lightbulb, label: "Innovation", desc: "Creative solutions", color: "from-amber-500/20 to-amber-600/5", borderColor: "border-amber-400/40", iconBg: "bg-amber-500/20", iconColor: "text-amber-400", textColor: "text-amber-400" }
-                ].map((feature, index) => (
-                  <motion.div
-                    key={feature.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className={`flex items-center space-x-3 p-3 bg-gradient-to-br ${feature.color} border ${feature.borderColor} rounded-lg hover:shadow-lg transition-all duration-300 group`}
-                  >
-                    <motion.div
-                      whileHover={{ 
-                        rotate: [0, -10, 10, 0],
-                        scale: [1, 1.1, 1]
-                      }}
-                      transition={{ duration: 0.6 }}
-                      className={`p-2 ${feature.iconBg} rounded-full group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <feature.icon className={`h-5 w-5 ${feature.iconColor} transition-colors duration-300`} />
-                    </motion.div>
-                    <div>
-                      <div className={`font-semibold ${feature.textColor} text-sm`}>{feature.label}</div>
-                      <div className="text-muted-foreground text-xs">{feature.desc}</div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                >
-                  <Button variant="outline" size="lg" asChild>
-                    <Link href="/about">
-                      Learn More About IGAC
-                    </Link>
-                  </Button>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-
-            {/* IGAC Members Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="relative order-2"
-            >
-              <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden group">
-                <Image 
-                  src="/events/members.jpg" 
-                  alt="IGAC Team Members" 
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-lg font-semibold bg-forest-900/60 px-3 py-2 rounded backdrop-blur-sm">
-                    The IGAC Family
-                  </p>
-                </div>
-                
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-accent-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* President's Message - Clean & Mobile Optimized */}
       <section className="py-16 md:py-24 relative overflow-hidden">
@@ -636,70 +429,48 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* The Core Section - Infinite Carousel (disabled on mobile for smoother scroll) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mt-20 md:mt-32"
-          >
-            {/* Core Header with Hover Effect */}
-            <div className="text-center mb-12">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 group cursor-default">
-                The <span className="transition-colors duration-300 group-hover:text-accent-gold">Core</span> of IGAC
-              </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent-gold to-transparent mx-auto mb-4" />
-              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-                The dedicated leadership team at the heart of our mission
-              </p>
-            </div>
-
-            {/* Infinite Scrolling Carousel (desktop) / Scrollable list (mobile) */}
-            {isMobile ? (
-              <div className="relative overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4">
-                <div className="flex gap-4 will-change-transform">
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`mobile-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div className="relative overflow-hidden">
-                <motion.div 
-                  ref={carouselRef}
-                  className="flex gap-4 sm:gap-6 pb-6 will-change-transform"
-                  animate={{ 
-                    x: [-(280 * executiveTeam.length), 0]
-                  }}
-                  transition={{
-                    duration: executiveTeam.length * 8,
-                    repeat: Infinity,
-                    ease: "linear",
-                    repeatType: "loop"
-                  }}
-                  style={{ 
-                    width: `${(executiveTeam.length * 3) * 280}px`
-                  }}
-                >
-                  {/* Triple set for seamless infinite scroll */}
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`first-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`second-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                  {executiveTeam.map((leader, index) => (
-                    <ExecutiveTeamCard key={`third-${leader.name}`} leader={leader} index={index} />
-                  ))}
-                </motion.div>
-              </div>
-            )}
-          </motion.div>
+          {/* The Core Section */}
+          <ExecutiveTeam />
         </div>
       </section>
 
+      {/* Featured Awardees Section */}
+      <FeaturedAwardees />
 
+      {/* Certificate Verification CTA */}
+      <section className="py-12 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-forest-900/80 to-forest-800/80 border border-accent-gold/20 rounded-2xl p-8 md:p-12 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay"></div>
+            <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl group-hover:bg-accent-gold/10 transition-colors duration-500"></div>
+            
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left max-w-2xl">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center justify-center md:justify-start gap-3">
+                  <ShieldCheck className="h-8 w-8 text-accent-gold" />
+                  Official Verification
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  We take authenticity seriously. All IGACMUN certificates are digitally signed and can be instantly verified through our secure portal.
+                </p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button size="xl" variant="outline" asChild className="min-w-[200px] border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-forest-950">
+                    <Link href="/certificate-portal">
+                      Verify Now
+                    </Link>
+                  </Button>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Quick Stats */}
       <section className="py-20 relative">
@@ -708,7 +479,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: Users, label: "Total Delegates", value: "4,000+" },
-              { icon: Award, label: "Committees", value: "10" },
+              { icon: Award, label: "Committees", value: "20+" },
               { icon: Calendar, label: "Days", value: "3" },
               { icon: MapPin, label: "Venue", value: venue.name },
             ].map((stat, index) => (
@@ -864,233 +635,10 @@ export default function Home() {
       </section>
 
       {/* Venue Showcase */}
-      <section className="py-24 bg-gradient-to-br from-background to-forest-950/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our Venue
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience diplomatic excellence at one of Bangladesh&apos;s premier educational institutions
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Venue Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden group">
-                {/* AIUB Image */}
-                <Image 
-                  src="/aiub.jpg" 
-                  alt="American International University-Bangladesh Campus" 
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-lg font-semibold bg-forest-900/60 px-3 py-2 rounded backdrop-blur-sm">
-                    {venue.fullName}
-                  </p>
-                </div>
-                
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-accent-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </motion.div>
-
-            {/* Venue Details */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <div>
-                <h3 className="font-display text-3xl font-bold text-foreground mb-4">
-                  {venue.fullName}
-                </h3>
-                <div className="flex items-center space-x-2 text-muted-foreground mb-4">
-                  <MapPin className="h-5 w-5 text-accent-gold" />
-                  <span className="text-lg">{venue.address}</span>
-                </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  State-of-the-art facilities designed to host international conferences with 
-                  modern amenities and professional environments. AIUB provides the perfect 
-                  setting for diplomatic excellence.
-                </p>
-              </div>
-
-              {/* Venue Features */}
-              <BentoGrid className="grid-cols-2 gap-3">
-                {[
-                  { icon: Users, label: "Conference Halls", desc: "Spacious venues" },
-                  { icon: Award, label: "Modern AV Systems", desc: "Latest technology" },
-                  { icon: Calendar, label: "Professional Setup", desc: "Expert arrangement" },
-                  { icon: MapPin, label: "Central Location", desc: "Easy access" }
-                ].map((feature, index) => (
-                  <BentoCard key={feature.label} index={index} className="p-4">
-                    <div className="flex flex-col space-y-2">
-                      <feature.icon className="h-6 w-6 text-accent-gold" />
-                      <div>
-                        <h4 className="text-sm font-semibold text-foreground">{feature.label}</h4>
-                        <p className="text-xs text-muted-foreground">{feature.desc}</p>
-                      </div>
-                    </div>
-                  </BentoCard>
-                ))}
-              </BentoGrid>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                viewport={{ once: true }}
-              >
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/session-3/venue">
-                    Explore Venue Details
-                  </Link>
-                </Button>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <VenueSection />
 
       {/* Session II Legacy */}
-      <section className="py-24 bg-forest-950/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Building on Excellence
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              IGACMUN Session II set the gold standard for MUN conferences in South East Asia
-            </p>
-          </motion.div>
-
-          <div className="max-w-5xl mx-auto">
-            {/* Session II Highlights */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-card border border-accent-gold/20 rounded-2xl p-8"
-            >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 relative">
-                  <Image
-                    src="/logo (1).png"
-                    alt="IGACMUN Session 2 Logo"
-                    fill
-                    sizes="48px"
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-display text-2xl font-bold text-foreground">
-                    IGACMUN Session II
-                  </h3>
-                  <p className="text-accent-gold font-medium">
-                    The Largest MUN in South East Asia
-                  </p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                {/* IGACMUN II Image */}
-                <div className="relative h-64 lg:h-80 rounded-lg overflow-hidden mb-4 group">
-                  <Image 
-                    src="/events/igacmunbannerjpg.jpg" 
-                    alt="IGACMUN Session II Conference" 
-                    fill
-                    sizes="100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 text-white">
-                    <p className="text-sm font-medium bg-forest-900/60 px-2 py-1 rounded backdrop-blur-sm">
-                      IGACMUN Session II
-                    </p>
-                  </div>
-                </div>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  Our previous session broke all records, hosting over 1700 delegates from across 
-                  the region. It established new benchmarks for diplomatic simulation and 
-                  international cooperation among youth.
-                </p>
-                
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {[
-                    { label: "Delegates", value: "1700+" },
-                    { label: "Committees", value: "12" },
-                    { label: "Countries", value: "15+" },
-                    { label: "Awards", value: "50+" }
-                  ].map((stat, index) => (
-                    <motion.div
-                      key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="text-center p-3 bg-forest-950/30 rounded-lg"
-                    >
-                      <div className="font-display text-xl font-bold text-accent-gold">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-muted-foreground">
-                        {stat.label}
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  className="mt-6 text-center"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  >
-                    <Button variant="outline" size="lg" asChild>
-                      <Link href="/events">
-                        Explore Past Events
-                      </Link>
-                    </Button>
-                  </motion.div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <LegacySection />
 
     </div>
   )

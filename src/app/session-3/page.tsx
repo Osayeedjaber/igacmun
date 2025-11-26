@@ -4,15 +4,22 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Shield, Users, Calendar, MapPin, Award, ArrowRight } from 'lucide-react'
+import { Shield, Users, Calendar, MapPin, Award, ArrowRight, Trophy, User, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Countdown } from '@/components/ui/countdown'
 import { MagneticElement } from '@/components/ui/magnetic-element'
+import { ElegantBackground } from '@/components/ui/elegant-background'
 import { appConfig } from '@/lib/config'
 import { isRevealed } from '@/lib/utils'
+import { FeaturedAwardees } from '@/components/featured-awardees'
 
 export default function Session3Page() {
   const { reveals, venue } = appConfig
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <div className="min-h-screen">
@@ -212,6 +219,44 @@ export default function Session3Page() {
         </div>
       </section>
 
+      {/* Featured Awardees Section */}
+      <FeaturedAwardees />
+
+      {/* Certificate Verification CTA */}
+      <section className="py-12 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-forest-900/80 to-forest-800/80 border border-accent-gold/20 rounded-2xl p-8 md:p-12 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay"></div>
+            <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-accent-gold/5 rounded-full blur-3xl group-hover:bg-accent-gold/10 transition-colors duration-500"></div>
+            
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left max-w-2xl">
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4 flex items-center justify-center md:justify-start gap-3">
+                  <ShieldCheck className="h-8 w-8 text-accent-gold" />
+                  Official Verification
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  We take authenticity seriously. All IGACMUN certificates are digitally signed and can be instantly verified through our secure portal.
+                </p>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button size="xl" variant="outline" asChild className="min-w-[200px] border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-forest-950">
+                    <Link href="/certificate-portal">
+                      Verify Now
+                    </Link>
+                  </Button>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Conference Information - Grid Layout */}
       <section className="py-32 bg-gradient-to-b from-forest-950/50 to-background relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -242,7 +287,7 @@ export default function Session3Page() {
                 className="bg-card border border-accent-gold/20 rounded-xl overflow-hidden hover:border-accent-gold/40 transition-all duration-300"
               >
                 {/* BIGGER Venue Image */}
-                {isRevealed(reveals.venue.revealAt) && (
+                {(mounted && isRevealed(reveals.venue.revealAt)) && (
                   <div className="relative h-80 overflow-hidden">
                     <Image
                       src="/aiub.jpg"
@@ -272,14 +317,14 @@ export default function Session3Page() {
                       </div>
                       <h3 className="font-display text-2xl font-bold text-foreground">Conference Venue</h3>
                     </div>
-                    {isRevealed(reveals.venue.revealAt) && (
+                    {(mounted && isRevealed(reveals.venue.revealAt)) && (
                       <div className="px-3 py-1 bg-green-500/10 border border-green-500/30 rounded text-xs font-semibold text-green-600">
                         Confirmed
                       </div>
                     )}
                   </div>
                   
-                  {!isRevealed(reveals.venue.revealAt) ? (
+                  {(!mounted || !isRevealed(reveals.venue.revealAt)) ? (
                     <Countdown
                       revealAt={reveals.venue.revealAt}
                       title=""
