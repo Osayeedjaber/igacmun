@@ -47,7 +47,7 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
     try {
       const response = await searchCertificate(trimmedQuery);
       if (response.success && response.data && response.data.length > 0) {
-        const certData = response.data[0] as CertificateData;
+        const certData = response.data[0] as unknown as CertificateData;
         setResult(certData);
         setCache(prev => ({ ...prev, [trimmedQuery]: certData }));
       } else {

@@ -6,26 +6,46 @@ import { Button } from "@/components/ui/button";
 import { formatDateReadable } from "@/lib/utils";
 import Image from "next/image";
 
+type CertificateMetadataItem = {
+  id: string;
+  certificate_id: string;
+  field_name: string;
+  field_value: string;
+  field_type: 'text' | 'array' | 'json';
+};
+
 type CertificateData = {
   certificate_id: string;
   participant_name: string;
   school: string;
   certificate_type: string;
-  event: string | null;
-  event_code: string | null;
+  event?: string | null;
+  event_code?: string | null;
   date_issued: string;
   status: string;
-  pdf_available: boolean;
-  pdf_download_url: string | null;
+  pdf_available?: boolean;
+  pdf_download_url?: string | null;
+  pdf_storage_path?: string | null;
+  // Metadata fields
+  cert_type?: string; // Category: delegate, secretariat, campus_ambassador
   country?: string;
   committee?: string;
+  department?: string; // For secretariat
+  designation?: string; // For secretariat
+  email?: string;
   segment?: string;
   team_name?: string;
   level?: string;
-  certificate_metadata?: Record<string, unknown>[];
+  // Joined data
+  events?: {
+    id: string;
+    event_code: string;
+    event_name: string;
+  } | null;
+  certificate_metadata?: CertificateMetadataItem[] | Record<string, unknown>[];
   revoked_at?: string;
   revoked_reason?: string;
-  [key: string]: string | number | boolean | null | undefined | Record<string, unknown>[];
+  [key: string]: string | number | boolean | null | undefined | CertificateMetadataItem[] | Record<string, unknown>[] | { id: string; event_code: string; event_name: string; } | null;
 };
 
 export type { CertificateData };
@@ -125,23 +145,33 @@ export function CertificateDisplay({ certificate, valid = true, revoked = false,
                             {certificate.certificate_type}
                         </h2>
                         <p className="text-sm text-white/40 mt-2 font-medium tracking-wide">
-                            {certificate.event || "IGACMUN Conference"}
+                            {certificate.event || certificate.events?.event_name || "IGACMUN Conference"}
                         </p>
                     </div>
 
-                    {/* Grid for extra details */}
-                    {(certificate.committee || certificate.country || certificate.team_name || certificate.segment) && (
+                    {/* Grid for extra details - handles both delegate and secretariat */}
+                    {(certificate.committee || certificate.country || certificate.department || certificate.designation || certificate.team_name || certificate.segment) && (
                         <div className="grid grid-cols-2 gap-x-8 gap-y-6 pt-8 border-t border-white/10">
-                            {certificate.committee && (
+                            {/* For Secretariat: Show Department, for Delegates: Show Committee */}
+                            {(certificate.department || certificate.committee) && (
                                 <div>
-                                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-1">Committee</p>
-                                    <p className="font-medium text-white text-lg">{certificate.committee}</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
+                                        {certificate.cert_type === 'secretariat' ? 'Department' : 'Committee'}
+                                    </p>
+                                    <p className="font-medium text-white text-lg">
+                                        {certificate.cert_type === 'secretariat' ? (certificate.department || certificate.committee) : certificate.committee}
+                                    </p>
                                 </div>
                             )}
-                            {certificate.country && (
+                            {/* For Secretariat: Show Designation, for Delegates: Show Country */}
+                            {(certificate.designation || certificate.country) && (
                                 <div>
-                                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-1">Country</p>
-                                    <p className="font-medium text-white text-lg">{certificate.country}</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
+                                        {certificate.cert_type === 'secretariat' ? 'Designation' : 'Country'}
+                                    </p>
+                                    <p className="font-medium text-white text-lg">
+                                        {certificate.cert_type === 'secretariat' ? (certificate.designation || certificate.country) : certificate.country}
+                                    </p>
                                 </div>
                             )}
                             {certificate.team_name && (

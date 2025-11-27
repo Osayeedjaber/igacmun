@@ -1,5 +1,6 @@
 import { searchCertificate } from "../actions";
 import { CertificatePortalClient } from "@/components/certificate-portal-client";
+import type { CertificateData } from "@/components/certificate-display";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export default async function CertificateVerifyPage({
   
   // Fetch certificate data on the server
   const result = await searchCertificate(certificateId);
-  const certificate = result.success && result.data ? result.data[0] : undefined;
+  const certificate = result.success && result.data ? result.data[0] as unknown as CertificateData : undefined;
 
   return (
     <CertificatePortalClient 

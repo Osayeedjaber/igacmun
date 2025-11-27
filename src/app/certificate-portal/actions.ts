@@ -1,103 +1,141 @@
 'use server'
 
-import { createClient } from '@supabase/supabase-js'
-import { unstable_cache } from 'next/cache'
+import { createClient } from '@/lib/supabase/server'
+
+export interface CertificateMetadata {
+  id: string
+  certificate_id: string
+  field_name: string
+  field_value: string
+  field_type: 'text' | 'array' | 'json'
+}
 
 export interface Certificate {
   id: string
   certificate_id: string
+  event_id: string
+  certificate_type: string
   participant_name: string
   school: string
-  certificate_type: string
   date_issued: string
-  created_at: string
-  event: string | null
-  event_code: string | null
-  status: string
+  status: 'active' | 'revoked'
+  revoked_at: string | null
+  revoked_reason: string | null
+  qr_code_data: string
   pdf_available: boolean
-  pdf_download_url: string | null
-  country?: string
+  pdf_storage_path: string | null
+  created_at: string
+  verification_count: number
+  last_verified_at: string | null
+  // Joined data
+  events?: {
+    id: string
+    event_code: string
+    event_name: string
+  } | null
+  certificate_metadata?: CertificateMetadata[]
+  // Flattened metadata fields
+  cert_type?: string
   committee?: string
-  segment?: string
-  team_name?: string
-  revoked_at?: string
-  revoked_reason?: string
-  [key: string]: string | number | boolean | null | undefined
+  country?: string
+  department?: string
+  designation?: string
+  email?: string
 }
 
-// Cache the certificate lookup to prevent Supabase rate limits
-// This caches the result for 1 hour (3600 seconds)
-const getCachedCertificate = unstable_cache(
-  async (query: string) => {
-    // Use a direct client without cookie overhead for public search
-    // This avoids "Dynamic server usage" errors in cached functions
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
+/**
+ * Safely parse JSON, returning the original value if parsing fails
+ */
+function safeJsonParse(value: string): unknown {
+  try {
+    return JSON.parse(value)
+  } catch {
+    return value
+  }
+}
 
-    return await supabase
+/**
+ * Flatten certificate_metadata array into top-level fields
+ * Handles: cert_type, committee, country, department, designation, email
+ */
+function flattenMetadata(certificate: Certificate): Certificate {
+  if (!certificate.certificate_metadata || certificate.certificate_metadata.length === 0) {
+    return certificate
+  }
+  
+  const metadata = certificate.certificate_metadata.reduce((acc, meta) => {
+    acc[meta.field_name] = (meta.field_type === 'json' || meta.field_type === 'array')
+      ? safeJsonParse(meta.field_value)
+      : meta.field_value
+    return acc
+  }, {} as Record<string, unknown>)
+  
+  return {
+    ...certificate,
+    cert_type: metadata.cert_type as string | undefined,
+    committee: metadata.committee as string | undefined,
+    country: metadata.country as string | undefined,
+    department: metadata.department as string | undefined,
+    designation: metadata.designation as string | undefined,
+    email: metadata.email as string | undefined,
+  }
+}
+
+export async function searchCertificate(query: string): Promise<{ success: boolean; data?: Certificate[]; error?: string }> {
+  if (!query) {
+    return { success: false, error: 'Please enter a certificate ID or name' }
+  }
+
+  // Sanitize input - remove any potentially dangerous characters
+  const sanitizedQuery = query.trim().slice(0, 100)
+  
+  if (!sanitizedQuery) {
+    return { success: false, error: 'Please enter a valid certificate ID or name' }
+  }
+
+  try {
+    const supabase = await createClient()
+    
+    // Try to search by certificate_id first (exact match)
+    const { data: idData, error: idError } = await supabase
       .from('certificates')
       .select(`
         *,
         events (*),
         certificate_metadata (*)
       `)
-      .eq('certificate_id', query)
+      .eq('certificate_id', sanitizedQuery)
       .single()
-  },
-  ['certificate-lookup-v1'],
-  { revalidate: 3600, tags: ['certificates'] }
-)
 
-export async function searchCertificate(query: string): Promise<{ success: boolean; data?: Certificate[]; error?: string }> {
-  if (!query) {
-    return { success: false, error: 'Please enter a certificate ID' }
-  }
-
-  try {
-    // Use the cached fetcher
-    const { data: certificate, error } = await getCachedCertificate(query) as { data: Certificate | null; error: { code: string } | null }
-
-    if (error || !certificate) {
-      // If error is specifically a connection issue or 500, we might want to say "System busy"
-      // But usually for single() it returns error if not found too (PGRST116)
-      if (error && error.code !== 'PGRST116') {
-         console.error('Supabase Error:', error)
-      }
-      return { success: false, error: 'Certificate not found. Please check the ID and try again.' }
+    if (idData && !idError) {
+      return { success: true, data: [flattenMetadata(idData as Certificate)] }
     }
 
-    // Format the response similar to the API
-    const metadata = ((certificate.certificate_metadata as unknown) as Record<string, unknown>[] | null || []).reduce((acc: Record<string, unknown>, meta: unknown) => {
-      const metaObj = meta as Record<string, unknown>
-      acc[metaObj.field_name as string] = metaObj.field_type === 'json' || metaObj.field_type === 'array' 
-        ? JSON.parse(metaObj.field_value as string) 
-        : metaObj.field_value
-      return acc
-    }, {}) as Record<string, string | number | boolean | null | undefined | Record<string, unknown>[]>
+    // If not found by ID, search by participant_name (case-insensitive partial match)
+    const { data: nameData, error: nameError } = await supabase
+      .from('certificates')
+      .select(`
+        *,
+        events (*),
+        certificate_metadata (*)
+      `)
+      .ilike('participant_name', `%${sanitizedQuery}%`)
+      .eq('status', 'active') // Only show active certificates in name search
+      .order('date_issued', { ascending: false })
+      .limit(10)
 
-    // Extract only the properties we need to avoid type conflicts
-    const { events, pdf_storage_path, status, pdf_available, ...certificateBase } = certificate
-    
-    const eventsObj = events as Record<string, unknown> | null
-    const eventName = typeof eventsObj?.event_name === 'string' ? eventsObj.event_name : null
-    const eventCode = typeof eventsObj?.event_code === 'string' ? eventsObj.event_code : null
-    const pdfUrl = typeof pdf_storage_path === 'string' ? pdf_storage_path : null
-    
-    const formattedCertificate: Certificate = {
-      ...certificateBase,
-      event: eventName,
-      event_code: eventCode,
-      pdf_download_url: pdfUrl,
-      status: typeof status === 'string' ? status : 'valid',
-      pdf_available: typeof pdf_available === 'boolean' ? pdf_available : true,
-      ...metadata
+    if (nameError) {
+      console.error('Supabase search error:', nameError)
+      return { success: false, error: 'Failed to search certificates' }
     }
 
-    return { success: true, data: [formattedCertificate] }
+    if (!nameData || nameData.length === 0) {
+      return { success: false, error: 'No certificates found' }
+    }
+
+    return { success: true, data: (nameData as Certificate[]).map(flattenMetadata) }
   } catch (error) {
     console.error('Search error:', error)
-    return { success: false, error: 'An unexpected error occurred. Please try again later.' }
+    return { success: false, error: 'An unexpected error occurred' }
   }
 }

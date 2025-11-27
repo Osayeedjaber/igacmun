@@ -89,22 +89,41 @@ export async function GET(
   }
 }
 
+/**
+ * Safely parse JSON, returning the original value if parsing fails
+ */
+function safeJsonParse(value: string): unknown {
+  try {
+    return JSON.parse(value)
+  } catch {
+    return value
+  }
+}
+
 function formatCertificateResponse(certificate: Record<string, unknown>) {
-  const metadata = (((certificate.certificate_metadata as unknown) as unknown[] | null) || []).reduce((acc: Record<string, unknown>, meta: unknown) => {
+  const metadataArray = (certificate.certificate_metadata as unknown[] | null) || []
+  
+  const metadata = metadataArray.reduce((acc: Record<string, unknown>, meta: unknown) => {
     const metaObj = meta as Record<string, unknown>
-    acc[metaObj.field_name as string] = metaObj.field_type === 'json' || metaObj.field_type === 'array' 
-      ? JSON.parse(metaObj.field_value as string) 
-      : metaObj.field_value
+    const fieldName = metaObj.field_name as string
+    const fieldValue = metaObj.field_value as string
+    const fieldType = metaObj.field_type as string
+    
+    acc[fieldName] = (fieldType === 'json' || fieldType === 'array')
+      ? safeJsonParse(fieldValue)
+      : fieldValue
     return acc
   }, {})
+  
+  const events = certificate.events as Record<string, unknown> | null
   
   return {
     certificate_id: certificate.certificate_id,
     participant_name: certificate.participant_name,
     school: certificate.school,
     certificate_type: certificate.certificate_type,
-    event: ((certificate.events as unknown) as Record<string, unknown>)?.event_name || null,
-    event_code: ((certificate.events as unknown) as Record<string, unknown>)?.event_code || null,
+    event: events?.event_name || null,
+    event_code: events?.event_code || null,
     date_issued: certificate.date_issued,
     status: certificate.status,
     pdf_available: certificate.pdf_available || false,
