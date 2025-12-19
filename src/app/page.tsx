@@ -153,7 +153,9 @@ export default function Home() {
               <div className="w-8 h-px bg-gradient-to-l from-transparent to-accent-gold/50"></div>
             </div>
             <p className="text-sm sm:text-base md:text-lg text-foreground font-display font-semibold">
-              19 - 21 December 2025
+              2 - 4 January 2026
+
+
             </p>
           </motion.div>
 
