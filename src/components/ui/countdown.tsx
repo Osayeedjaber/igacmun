@@ -62,7 +62,13 @@ export function Countdown({
   onReveal,
   showOverlay = false
 }: CountdownProps) {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => calculateTimeLeft(revealAt))
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    isRevealed: false
+  })
   const [mounted, setMounted] = useState(false)
 
   const updateCountdown = useCallback(() => {

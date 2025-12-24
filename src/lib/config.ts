@@ -25,7 +25,7 @@ export const appConfig = {
   reveals: {
     committees: { 
       mode: "countdown" as const, 
-      revealAt: "2025-12-25T10:00:00Z", 
+      revealAt: "2024-12-25T10:00:00Z", 
       showCountdownOverlay: false,
       enableCountdown: true
     },
@@ -43,8 +43,9 @@ export const appConfig = {
     },
     secretariats: { 
       mode: "countdown" as const, 
-      revealAt: "2025-12-17T10:00:00Z", 
-      showCountdownOverlay: false 
+      revealAt: "2025-12-30T10:00:00Z", 
+      showCountdownOverlay: false,
+      enableCountdown: true
     }
   },
   registrationTypes: [
@@ -53,13 +54,6 @@ export const appConfig = {
       icon: 'Bird',
       color: 'from-emerald-500/20 to-emerald-600/5',
       borderColor: 'border-emerald-400/40',
-      flashMode: 'false'
-    },
-    {
-      key: 'doubleDelegation',
-      icon: 'Users',
-      color: 'from-blue-500/20 to-blue-600/5',
-      borderColor: 'border-blue-400/40',
       flashMode: 'false'
     },
     {
@@ -77,6 +71,13 @@ export const appConfig = {
       flashMode: 'false'
     },
     {
+      key: 'doubleDelegation',
+      icon: 'Users',
+      color: 'from-blue-500/20 to-blue-600/5',
+      borderColor: 'border-blue-400/40',
+      flashMode: 'false'
+    },
+    {
       key: 'late',
       icon: 'Clock',
       color: 'from-destructive/20 to-destructive/5',
@@ -90,7 +91,7 @@ export const appConfig = {
       link: "https://forms.gle/PW95WFfWVVu2vPMD6",
       title: "Campus Ambassadors",
       description: "Represent your institution",
-      deadline: "2025-11-30T23:59:59Z",
+      deadline: "2025-12-28T23:59:59Z",
       price: "3570",
       currency: "BDT"
     },
@@ -99,7 +100,7 @@ export const appConfig = {
       link: "https://forms.gle/Rumm2ApxBcAi41649",
       title: "Regular Bird Registration",
       description: "Standard registration rates",
-      deadline: "2025-12-10T23:59:59Z",
+      deadline: "2025-12-28T23:59:59Z",
       price: "3570",
       currency: "BDT"
     },
@@ -108,21 +109,21 @@ export const appConfig = {
       link: "https://forms.gle/your-late-registration-form-id",
       title: "Late Registration",
       description: "Will be announced soon",
-      deadline: "2025-12-15T23:59:59Z"
+      deadline: "2025-12-28T23:59:59Z"
     },
     executiveBoard: { 
       enabled: true, 
       link: "https://forms.gle/Jieo1f4TMaTnkzgeA",
       title: "Executive Board Registration",
       description: "Exclusive registration for executive positions and leadership roles",
-      deadline: "2025-11-15T23:59:59Z"
+      deadline: "2025-12-28T23:59:59Z"
     },
     doubleDelegation: { 
-      enabled: true, 
+      enabled: false, 
       link: "https://forms.gle/fgYbUYox6H8bCj546",
       title: "Double Delegation",
       description: "Register as a pair of delegates",
-      deadline: "2025-12-10T23:59:59Z",
+      deadline: "2025-12-28T23:59:59Z",
       price: "7140",
       currency: "BDT"
     },
@@ -131,7 +132,7 @@ export const appConfig = {
       link: "https://forms.gle/kruBU3Vr5336ZXXRA",
       title: "Payment Confirmation",
       description: "Submit your payment proof after registration",
-      deadline: "2025-12-15T23:59:59Z"
+      deadline: "2025-12-28T23:59:59Z"
     }
   },
   
@@ -146,61 +147,73 @@ export const appConfig = {
       name: "United Nations Security Council",
       sigilImage: "/committees/unsc.svg",
       difficulty: "Advanced",
-      description: "Addressing global security challenges and maintaining international peace"
+      description: "OPEN AGENDA"
     },
     {
-      name: "General Assembly",
-      sigilImage: "/committees/ga.svg", 
-      difficulty: "Beginner",
-      description: "Discussing international cooperation and global governance"
-    },
-    {
-      name: "Economic and Social Council",
-      sigilImage: "/committees/ecosoc.svg",
+      name: "Disarmament and International Security Committee",
+      sigilImage: "/committees/disec.svg", 
       difficulty: "Intermediate",
-      description: "Coordinating economic and social work of UN specialized agencies"
+      description: "REGULATING MILITARY ARTIFICIAL INTELLIGENCE AND LETHAL AUTONOMOUS WEAPONS SYSTEMS (LAWS) TO PRESERVE MEANINGFUL HUMAN CONTROL"
     },
     {
-      name: "Human Rights Council",
-      sigilImage: "/committees/hrc.svg",
-      difficulty: "Intermediate", 
-      description: "Promoting and protecting human rights around the globe"
+      name: "United Nations Children's Fund",
+      sigilImage: "/committees/unicef.svg",
+      difficulty: "Intermediate",
+      description: "Regulating the Digital Environment to Safeguard Children from Online Radicalization and Cyber Exploitation"
     },
     {
-      name: "International Court of Justice",
-      sigilImage: "/committees/icj.svg",
+      name: "Special Political and Decolonization Committee",
+      sigilImage: "/committees/specpol.svg",
+      difficulty: "Advanced", 
+      description: "ADDRESSING THE GEOPOLITICAL IMPACT OF TERRITORIAL DISPUTES AND DECOLONIZATION IN THE 21ST CENTURY"
+    },
+    {
+      name: "United Nations Human Rights Council",
+      sigilImage: "/committees/unhrc.svg",
+      difficulty: "Intermediate",
+      description: "SAFEGUARDING HUMAN RIGHTS DEFENDERS AND CIVIC SPACE FROM AI-ENABLED SURVEILLANCE, PREDICTIVE POLICING AND SMART SECURITY"
+    },
+    {
+      name: "Economic and Financial Committee",
+      sigilImage: "/committees/ecofin.svg",
       difficulty: "Advanced",
-      description: "Principal judicial organ of the United Nations"
+      description: "OPERATIONALIZING CLIMATE-RELATED LOSS AND DAMAGE FINANCE WITHIN THE GLOBAL FINANCIAL ARCHITECTURE"
     },
     {
-      name: "World Health Organization",
-      sigilImage: "/committees/who.svg",
-      difficulty: "Intermediate",
-      description: "Directing and coordinating international health work"
-    },
-    {
-      name: "United Nations Environment Programme",
-      sigilImage: "/committees/unep.svg",
+      name: "Food and Agriculture Organization",
+      sigilImage: "/committees/fao.svg",
       difficulty: "Beginner",
-      description: "Leading global environmental authority"
+      description: "ADDRESSING HUNGER AND UNETHICAL FOOD DISTRIBUTION IN CONFLICT AND DISASTER-PRONE REGIONS"
     },
     {
-      name: "International Monetary Fund",
-      sigilImage: "/committees/imf.svg",
+      name: "World Trade Organization",
+      sigilImage: "/committees/wto.svg",
       difficulty: "Advanced",
-      description: "Ensuring stability of the international monetary system"
+      description: "THE CRISIS OF COMPATIBILITY: RECONCILING TRADE LIBERALIZATION WITH NATIONAL SECURITY AND CLIMATE INDUSTRIAL POLICY, AND RESTORING THE LEGITIMACY OF THE DISPUTE SETTLEMENT SYSTEM"
     },
     {
-      name: "Arab League",
-      sigilImage: "/committees/arab-league.svg",
+      name: "United Nations Entity for Gender Equality",
+      sigilImage: "/committees/unw.svg",
       difficulty: "Intermediate",
-      description: "Regional organization of Arab states"
+      description: "SECURING GENDER JUSTICE IN THE DIGITAL ERA"
     },
     {
-      name: "African Union",
-      sigilImage: "/committees/au.svg",
+      name: "United Nations Educational, Scientific and Cultural Organization",
+      sigilImage: "/committees/unesco.svg",
+      difficulty: "Beginner",
+      description: "Promoting education, culture, and international cooperation"
+    },
+    {
+      name: "North Atlantic Treaty Organization",
+      sigilImage: "/committees/nato.svg",
+      difficulty: "Advanced",
+      description: "ARCTIC SECURITY: DEFENDING THE HIGH NORTH FROM NEW THREATS"
+    },
+    {
+      name: "International Press",
+      sigilImage: "/committees/ip.svg",
       difficulty: "Intermediate",
-      description: "Continental union consisting of 55 African countries"
+      description: "Media and press representation covering the conference"
     }
   ],
   venue: {
@@ -215,7 +228,7 @@ export const appConfig = {
     subtitle: "",
     tagline: "United | Transformation | Innovation",
     dates: "TBA",
-    expectedDelegates: "1700+",
+    expectedDelegates: "500+",
     description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence."
   },
   schedule: {
@@ -269,7 +282,7 @@ export const appConfig = {
       questions: [
         {
           q: "What is IGACMUN Session III?",
-          a: "IGACMUN Session III is the flagship Model United Nations conference by IGAC, scheduled for December 2025 at AIUB."
+          a: "IGACMUN Session III is the flagship Model United Nations conference by IGAC, scheduled for January 2026 at AIUB."
         },
         {
           q: "Who can register?",

@@ -80,7 +80,7 @@ export default function Session3Page() {
                   <span className="text-muted-foreground">|</span>
                   <span>Innovation</span>
                 </div>
-                <p className="text-muted-foreground mt-4 text-lg">December 2025</p>
+                <p className="text-muted-foreground mt-4 text-lg">January 2026</p>
               </motion.div>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -141,14 +141,14 @@ export default function Session3Page() {
                   The Next Chapter in Diplomatic Excellence
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Building on the success of IGACMUN Session II which hosted 1700+ delegates, Session III aims to set a new standard for Model United Nations conferences in South East Asia. Join us for an unprecedented diplomatic experience in December 2025.
+                  Building on the success of IGACMUN Session II, Session III aims to set a new standard for Model United Nations conferences in South East Asia. Join us for an unprecedented diplomatic experience with 500+ delegates in January 2026.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "TBA", label: "Expected Delegates" },
-                  { number: "10", label: "Committees" },
+                  { number: "500+", label: "Expected Delegates" },
+                  { number: "12", label: "Committees" },
                   { number: "3", label: "Conference Days" },
                   { number: "AIUB", label: "Venue Location" }
                 ].map((stat, index) => (
@@ -186,7 +186,7 @@ export default function Session3Page() {
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-900/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-forest-900/60 backdrop-blur-md border border-accent-gold/30 rounded-xl p-4">
-                    <div className="text-accent-gold font-semibold mb-1">December 2025</div>
+                    <div className="text-accent-gold font-semibold mb-1">January 2026</div>
                     <div className="text-foreground text-sm">American International University-Bangladesh</div>
                   </div>
                 </div>
@@ -456,7 +456,7 @@ export default function Session3Page() {
                       </div>
                       <div>
                         <h3 className="font-display text-2xl font-bold text-foreground">Committees</h3>
-                        <p className="text-xs text-muted-foreground">10 Diplomatic Arenas</p>
+                        <p className="text-xs text-muted-foreground">12 Diplomatic Arenas</p>
                       </div>
                     </div>
                     <div className="px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 rounded text-xs font-semibold text-amber-600">
@@ -466,7 +466,7 @@ export default function Session3Page() {
                   <Countdown
                     revealAt={reveals.committees.revealAt}
                     title=""
-                    description=""
+                    description="Information about all 12 committees will be announced soon."
                   />
                 </div>
               </motion.div>
@@ -485,7 +485,7 @@ export default function Session3Page() {
               Ready to Join?
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Be part of the next chapter. Registration is now open for delegates, campus ambassadors, and executive board positions for Session III in December 2025.
+              Be part of the next chapter. Registration is now open for delegates, campus ambassadors, and executive board positions for Session III in January 2026.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="thorn" size="xl" asChild>

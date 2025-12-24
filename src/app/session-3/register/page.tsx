@@ -357,7 +357,7 @@ export default function RegisterPage() {
                 <li>• Session III is the next chapter of IGAC&apos;s flagship conference</li>
                 <li>• Session II successfully hosted 1700+ delegates in 2024</li>
                 <li>• Building on proven excellence with enhanced experiences</li>
-                <li>• Taking place in December 2025 at AIUB Campus</li>
+                <li>• Taking place in January 2026 at AIUB Campus</li>
                 <li>• All registrations processed through Google Forms</li>
               </ul>
             </div>

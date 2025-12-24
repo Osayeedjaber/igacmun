@@ -10,8 +10,20 @@ import { appConfig } from '@/lib/config'
 export default function SecretariatsPage() {
   const { reveals } = appConfig
   const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  const isRevealed = typeof window !== 'undefined' && new Date() >= new Date(reveals.secretariats.revealAt)
+  const [isRevealed, setIsRevealed] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+    const checkReveal = () => {
+      const now = new Date()
+      const revealDate = new Date(reveals.secretariats.revealAt)
+      setIsRevealed(now >= revealDate)
+    }
+    
+    checkReveal()
+    const timer = setInterval(checkReveal, 1000)
+    return () => clearInterval(timer)
+  }, [reveals.secretariats.revealAt])
 
   // Placeholder secretariat data that would be revealed
   const secretariats = [
@@ -65,7 +77,7 @@ export default function SecretariatsPage() {
     }
   ]
 
-  // Show countdown if not yet revealed
+  // Show loading or countdown if not revealed
   if (!mounted || !isRevealed) {
     return (
       <div className="min-h-screen py-20">
@@ -84,13 +96,12 @@ export default function SecretariatsPage() {
               </div>
             </div>
             
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Secretariats
-            </h1>
-            <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
-              Distinguished Leadership Team
-            </p>
-          </motion.div>
+                      <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">
+                        Secretariats
+                      </h1>
+                      <p className="text-lg sm:text-xl md:text-2xl text-accent-gold font-display mb-4">
+                        Distinguished Leadership Team
+                      </p>          </motion.div>
 
           {/* Countdown Section */}
           <motion.div
@@ -99,7 +110,7 @@ export default function SecretariatsPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <div className="bg-forest-950/60 border border-accent-gold/20 rounded-xl p-8 backdrop-blur-sm">
+            <div className="bg-forest-950/60 border border-accent-gold/20 rounded-xl p-12 backdrop-blur-sm">
               <p className="text-accent-gold font-semibold text-2xl mb-6 tracking-wide">
                 THE SECRETARIATS WILL BE REVEALED SOON
               </p>
@@ -111,8 +122,8 @@ export default function SecretariatsPage() {
                 className="[&>div]:bg-gradient-to-br [&>div]:from-forest-700 [&>div]:to-forest-800 [&>div]:border-accent-gold/30 [&>div]:text-accent-gold"
               />
               
-              <p className="text-muted-foreground mt-6 text-lg">
-                Meet the distinguished team that will guide your diplomatic journey. Excellence awaits.
+              <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
+                The secretariat team details will be announced soon. Stay tuned for more information.
               </p>
             </div>
           </motion.div>

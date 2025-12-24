@@ -1,19 +1,20 @@
 {
-  "/api/verify/[certificateId]/route": "/api/verify/[certificateId]",
+  "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/about/page": "/about",
+  "/api/verify/[certificateId]/route": "/api/verify/[certificateId]",
+  "/certificate-portal/[certificateId]/page": "/certificate-portal/[certificateId]",
   "/certificate-portal/page": "/certificate-portal",
-  "/faq/page": "/faq",
   "/contact/page": "/contact",
   "/events/page": "/events",
+  "/faq/page": "/faq",
   "/gallery/page": "/gallery",
-  "/secretariats/page": "/secretariats",
   "/page": "/",
   "/register/page": "/register",
+  "/secretariats/page": "/secretariats",
   "/session-3/committees/page": "/session-3/committees",
+  "/session-3/page": "/session-3",
   "/session-3/register/page": "/session-3/register",
   "/session-3/schedule/page": "/session-3/schedule",
-  "/session-3/page": "/session-3",
-  "/session-3/venue/page": "/session-3/venue",
-  "/certificate-portal/[certificateId]/page": "/certificate-portal/[certificateId]"
+  "/session-3/venue/page": "/session-3/venue"
 }

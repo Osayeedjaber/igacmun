@@ -96,7 +96,7 @@ export async function searchCertificate(query: string): Promise<{ success: boole
   try {
     const supabase = await createClient()
     
-    // Try to search by certificate_id first (exact match)
+    // Search by certificate_id only (exact match required)
     const { data: idData, error: idError } = await supabase
       .from('certificates')
       .select(`
@@ -111,29 +111,13 @@ export async function searchCertificate(query: string): Promise<{ success: boole
       return { success: true, data: [flattenMetadata(idData as Certificate)] }
     }
 
-    // If not found by ID, search by participant_name (case-insensitive partial match)
-    const { data: nameData, error: nameError } = await supabase
-      .from('certificates')
-      .select(`
-        *,
-        events (*),
-        certificate_metadata (*)
-      `)
-      .ilike('participant_name', `%${sanitizedQuery}%`)
-      .eq('status', 'active') // Only show active certificates in name search
-      .order('date_issued', { ascending: false })
-      .limit(10)
-
-    if (nameError) {
-      console.error('Supabase search error:', nameError)
-      return { success: false, error: 'Failed to search certificates' }
+    // If exact match not found, return error (no partial matching)
+    if (idError?.code === 'PGRST116') {
+      return { success: false, error: 'No certificate found with this ID' }
     }
 
-    if (!nameData || nameData.length === 0) {
-      return { success: false, error: 'No certificates found' }
-    }
-
-    return { success: true, data: (nameData as Certificate[]).map(flattenMetadata) }
+    console.error('Supabase search error:', idError)
+    return { success: false, error: 'Failed to search certificates' }
   } catch (error) {
     console.error('Search error:', error)
     return { success: false, error: 'An unexpected error occurred' }

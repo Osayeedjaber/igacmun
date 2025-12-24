@@ -236,8 +236,33 @@ export default function SchedulePage() {
     </div>
   )
 
-  // Check if countdown is enabled
-  if (reveals.schedule.enableCountdown) {
+  // Check if revealed using state to avoid hydration mismatch
+  const [isRevealed, setIsRevealed] = React.useState(false)
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+    const checkReveal = () => {
+      const now = new Date()
+      const revealDate = new Date(reveals.schedule.revealAt)
+      // If countdown is disabled, it's always revealed
+      if (!reveals.schedule.enableCountdown) {
+        setIsRevealed(true)
+        return
+      }
+      setIsRevealed(now >= revealDate)
+    }
+    
+    checkReveal()
+    const timer = setInterval(checkReveal, 1000)
+    return () => clearInterval(timer)
+  }, [reveals.schedule.revealAt, reveals.schedule.enableCountdown])
+
+  if (!mounted) {
+    return null // or a loading spinner
+  }
+
+  if (!isRevealed) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <Countdown

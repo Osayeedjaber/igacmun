@@ -98,7 +98,7 @@ export default function Home() {
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 relative">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 relative">
                 <Image
                   src="/logo.png"
                   alt="IGACMUN Logo"
@@ -478,10 +478,10 @@ export default function Home() {
       <section className="py-20 relative">
         <ElegantBackground variant="section" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Users, label: "Total Delegates", value: "4,000+" },
-              { icon: Award, label: "Committees", value: "20+" },
+              { icon: Users, label: "Total Delegates", value: "500+" },
+              { icon: Award, label: "Committees", value: "12+" },
               { icon: Calendar, label: "Days", value: "3" },
               { icon: MapPin, label: "Venue", value: venue.name },
             ].map((stat, index) => (
@@ -584,7 +584,7 @@ export default function Home() {
                       />
                       
                       <p className="text-muted-foreground mt-6">
-                        Information about all 10 committees will be announced soon.
+                        Information about all 12 committees will be announced soon.
                       </p>
                     </>
                   ) : (
@@ -629,8 +629,45 @@ export default function Home() {
               </div>
             </motion.div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Committee cards will be rendered here when revealed */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {committees.slice(0, 6).map((committee, index) => (
+                <motion.div
+                  key={committee.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-card border border-accent-gold/20 rounded-xl p-6 hover:border-accent-gold/50 transition-colors group"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center shrink-0 group-hover:bg-accent-gold/20 transition-colors">
+                      <span className="font-display font-bold text-accent-gold">
+                        {committee.name.split(' ').filter(w => !['and', 'for', 'of', 'the'].includes(w.toLowerCase())).map(w => w[0]).join('').slice(0, 2)}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground leading-tight mb-1">{committee.name}</h3>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-accent-gold/10 text-accent-gold border border-accent-gold/20">
+                        {committee.difficulty}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                    {committee.description}
+                  </p>
+                  <Button variant="outline" size="sm" asChild className="w-full justify-between border-accent-gold/30 text-accent-gold hover:bg-accent-gold/10 transition-all group/btn">
+                    <Link href="/session-3/committees" className="flex items-center justify-between w-full">
+                      <span>View Details</span>
+                      <ChevronDown className="h-4 w-4 -rotate-90 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                </motion.div>
+              ))}
+              <div className="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center mt-8">
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="/session-3/committees">View All Committees</Link>
+                </Button>
+              </div>
             </div>
           )}
         </div>

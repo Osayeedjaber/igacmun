@@ -1,30 +1,26 @@
 {
-  "[project]/src/components/home/about-section.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/src/components/home/about-section.tsx [app-client] (ecmascript, next/dynamic entry)",
+  "885": {
+    "id": 885,
     "files": [
-      "static/chunks/_fafeefd3._.js",
-      "static/chunks/src_components_home_about-section_tsx_c468dbc6._.js"
+      "static/chunks/f1af859e8a762bde.js"
     ]
   },
-  "[project]/src/components/home/legacy-section.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/src/components/home/legacy-section.tsx [app-client] (ecmascript, next/dynamic entry)",
+  "72406": {
+    "id": 72406,
     "files": [
-      "static/chunks/src_components_home_legacy-section_tsx_23f8f1d7._.js",
-      "static/chunks/src_components_home_legacy-section_tsx_c468dbc6._.js"
+      "static/chunks/9527dd4e39c8322c.js"
     ]
   },
-  "[project]/src/components/home/venue-section.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/src/components/home/venue-section.tsx [app-client] (ecmascript, next/dynamic entry)",
+  "71058": {
+    "id": 71058,
     "files": [
-      "static/chunks/src_components_f0d3e078._.js",
-      "static/chunks/src_components_home_venue-section_tsx_c468dbc6._.js"
+      "static/chunks/7f7ffa8720075e57.js"
     ]
   },
-  "[project]/src/components/home/executive-team.tsx [app-client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/src/components/home/executive-team.tsx [app-client] (ecmascript, next/dynamic entry)",
+  "32883": {
+    "id": 32883,
     "files": [
-      "static/chunks/src_components_home_executive-team_tsx_90c8f28b._.js",
-      "static/chunks/src_components_home_executive-team_tsx_c468dbc6._.js"
+      "static/chunks/06edbeaa6d19801f.js"
     ]
   }
 }

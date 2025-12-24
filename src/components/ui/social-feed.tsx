@@ -27,14 +27,14 @@ export function SocialFeed() {
   // Sample Facebook-style posts
   const facebookPosts = [
     {
-      text: "📢 Registration for IGACMUN Session III is NOW OPEN! Don't miss your chance to be part of South East Asia's largest MUN conference. December 19-21, 2025 at AIUB. Register today!",
+      text: "📢 Registration for IGACMUN Session III is NOW OPEN! Don't miss your chance to be part of South East Asia's largest MUN conference. January 2-4, 2026 at AIUB. Register today!",
       reactions: 145,
       comments: 23,
       shares: 12,
       time: "3 days ago"
     },
     {
-      text: "🎯 Session II was a massive success with 1700+ delegates! Session III is going to be even bigger. Are you ready to make history? #IGACMUN #DiplomacyMeetsDestiny",
+      text: "🎯 Session II was a massive success with 1700+ delegates! Session III is set to continue this legacy of diplomatic excellence. Are you ready to make history? #IGACMUN #DiplomacyMeetsDestiny",
       reactions: 298,
       comments: 41,
       shares: 28,

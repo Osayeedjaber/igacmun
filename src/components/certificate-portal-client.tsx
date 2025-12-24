@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Loader2, Trophy, User, Globe, School, FileCheck, ShieldCheck } from 'lucide-react';
+import { Search, Loader2, Trophy, User, Users, Globe, School, FileCheck, ShieldCheck, Lock, Database, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ElegantBackground } from '@/components/ui/elegant-background';
 import { searchCertificate } from '@/app/certificate-portal/actions';
@@ -71,11 +71,13 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="font-[family-name:var(--font-cinzel)] text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-[family-name:var(--font-cinzel)] text-4xl md:text-6xl font-bold text-foreground mb-6">
             Certificate <span className="text-accent-gold">Portal</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Verify and view IGACMUN certificates. Enter your Certificate ID below.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Verify the authenticity of IGACMUN awards and certificates. 
+            <br className="hidden sm:block" />
+            Enter your unique Certificate ID below to access the digital record.
           </p>
         </motion.div>
 
@@ -84,54 +86,111 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto mb-16"
+          className="max-w-2xl mx-auto mb-20"
         >
           <form onSubmit={handleSearch} className="relative flex items-center">
             <div className="relative w-full group">
-              <div className="absolute inset-0 bg-accent-gold/20 rounded-lg blur-md group-hover:blur-lg transition-all duration-300 opacity-50" />
+              <div className="absolute inset-0 bg-accent-gold/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-500 opacity-40 group-hover:opacity-60" />
               <input
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Enter Certificate ID (e.g. 123456)"
-                className="w-full bg-forest-900/80 border border-accent-gold/30 text-foreground placeholder:text-muted-foreground/50 rounded-lg py-4 pl-12 pr-32 focus:outline-none focus:border-accent-gold/60 focus:ring-1 focus:ring-accent-gold/60 transition-all backdrop-blur-sm relative z-10 font-mono"
+                className="w-full bg-forest-950/90 border border-accent-gold/30 text-foreground placeholder:text-muted-foreground/50 rounded-xl py-4 sm:py-5 pl-12 sm:pl-14 pr-32 sm:pr-36 focus:outline-none focus:border-accent-gold/60 focus:ring-1 focus:ring-accent-gold/60 transition-all backdrop-blur-xl relative z-10 font-mono text-base sm:text-lg shadow-2xl"
               />
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-accent-gold/70 h-5 w-5 z-20" />
+              <Search className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 text-accent-gold/70 h-4 w-4 sm:h-5 sm:w-5 z-20" />
               
               <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20">
                 <Button 
                   type="submit" 
                   disabled={loading}
-                  className="bg-accent-gold/10 hover:bg-accent-gold/20 text-accent-gold border border-accent-gold/30"
+                  size="lg"
+                  className="bg-accent-gold text-forest-950 hover:bg-accent-gold/90 font-semibold shadow-lg shadow-accent-gold/20"
                 >
-                  {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Verify'}
+                  {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Verify ID'}
                 </Button>
               </div>
             </div>
           </form>
-
-          {/* Recent Searches Removed */}
         </motion.div>
 
-        {/* Stats Bar */}
+        {/* Stats Bar - Enhanced */}
         {!result && !loading && (
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.25 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16"
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20"
             >
                 {[
-                    { label: "Committees", value: "20+", icon: Globe },
-                    { label: "Institutions", value: "50+", icon: School },
-                    { label: "Certificates", value: "Issued", icon: FileCheck },
+                    { label: "Verified Delegates", value: "500+", icon: Users, desc: "Across 15+ Countries" },
+                    { label: "Committees", value: "12+", icon: Globe, desc: "Specialized Agendas" },
+                    { label: "Partner Institutions", value: "50+", icon: School, desc: "Global Recognition" },
                 ].map((stat, i) => (
-                    <div key={i} className="bg-forest-900/30 border border-accent-gold/10 rounded-lg p-4 text-center backdrop-blur-sm hover:bg-forest-900/40 transition-colors">
-                        <stat.icon className="w-6 h-6 text-accent-gold/60 mx-auto mb-2" />
-                        <div className="text-2xl font-bold text-white font-[family-name:var(--font-cinzel)]">{stat.value}</div>
-                        <div className="text-xs text-accent-gold/60 uppercase tracking-wider">{stat.label}</div>
+                    <div key={i} className="group relative bg-gradient-to-br from-forest-900/40 to-forest-800/40 border border-accent-gold/10 rounded-2xl p-6 text-center backdrop-blur-md hover:border-accent-gold/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-gold/5">
+                        <div className="absolute inset-0 bg-accent-gold/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                        <div className="relative z-10">
+                            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent-gold/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <stat.icon className="w-6 h-6 text-accent-gold" />
+                            </div>
+                            <div className="text-3xl font-bold text-white font-[family-name:var(--font-cinzel)] mb-1">{stat.value}</div>
+                            <div className="text-sm font-semibold text-accent-gold uppercase tracking-wider mb-2">{stat.label}</div>
+                            <div className="text-xs text-muted-foreground">{stat.desc}</div>
+                        </div>
                     </div>
                 ))}
+            </motion.div>
+        )}
+
+        {/* Error Message */}
+        {!result && !loading && error && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="flex justify-center mb-16"
+          >
+            <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-8 max-w-md backdrop-blur-sm text-center">
+              <p className="text-lg text-destructive font-medium mb-4">{error}</p>
+              <Button 
+                variant="outline" 
+                onClick={() => setError('')}
+                className="border-destructive/30 text-destructive hover:bg-destructive/10"
+              >
+                Try Again
+              </Button>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Security Features - NEW SECTION */}
+        {!result && !loading && (
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className="max-w-5xl mx-auto mb-20"
+            >
+                <div className="text-center mb-10">
+                    <h2 className="text-xl font-bold text-white uppercase tracking-widest flex items-center justify-center gap-3">
+                        <Lock className="h-5 w-5 text-accent-gold" /> 
+                        Advanced Security Features
+                    </h2>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[
+                        { title: "Encrypted Database", desc: "All records are stored in a secure, immutable database to prevent tampering.", icon: Database },
+                        { title: "Unique ID System", desc: "Instant verification via unique alphanumeric IDs assigned to every record.", icon: FileCheck },
+                        { title: "Digital Signature", desc: "Cryptographically signed to ensure authenticity and validity.", icon: CheckCircle2 },
+                    ].map((feature, i) => (
+                        <div key={i} className="flex flex-col items-center text-center p-6 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 transition-colors">
+                            <feature.icon className="w-8 h-8 text-accent-gold/60 mb-4" />
+                            <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
+                            <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                        </div>
+                    ))}
+                </div>
             </motion.div>
         )}
 
@@ -141,11 +200,11 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="max-w-4xl mx-auto mb-16"
+                className="max-w-4xl mx-auto mb-20"
             >
-                <div className="text-center mb-8">
+                <div className="text-center mb-10">
                     <h2 className="text-xl font-bold text-accent-gold uppercase tracking-widest flex items-center justify-center gap-2">
-                        <Trophy className="h-5 w-5" /> Featured Awardees
+                        <Trophy className="h-5 w-5" /> Hall of Excellence
                     </h2>
                 </div>
                 
@@ -252,25 +311,6 @@ export function CertificatePortalClient({ initialCertificate, initialId }: Certi
                     </div>
                   </div>
                   <p className="text-accent-gold/70 font-medium animate-pulse">Verifying ID...</p>
-                </div>
-              </motion.div>
-            ) : error ? (
-              <motion.div
-                key="error"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="text-center py-12"
-              >
-                <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-6 max-w-md mx-auto backdrop-blur-sm">
-                  <p className="text-destructive font-medium">{error}</p>
-                  <Button 
-                    variant="link" 
-                    onClick={() => setError('')}
-                    className="text-destructive/70 mt-2"
-                  >
-                    Try Again
-                  </Button>
                 </div>
               </motion.div>
             ) : result ? (

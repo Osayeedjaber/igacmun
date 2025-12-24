@@ -196,10 +196,10 @@ export default function RegisterPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8">
-            <div className="bg-gradient-to-br from-forest-500/10 to-forest-600/5 border border-forest-400/30 rounded-xl p-6 sm:p-8">
+            <div className="bg-card border border-accent-gold/20 rounded-xl p-6 sm:p-8">
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-forest-500/20 rounded-full mr-4">
-                  <Info className="h-6 w-6 text-forest-400" />
+                <div className="p-3 bg-accent-gold/20 rounded-full mr-4">
+                  <Info className="h-6 w-6 text-accent-gold" />
                 </div>
                 <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">
                   Payment Instructions
@@ -318,9 +318,9 @@ export default function RegisterPage() {
               </h3>
               <ul className="space-y-2 text-muted-foreground text-xs sm:text-sm">
                 <li>• Session III continues IGAC&apos;s flagship conference</li>
+                <li>• Expecting 500+ delegates in January 2026</li>
                 <li>• Session II hosted 1700+ delegates in 2024</li>
                 <li>• Enhanced diplomatic experience</li>
-                <li>• December 2025 at AIUB Campus</li>
               </ul>
             </div>
             <div className="space-y-4">
