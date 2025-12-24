@@ -10,10 +10,10 @@ export default function SchedulePage() {
   const { reveals, schedule } = appConfig
 
   // Convert schedule data to array format
-  const scheduleData = Object.entries(schedule).map(([, data]) => ({
-    day: data.date,
+  const scheduleData = Object.entries(schedule).map(([key, data]) => ({
+    day: key.replace('day', 'Day '),
     title: data.title,
-    date: "TBA",
+    date: data.date,
     sessions: data.sessions
   }))
 

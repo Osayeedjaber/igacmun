@@ -60,8 +60,8 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "Event",
           "name": event.title,
-          "startDate": "2025-12-19",
-          "endDate": "2025-12-21",
+          "startDate": "2026-01-02",
+          "endDate": "2026-01-04",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
@@ -552,11 +552,24 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Committees
+              Diplomatic Arenas
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
               Engage in high-level diplomatic discussions across diverse global issues
             </p>
+            
+            {/* Added Stats Elements */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-12 opacity-80">
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-accent-gold">{committees.length}</span>
+                <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Committees</span>
+              </div>
+              <div className="w-px h-8 bg-accent-gold/20 hidden sm:block" />
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-accent-gold">3</span>
+                <span className="text-[10px] uppercase tracking-widest text-muted-foreground">Levels</span>
+              </div>
+            </div>
           </motion.div>
 
           {!mounted || !isRevealed(reveals.committees.revealAt) ? (
@@ -600,10 +613,14 @@ export default function Home() {
                         {committees.slice(0, 3).map((committee) => (
                           <div key={committee.name} className="bg-forest-800/30 border border-accent-gold/20 rounded-lg p-4 hover:border-accent-gold/40 transition-colors">
                             <div className="text-center mb-3">
-                              <div className="w-8 h-8 mx-auto mb-2 rounded bg-accent-gold/20 flex items-center justify-center">
-                                <span className="text-accent-gold text-xs font-bold">
-                                  {committee.name.split(' ').map((word) => word[0]).join('').slice(0, 2)}
-                                </span>
+                              <div className="w-10 h-10 mx-auto mb-2 rounded bg-accent-gold/10 flex items-center justify-center overflow-hidden p-1.5">
+                                <Image
+                                  src={committee.sigilImage}
+                                  alt={committee.name}
+                                  width={32}
+                                  height={32}
+                                  className="w-full h-full object-contain filter drop-shadow-sm"
+                                />
                               </div>
                               <h4 className="font-semibold text-foreground text-sm leading-tight">
                                 {committee.name}
@@ -629,7 +646,7 @@ export default function Home() {
               </div>
             </motion.div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               {committees.slice(0, 6).map((committee, index) => (
                 <motion.div
                   key={committee.name}
@@ -637,35 +654,36 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-card border border-accent-gold/20 rounded-xl p-6 hover:border-accent-gold/50 transition-colors group"
+                  className="bg-forest-950/40 backdrop-blur-md border border-accent-gold/15 rounded-2xl p-5 hover:border-accent-gold/40 hover:bg-forest-900/40 transition-all duration-300 group flex items-center gap-5"
                 >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-accent-gold/10 border border-accent-gold/20 flex items-center justify-center shrink-0 group-hover:bg-accent-gold/20 transition-colors">
-                      <span className="font-display font-bold text-accent-gold">
-                        {committee.name.split(' ').filter(w => !['and', 'for', 'of', 'the'].includes(w.toLowerCase())).map(w => w[0]).join('').slice(0, 2)}
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground leading-tight mb-1">{committee.name}</h3>
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-accent-gold/10 text-accent-gold border border-accent-gold/20">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-forest-900/80 border border-accent-gold/10 flex items-center justify-center shrink-0 group-hover:bg-accent-gold/20 transition-colors overflow-hidden p-3 shadow-xl">
+                    <Image
+                      src={committee.sigilImage}
+                      alt={committee.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain filter drop-shadow-sm transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="flex-grow min-w-0">
+                    <div className="flex items-center justify-between gap-2 mb-1">
+                      <h3 className="font-bold text-white leading-tight truncate font-display group-hover:text-accent-gold transition-colors">{committee.name}</h3>
+                      <span className="hidden sm:block text-[8px] px-2 py-0.5 rounded-full bg-accent-gold/10 text-accent-gold border border-accent-gold/20 font-black uppercase tracking-widest">
                         {committee.difficulty}
                       </span>
                     </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                    {committee.description}
-                  </p>
-                  <Button variant="outline" size="sm" asChild className="w-full justify-between border-accent-gold/30 text-accent-gold hover:bg-accent-gold/10 transition-all group/btn">
-                    <Link href="/session-3/committees" className="flex items-center justify-between w-full">
-                      <span>View Details</span>
-                      <ChevronDown className="h-4 w-4 -rotate-90 group-hover/btn:translate-x-1 transition-transform" />
+                    <p className="text-xs text-gray-400 line-clamp-1 italic font-light">
+                      "{committee.description}"
+                    </p>
+                    <Link href="/session-3/committees" className="inline-block mt-2 text-[10px] font-black uppercase tracking-[0.2em] text-accent-gold/60 hover:text-accent-gold transition-colors">
+                      Learn More →
                     </Link>
-                  </Button>
+                  </div>
                 </motion.div>
               ))}
-              <div className="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center mt-8">
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/session-3/committees">View All Committees</Link>
+              <div className="col-span-1 lg:col-span-2 flex justify-center mt-10">
+                <Button variant="outline" size="lg" asChild className="border-accent-gold/20 text-accent-gold hover:bg-accent-gold/10 min-w-[200px]">
+                  <Link href="/session-3/committees">View All 12 Chambers</Link>
                 </Button>
               </div>
             </div>

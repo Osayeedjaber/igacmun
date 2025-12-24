@@ -4,10 +4,11 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Shield, Users, Calendar, MapPin, Award, ArrowRight, ShieldCheck } from 'lucide-react'
+import { Shield, Users, Calendar, MapPin, Award, ArrowRight, Trophy, User, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Countdown } from '@/components/ui/countdown'
 import { MagneticElement } from '@/components/ui/magnetic-element'
+import { ElegantBackground } from '@/components/ui/elegant-background'
 import { appConfig } from '@/lib/config'
 import { isRevealed } from '@/lib/utils'
 import { FeaturedAwardees } from '@/components/featured-awardees'
@@ -141,14 +142,14 @@ export default function Session3Page() {
                   The Next Chapter in Diplomatic Excellence
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Building on the success of IGACMUN Session II, Session III aims to set a new standard for Model United Nations conferences in South East Asia. Join us for an unprecedented diplomatic experience with 500+ delegates in January 2026.
+                  Building on the success of IGACMUN Session II which hosted 1700+ delegates, Session III aims to set a new standard for Model United Nations conferences in South East Asia. Join us for an unprecedented diplomatic experience in January 2026.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "500+", label: "Expected Delegates" },
-                  { number: "12", label: "Committees" },
+                  { number: "TBA", label: "Expected Delegates" },
+                  { number: "10", label: "Committees" },
                   { number: "3", label: "Conference Days" },
                   { number: "AIUB", label: "Venue Location" }
                 ].map((stat, index) => (
@@ -456,7 +457,7 @@ export default function Session3Page() {
                       </div>
                       <div>
                         <h3 className="font-display text-2xl font-bold text-foreground">Committees</h3>
-                        <p className="text-xs text-muted-foreground">12 Diplomatic Arenas</p>
+                        <p className="text-xs text-muted-foreground">10 Diplomatic Arenas</p>
                       </div>
                     </div>
                     <div className="px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 rounded text-xs font-semibold text-amber-600">
@@ -466,7 +467,7 @@ export default function Session3Page() {
                   <Countdown
                     revealAt={reveals.committees.revealAt}
                     title=""
-                    description="Information about all 12 committees will be announced soon."
+                    description=""
                   />
                 </div>
               </motion.div>

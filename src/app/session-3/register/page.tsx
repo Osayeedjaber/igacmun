@@ -2,24 +2,22 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Users, Star, Clock, ExternalLink, CheckCircle, Award, X, CreditCard, Crown, DollarSign, Info, AlertCircle, Upload, Bird, LucideIcon } from 'lucide-react'
+import { ExternalLink, CheckCircle, X, CreditCard, Bird, Users, Crown, Award, Star, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { ShinyText } from '@/components/ui/shiny-text'
 import { appConfig } from '@/lib/config'
+import { ElegantBackground } from '@/components/ui/elegant-background'
 
 const iconMap: Record<string, LucideIcon> = {
-  Star,
-  CheckCircle,
+  Bird,
   Users,
-  Clock,
   Crown,
   Award,
-  CreditCard,
-  Bird
+  Star,
+  CreditCard
 }
 
 export default function RegisterPage() {
-  const { forms, event, registrationTypes } = appConfig
+  const { forms, registrationTypes } = appConfig
 
   const handleRegistration = (formKey: string) => {
     const form = forms[formKey as keyof typeof forms]
@@ -28,371 +26,110 @@ export default function RegisterPage() {
     }
   }
 
-  const sortedRegistrationTypes = registrationTypes
-    .map(type => ({ 
-      ...type, 
-      form: forms[type.key as keyof typeof forms],
-      icon: iconMap[type.icon] || Star,
-      flashMode: false
-    }))
-    .filter(type => type.form)
-    .sort((a, b) => {
-      if (a.form.enabled && !b.form.enabled) return -1
-      if (!a.form.enabled && b.form.enabled) return 1
-      return 0
-    })
-
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <Award className="h-16 w-16 text-accent-gold" />
-              <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse" />
-            </div>
-          </div>
-          
-          <h1 className="font-display text-5xl md:text-6xl font-bold mb-6">
-            <ShinyText className="text-foreground">Claim Your Seat</ShinyText>
+    <div className="min-h-screen relative bg-background">
+      <ElegantBackground variant="section" />
+      
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-24">
+        {/* Simple Header */}
+        <div className="mb-20 border-l-4 border-accent-gold pl-6">
+          <h1 className="font-display text-5xl font-bold text-white tracking-tight">
+            Registration
           </h1>
-          <p className="text-xl md:text-2xl text-accent-gold font-display mb-4">
-            Register for {event.title}
+          <p className="text-gray-400 mt-2 text-lg font-light">
+            Secure your seat in Session III. Select a category to begin.
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Secure your place in the biggest Model United Nations conference in South East Asia. 
-            Choose your registration Type and embark on a journey of diplomatic excellence.
-          </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-card border border-accent-gold/20 rounded-xl p-8 mb-12 max-w-4xl mx-auto"
-        >
-          <h2 className="font-display text-2xl font-bold text-foreground mb-4 text-center">
-            Registration Process
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-            <div className="space-y-3">
-              <div className="w-12 h-12 bg-accent-gold/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="font-bold text-accent-gold">1</span>
-              </div>
-              <h3 className="font-semibold text-foreground">Choose Types</h3>
-              <p className="text-sm text-muted-foreground">Select your preferred registration category</p>
-            </div>
-            <div className="space-y-3">
-              <div className="w-12 h-12 bg-accent-gold/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="font-bold text-accent-gold">2</span>
-              </div>
-              <h3 className="font-semibold text-foreground">External Form</h3>
-              <p className="text-sm text-muted-foreground">Complete registration via Google Forms</p>
-            </div>
-            <div className="space-y-3">
-              <div className="w-12 h-12 bg-accent-gold/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="font-bold text-accent-gold">3</span>
-              </div>
-              <h3 className="font-semibold text-foreground">Payment</h3>
-              <p className="text-sm text-muted-foreground">Submit payment confirmation</p>
-            </div>
-            <div className="space-y-3">
-              <div className="w-12 h-12 bg-accent-gold/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="font-bold text-accent-gold">4</span>
-              </div>
-              <h3 className="font-semibold text-foreground">Confirmation</h3>
-              <p className="text-sm text-muted-foreground">Receive confirmation and further details</p>
-            </div>
-          </div>
-        </motion.div>
+        {/* Structured Horizontal Grid for Registration */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-16">
+          {registrationTypes.map((type, index) => {
+            const form = forms[type.key as keyof typeof forms]
+            if (!form) return null
+            const Icon = iconMap[type.icon] || Star
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {sortedRegistrationTypes.map((type) => {
-            const { form } = type
-            const Icon = type.icon
-            
             return (
-              <div
+              <motion.div
                 key={type.key}
-                className={`
-                  relative bg-gradient-to-br from-card to-forest-900/20 border-2 border-accent-gold/30 
-                  rounded-xl p-6 md:p-8 
-                  ${form.enabled ? 'hover:shadow-2xl hover:shadow-accent-gold/20 hover:border-accent-gold/50' : 'opacity-60'} 
-                  transition-all duration-300 group
-                `}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className={`group flex items-center gap-5 p-5 bg-forest-950/40 backdrop-blur-md border border-accent-gold/15 rounded-2xl transition-all duration-300 ${form.enabled ? 'hover:bg-forest-900/40 hover:border-accent-gold/40' : 'opacity-50'}`}
               >
-
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 rounded-full bg-accent-gold/20 group-hover:bg-accent-gold/30 transition-all duration-300">
-                    <Icon className={`${type.key === 'regular' ? 'h-10 w-10' : 'h-8 w-8'} text-accent-gold`} />
-                  </div>
+                {/* Compact Icon */}
+                <div className="shrink-0 w-14 h-14 rounded-xl bg-forest-900 border border-accent-gold/20 flex items-center justify-center group-hover:border-accent-gold/40 transition-colors shadow-xl">
+                  <Icon className="h-6 w-6 text-accent-gold" />
                 </div>
 
-
-                <div className="text-center space-y-4">
-                  <h3 className="font-display text-xl font-bold text-foreground">
-                    {form.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
+                {/* Info */}
+                <div className="flex-grow min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-lg font-bold text-white group-hover:text-accent-gold transition-colors truncate">
+                      {form.title}
+                    </h3>
+                    {form.enabled ? (
+                      <CheckCircle className="h-3 w-3 text-green-500 shrink-0" />
+                    ) : (
+                      <X className="h-3 w-3 text-gray-500 shrink-0" />
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-400 line-clamp-1 font-light italic">
                     {form.description}
                   </p>
-
-                  <div className="flex items-center justify-center space-x-2">
-                    {form.enabled ? (
-                      <>
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span className="text-sm text-green-500 font-medium">Available</span>
-                      </>
-                    ) : (
-                      <>
-                        <X className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground font-medium">Not Available</span>
-                      </>
-                    )}
-                  </div>
-
-                  <Button
-                    variant={form.enabled ? "thorn" : "ghost"}
-                    className={`w-full group/btn ${
-                      type.flashMode
-                        ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white border-red-500 shadow-lg shadow-red-500/25'
-                        : ''
-                    }`}
-                    disabled={!form.enabled}
-                    onClick={() => handleRegistration(type.key)}
-                  >
-                    {form.enabled ? (
-                      <>
-                        {type.flashMode ? 'Flash Register Now!' :
-                         'Register Now'}
-                        <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </>
-                    ) : (
-                      "Coming Soon"
-                    )}
-                  </Button>
                 </div>
 
-                <div className={`absolute top-4 right-4 w-2 h-2 ${
-                  type.flashMode ? 'bg-red-400/50' :
-                  'bg-accent-gold/30'
-                } rounded-full animate-pulse`} />
-                <div className={`absolute bottom-4 left-4 w-1 h-1 ${
-                  type.flashMode ? 'bg-red-400/30' :
-                  'bg-accent-gold/20'
-                } rounded-full`} />
-              </div>
+                {/* Action */}
+                <div className="shrink-0">
+                  <Button 
+                    variant={form.enabled ? "outline" : "ghost"} 
+                    size="sm" 
+                    disabled={!form.enabled}
+                    onClick={() => handleRegistration(type.key)}
+                    className="text-accent-gold border-accent-gold/20 hover:bg-accent-gold/10 px-4"
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest">{form.enabled ? 'Register' : 'Soon'}</span>
+                    {form.enabled && <ExternalLink className="ml-2 h-3 w-3" />}
+                  </Button>
+                </div>
+              </motion.div>
             )
           })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 max-w-6xl mx-auto"
-        >
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="relative">
-                <DollarSign className="h-16 w-16 text-accent-gold" />
-                <div className="absolute inset-0 bg-accent-gold/20 rounded-full blur-xl animate-pulse" />
-              </div>
+        {/* Payment Proof Section - Matching Grid Aesthetic */}
+        <div className="bg-forest-900/20 border border-accent-gold/20 rounded-[2rem] p-8 md:p-12 relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-r from-accent-gold/[0.03] to-transparent" />
+          <div className="flex flex-col md:flex-row items-center gap-10 relative z-10">
+            <div className="shrink-0 p-6 bg-accent-gold/10 rounded-2xl border border-accent-gold/20 group-hover:bg-accent-gold/20 transition-colors">
+              <CreditCard className="h-10 w-10 text-accent-gold" />
             </div>
-            <h2 className="font-display text-4xl font-bold text-foreground mb-4">
-              Payment Confirmation
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Complete your registration by submitting payment proof. Follow the instructions below for a smooth process.
-            </p>
+            <div className="flex-grow text-center md:text-left">
+              <h2 className="text-3xl font-bold text-white mb-3">Payment Confirmation</h2>
+              <p className="text-gray-400 font-light text-base max-w-xl">
+                Already registered and paid? Submit your payment proof here to finalize your delegation and secure your chamber.
+              </p>
+            </div>
+            <Button 
+              variant="thorn" 
+              size="xl" 
+              className="w-full md:w-auto px-12"
+              onClick={() => handleRegistration('paymentConfirmation')}
+              disabled={!forms.paymentConfirmation.enabled}
+            >
+              Submit Proof
+            </Button>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gradient-to-br from-forest-500/10 to-forest-600/5 border border-forest-400/30 rounded-xl p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-forest-500/20 rounded-full mr-4">
-                  <Info className="h-6 w-6 text-forest-400" />
-                </div>
-                <h3 className="font-display text-xl font-bold text-foreground">
-                  Payment Instructions
-                </h3>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-accent-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-bold text-accent-gold">1</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Complete Registration</p>
-                    <p className="text-sm text-muted-foreground">Fill out your registration form first</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-accent-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-bold text-accent-gold">2</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Make Payment</p>
-                    <p className="text-sm text-muted-foreground">Use the payment details provided in confirmation email</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-accent-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-bold text-accent-gold">3</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Submit Proof</p>
-                    <p className="text-sm text-muted-foreground">Upload screenshot or receipt using the form</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-accent-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-xs font-bold text-accent-gold">4</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Confirmation</p>
-                    <p className="text-sm text-muted-foreground">Receive final confirmation within 24-48 hours</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
-                <div className="flex items-start space-x-3">
-                  <AlertCircle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-medium text-amber-700 dark:text-amber-300">Important Note</p>
-                    <p className="text-sm text-amber-600 dark:text-amber-400 mt-1">
-                      Payment confirmation must be submitted before the deadline. Late submissions may not be processed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-accent-gold/10 to-accent-gold/5 border border-accent-gold/30 rounded-xl p-8">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-accent-gold/20 rounded-full mr-4">
-                  <Upload className="h-6 w-6 text-accent-gold" />
-                </div>
-                <div>
-                  <h3 className="font-display text-xl font-bold text-foreground">
-                    {appConfig.forms.paymentConfirmation.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {appConfig.forms.paymentConfirmation.description}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">
-                  <span className="text-sm font-medium text-foreground">Deadline:</span>
-                  <span className="text-sm text-accent-gold font-bold" suppressHydrationWarning>
-                    {new Date(appConfig.forms.paymentConfirmation.deadline).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-card/50 rounded-lg border border-accent-gold/20">
-                  <span className="text-sm font-medium text-foreground">Status:</span>
-                  <div className="flex items-center space-x-2">
-                    {appConfig.forms.paymentConfirmation.enabled ? (
-                      <>
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span className="text-sm text-green-500 font-medium">Available</span>
-                      </>
-                    ) : (
-                      <>
-                        <X className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground font-medium">Not Available</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-              </div>
-              
-              <Button
-                variant="thorn"
-                className="w-full group/btn"
-                disabled={!appConfig.forms.paymentConfirmation.enabled}
-                onClick={() => handleRegistration('paymentConfirmation')}
-              >
-                {appConfig.forms.paymentConfirmation.enabled ? (
-                  <>
-                    <CreditCard className="mr-2 h-4 w-4" />
-                    Submit Payment Proof
-                    <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </>
-                ) : (
-                  "Coming Soon"
-                )}
-              </Button>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 bg-card border border-accent-gold/20 rounded-xl p-8 max-w-4xl mx-auto"
-        >
-          <h2 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
-            Important Information
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <h3 className="font-semibold text-foreground flex items-center">
-                <CheckCircle className="h-5 w-5 text-accent-gold mr-2" />
-                About IGACMUN Session III
-              </h3>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Session III is the next chapter of IGAC&apos;s flagship conference</li>
-                <li>• Session II successfully hosted 1700+ delegates in 2024</li>
-                <li>• Building on proven excellence with enhanced experiences</li>
-                <li>• Taking place in January 2026 at AIUB Campus</li>
-                <li>• All registrations processed through Google Forms</li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-foreground flex items-center">
-                <Award className="h-5 w-5 text-accent-gold mr-2" />
-                What&apos;s Included
-              </h3>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Full access to all committee sessions</li>
-                <li>• Conference materials and delegate handbook</li>
-                <li>• Networking with delegates across the region</li>
-                <li>• Certificate of participation</li>
-                <li>• Opportunity for awards and recognition</li>
-                <li>• Meals and refreshments during conference days</li>
-              </ul>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-12 text-center"
-        >
-          <p className="text-muted-foreground mb-4">
-            Need help with registration? Have questions about the conference?
+        {/* Simple Footer Note */}
+        <div className="mt-20 text-center">
+          <p className="text-gray-500 text-xs uppercase tracking-[0.3em] font-black">
+            IGACMUN SESSION III • AIUB
           </p>
-          <Button variant="outline" asChild>
-            <a href="/contact">
-              Contact Us
-            </a>
-          </Button>
-        </motion.div>
+          <p className="mt-4 text-gray-500 text-sm font-light">
+            Need assistance? <a href="/contact" className="text-accent-gold hover:underline">Contact Support</a>
+          </p>
+        </div>
       </div>
     </div>
   )

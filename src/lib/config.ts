@@ -31,7 +31,7 @@ export const appConfig = {
     },
     schedule: { 
       mode: "countdown" as const, 
-      revealAt: "2025-12-15T10:00:00Z", 
+      revealAt: "2026-01-01T00:00:00Z", 
       showCountdownOverlay: false,
       enableCountdown: true
     },
@@ -145,73 +145,73 @@ export const appConfig = {
   committees: [
     {
       name: "United Nations Security Council",
-      sigilImage: "/committees/unsc.svg",
+      sigilImage: "/coms/UNSC.svg",
       difficulty: "Advanced",
       description: "OPEN AGENDA"
     },
     {
       name: "Disarmament and International Security Committee",
-      sigilImage: "/committees/disec.svg", 
+      sigilImage: "/coms/DISEC.svg", 
       difficulty: "Intermediate",
       description: "REGULATING MILITARY ARTIFICIAL INTELLIGENCE AND LETHAL AUTONOMOUS WEAPONS SYSTEMS (LAWS) TO PRESERVE MEANINGFUL HUMAN CONTROL"
     },
     {
       name: "United Nations Children's Fund",
-      sigilImage: "/committees/unicef.svg",
+      sigilImage: "/coms/UNICEF.svg",
       difficulty: "Intermediate",
       description: "Regulating the Digital Environment to Safeguard Children from Online Radicalization and Cyber Exploitation"
     },
     {
       name: "Special Political and Decolonization Committee",
-      sigilImage: "/committees/specpol.svg",
+      sigilImage: "/coms/SPECPOL.svg",
       difficulty: "Advanced", 
       description: "ADDRESSING THE GEOPOLITICAL IMPACT OF TERRITORIAL DISPUTES AND DECOLONIZATION IN THE 21ST CENTURY"
     },
     {
       name: "United Nations Human Rights Council",
-      sigilImage: "/committees/unhrc.svg",
+      sigilImage: "/coms/UNHRC.svg",
       difficulty: "Intermediate",
       description: "SAFEGUARDING HUMAN RIGHTS DEFENDERS AND CIVIC SPACE FROM AI-ENABLED SURVEILLANCE, PREDICTIVE POLICING AND SMART SECURITY"
     },
     {
       name: "Economic and Financial Committee",
-      sigilImage: "/committees/ecofin.svg",
+      sigilImage: "/coms/ECOFIN.svg",
       difficulty: "Advanced",
       description: "OPERATIONALIZING CLIMATE-RELATED LOSS AND DAMAGE FINANCE WITHIN THE GLOBAL FINANCIAL ARCHITECTURE"
     },
     {
       name: "Food and Agriculture Organization",
-      sigilImage: "/committees/fao.svg",
+      sigilImage: "/coms/FAO.svg",
       difficulty: "Beginner",
       description: "ADDRESSING HUNGER AND UNETHICAL FOOD DISTRIBUTION IN CONFLICT AND DISASTER-PRONE REGIONS"
     },
     {
       name: "World Trade Organization",
-      sigilImage: "/committees/wto.svg",
+      sigilImage: "/coms/WTO.svg",
       difficulty: "Advanced",
       description: "THE CRISIS OF COMPATIBILITY: RECONCILING TRADE LIBERALIZATION WITH NATIONAL SECURITY AND CLIMATE INDUSTRIAL POLICY, AND RESTORING THE LEGITIMACY OF THE DISPUTE SETTLEMENT SYSTEM"
     },
     {
       name: "United Nations Entity for Gender Equality",
-      sigilImage: "/committees/unw.svg",
+      sigilImage: "/coms/UNW.svg",
       difficulty: "Intermediate",
       description: "SECURING GENDER JUSTICE IN THE DIGITAL ERA"
     },
     {
       name: "United Nations Educational, Scientific and Cultural Organization",
-      sigilImage: "/committees/unesco.svg",
+      sigilImage: "/coms/UNESCO.svg",
       difficulty: "Beginner",
       description: "Promoting education, culture, and international cooperation"
     },
     {
       name: "North Atlantic Treaty Organization",
-      sigilImage: "/committees/nato.svg",
+      sigilImage: "/coms/NATO.svg",
       difficulty: "Advanced",
       description: "ARCTIC SECURITY: DEFENDING THE HIGH NORTH FROM NEW THREATS"
     },
     {
       name: "International Press",
-      sigilImage: "/committees/ip.svg",
+      sigilImage: "/coms/IP.svg",
       difficulty: "Intermediate",
       description: "Media and press representation covering the conference"
     }
@@ -227,14 +227,14 @@ export const appConfig = {
     title: "IGACMUN SESSION III",
     subtitle: "",
     tagline: "United | Transformation | Innovation",
-    dates: "TBA",
+    dates: "2 - 4 January 2026",
     expectedDelegates: "500+",
     description: "The biggest Model United Nations conference in South East Asia returns with unprecedented scale and diplomatic excellence."
   },
   schedule: {
     day1: {
       title: "Opening Day",
-      date: "Day 1",
+      date: "2 January 2026",
       sessions: [
         { time: "08:00 - 09:00", title: "Registration & Check-in", type: "registration" },
         { time: "09:00 - 10:00", title: "Opening Ceremony", type: "ceremony" },
@@ -248,7 +248,7 @@ export const appConfig = {
     },
     day2: {
       title: "Main Conference Day",
-      date: "Day 2", 
+      date: "3 January 2026", 
       sessions: [
         { time: "09:00 - 11:00", title: "Committee Session IV", type: "committee" },
         { time: "11:00 - 11:30", title: "Coffee Break", type: "break" },
@@ -262,7 +262,7 @@ export const appConfig = {
     },
     day3: {
       title: "Closing Day",
-      date: "Day 3",
+      date: "4 January 2026",
       sessions: [
         { time: "09:00 - 11:00", title: "Final Committee Session", type: "committee" },
         { time: "11:00 - 11:30", title: "Coffee Break", type: "break" },
